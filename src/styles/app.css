@@ -1,5 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .page {
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
+}
+
+.guide-page .main-pic {
+    display:block;
+    width:.86rem;
+    height:.7rem;
+     margin:.93rem auto .29rem auto;
+}
+
+.guide-page .title {
+    color: #242424;
+    font-weight: regular;
+    font-size:.2rem;
+    line-height:.23rem;
+    letter-spacing:0;
+    text-align:center;
 }
