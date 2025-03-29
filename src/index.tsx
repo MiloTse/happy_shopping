@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './styles/border.css';
-import './styles/base.css';
+import 'normalize.css';
 
 document.documentElement.style.fontSize =document.documentElement.clientWidth/ 375 * 100+'px';
 

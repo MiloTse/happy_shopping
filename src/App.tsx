@@ -1,10 +1,10 @@
 import React from 'react';
-
+import './styles/app.css';
 
 const App =() => {
   return (
-    <div style={{fontSize: '.2rem'}}>
-       Happy Shopping Project22Happy Shopping Project22Happy Shopping Project22Happy Shopping Project22Happy Shopping Project22Happy Shopping Project22Happy Shopping Project22
+    <div className="page">
+
     </div>
   );
 }
