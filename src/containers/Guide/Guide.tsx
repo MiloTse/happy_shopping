@@ -1,11 +1,21 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import './style.css';
+import {useNavigate} from "react-router-dom";
 
 const Guide =() => {
     const ref = useRef<HTMLDivElement>(null!);
+    const navigate = useNavigate();
     useEffect(()=>{
         ref.current.style.opacity = '1';
     })
+
+    //use useCallback hook as it will not be changed frequently
+    const handleIconClick = useCallback(()=>{
+        navigate('/login');
+    },[]);
+
+
+
     return (
         <div ref={ref} className="page guide-page">
             <img alt="JoyCart"
@@ -17,9 +27,11 @@ const Guide =() => {
                  className="sub-pic"
                  src={require('../../images/slogan_word_icon_@2x.png')}
             />
-            <div className="iconfont arrow-icon">&#xe60c;</div>
+            <div className="iconfont arrow-icon"
+            onClick={handleIconClick}
+            >&#xe60c;</div>
         </div>
-    );
+    )
 }
 
 export default Guide;
