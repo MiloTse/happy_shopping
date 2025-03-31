@@ -15,10 +15,14 @@ const Login = ()=> {
     const [loaded,setLoaded] = useState(false);
 
     function handleSubmitBtnClick() {
-        axios.get('/a.json').then((response)=>{
+        axios.get('/charlestest.json').then((response)=>{
+            setLoaded(true);
             setData(response.data);
+
         }).catch((error)=>{
             console.log(error);
+            setLoaded(true);
+            setError(error.message);
         })
     }
 
