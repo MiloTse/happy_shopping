@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './styles/app.css';
 
 const App =() => {
+    const ref = useRef<HTMLDivElement>(null!);
+    useEffect(()=>{
+      ref.current.style.opacity = '1';
+    })
   return (
-      <div className="page guide-page">
+      <div ref={ref} className="page guide-page">
           <img alt="logo"
                className="main-pic"
                src={require('./images/halg_logo_icon_@2x.png')}

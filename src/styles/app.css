@@ -27,7 +27,10 @@
     background-color: #FFFFFF;
 }
 
-
+.guide-page {
+    opacity: 0;
+    transition: all 3s;
+}
 
 .guide-page .main-pic {
     display:block;
