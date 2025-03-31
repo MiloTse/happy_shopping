@@ -3,12 +3,17 @@ import './style.css';
 import {useNavigate} from "react-router-dom";
 
 const Guide =() => {
+    //处理动画相关的逻辑
+    //handle the animation related logic
     const ref = useRef<HTMLDivElement>(null!);
-    const navigate = useNavigate();
     useEffect(()=>{
         ref.current.style.opacity = '1';
     })
 
+
+    //处理页面跳转相关的逻辑
+    //handle the page jump related logic
+    const navigate = useNavigate();
     //use useCallback hook as it will not be changed frequently
     //useCallback hook will only be called once when the component is mounted
 /*
