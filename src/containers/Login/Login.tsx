@@ -1,6 +1,13 @@
 import './style.scss'
+import {useState} from "react";
 
 const Login = ()=> {
+
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [password, setPassword] = useState('');
+
+
+
     return (
         <div className="page login-page">
             <div className="tab">
@@ -10,11 +17,24 @@ const Login = ()=> {
             <div className="form">
                 <div className="form-item">
                     <div className='form-item-title'>phone number</div>
-                    <input className='form-item-content' placeholder='please input phone number'/>
+                    <input value={phoneNumber}
+                           className='form-item-content'
+                           placeholder='please input phone number'
+                           onChange={(e)=>{
+                               setPhoneNumber(e.target.value);
+                           }}
+                    />
                 </div>
                 <div className="form-item">
                     <div className='form-item-title'>password</div>
-                    <input type="password" className="form-item-content" placeholder="please input password"/>
+                    <input value={password}
+                           type="password"
+                           className="form-item-content"
+                           placeholder="please input password"
+                           onChange={(e)=>{
+                               setPassword(e.target.value);
+                           }}
+                    />
                 </div>
             </div>
 
