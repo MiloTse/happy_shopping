@@ -47,3 +47,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Command to install libraries:
 npm install react-router-dom --save
+
+npm run eject
