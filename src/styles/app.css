@@ -17,9 +17,15 @@
 
 .guide-page .title {
     color: #242424;
-    font-weight: regular;
+    font-weight: bold;
     font-size:.2rem;
     line-height:.23rem;
     letter-spacing:0;
     text-align:center;
+}
+.guide-page .sub-title {
+    display:block;
+    width:2.02rem;
+    height: 1.18rem;
+    margin:1.73rem auto 1.76rem auto
 }
