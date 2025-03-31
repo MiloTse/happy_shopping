@@ -1,11 +1,26 @@
 import './style.scss'
 import {useState} from "react";
+import axios from "axios";
+
 
 const Login = ()=> {
 
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
 
+    //发送请求相关数据定义
+    //define the data related to sending request
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    const [loaded,setLoaded] = useState(false);
+
+    function handleSubmitBtnClick() {
+        axios.get('/a.json').then((response)=>{
+            setData(response.data);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    }
 
 
     return (
@@ -38,7 +53,7 @@ const Login = ()=> {
                 </div>
             </div>
 
-            <div className="submit">
+            <div className="submit" onClick={handleSubmitBtnClick}>
                 login
             </div>
             <p className="notice">
