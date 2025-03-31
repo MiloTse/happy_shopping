@@ -26,6 +26,14 @@ const Login = ()=> {
         })
     }
 
+    if(loaded){
+        if(data){
+            setLoaded(false);
+            alert("request success");
+        }else{
+           alert(error);
+        }
+    }
 
     return (
         <div className="page login-page">
