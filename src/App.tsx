@@ -13,6 +13,7 @@ const App =() => {
                className="sub-pic"
                src={require('./images/slogan_word_icon_@2x.png')}
           />
+          <div className="iconfont arrow-icon">&#xe60c;</div>
       </div>
   );
 }

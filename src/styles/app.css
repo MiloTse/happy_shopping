@@ -2,11 +2,32 @@
     margin: 0;
     padding: 0;
 }
+
+@font-face {
+    font-family: "iconfont"; /* Project id 4876302 */
+    src: url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.woff2?t=1743386370639') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.woff?t=1743386370639') format('woff'),
+    url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.ttf?t=1743386370639') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 .page {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
 }
+
+
 
 .guide-page .main-pic {
     display:block;
@@ -23,9 +44,21 @@
     letter-spacing:0;
     text-align:center;
 }
-.guide-page .sub-title {
+.guide-page .sub-pic {
     display:block;
     width:2.02rem;
     height: 1.18rem;
-    margin:1.73rem auto 1.76rem auto
+    margin:1.73rem auto 0 auto
+}
+
+.guide-page .arrow-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .73rem;
+    text-align:center;
+    color:#73D13D;
+    line-height: .2rem;
+    font-size:.4rem;
+    font-weight: bold;
 }
