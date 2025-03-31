@@ -10,10 +10,17 @@ const Guide =() => {
     })
 
     //use useCallback hook as it will not be changed frequently
+    //useCallback hook will only be called once when the component is mounted
+/*
     const handleIconClick = useCallback(()=>{
         navigate('/login');
-    },[]);
+    },[navigate]);
+*/
 
+    //simple way to handle click event without useCallback hook without buffering
+    function handleIconClick() {
+        navigate('/login');
+    }
 
 
     return (
