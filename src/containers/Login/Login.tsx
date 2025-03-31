@@ -27,8 +27,8 @@ const Login = ()=> {
     }
 
     if(loaded){
+        setLoaded(false);
         if(data){
-            setLoaded(false);
             alert("request success");
         }else{
            alert(error);
