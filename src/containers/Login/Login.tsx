@@ -19,13 +19,14 @@ const Login = ()=> {
             </div>
 
             <div className="submit">
-                LOGIN
+                login
             </div>
             <p className="notice">
-                *登录即表示同意
-                <a href="#">《用户协议》</a>
-                和
-                <a href="#">《隐私政策》</a>
+                <input type="checkbox"/>
+                I accept the
+                <a href="#">Terms and Conditions</a>
+                &
+                <a href="#">Privacy Policy</a>
             </p>
         </div>
 

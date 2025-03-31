@@ -2,7 +2,13 @@
     margin: 0;
     padding: 0;
 }
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 99999s;
+    -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+}
 @font-face {
     font-family: "iconfont"; /* Project id 4876302 */
     src: url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.woff2?t=1743386370639') format('woff2'),
