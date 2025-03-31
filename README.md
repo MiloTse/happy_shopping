@@ -49,3 +49,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 npm install react-router-dom --save
 
 npm run eject
+ 
+npm install sass-embedded
