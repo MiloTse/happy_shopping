@@ -1,5 +1,5 @@
 import axios, {AxiosRequestConfig, Method} from "axios";
-import {useState} from "react";
+import {useState, useRef} from "react";
 
 
 //define a custom hook to send request
@@ -15,6 +15,13 @@ function useRequest<T>(
     const[data, setData] = useState<T | null>(null);
     const[error, setError] = useState('');
     const[loaded, setLoaded] = useState(false);
+    //define a controller to stop req
+    //它的改变不需要重新渲染，所以用useRef
+    //it doesn't need to be re-rendered, so use useRef
+    const controllerRef = useRef(new AbortController());
+    const cancel = () => {
+        controllerRef.current.abort();
+    }
 
     const request = async () => {
         //每次请求之前先清空之前的状态
@@ -30,6 +37,7 @@ function useRequest<T>(
                 //passing three parameters as obj
                 url,
                 method,
+                signal: controllerRef.current.signal,
                 data: payload
             });
             const a = response.data;
@@ -42,7 +50,7 @@ function useRequest<T>(
         }
     }
     //step4. 把data 返回， 返回 data 的类型一定为 ResponseType | null
-    return {data, error, loaded, request};
+    return {data, error, loaded, request, cancel};
 }
 
 export default useRequest;
