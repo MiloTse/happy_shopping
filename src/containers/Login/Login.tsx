@@ -15,10 +15,12 @@ const Login = ()=> {
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
-    const { data, error, loaded, request } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    const { data, error, loaded, request, cancel } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
         request();
+        //added invoke cancel function to test, won't be found the data charlestest.json on network tab
+        cancel();
     }
 
     //当点击的时候，请求发了，数据改了，页面也跟着渲染了。渲染完成后给个提示，用useEffect. 把提示放在dom渲染完成之后做
