@@ -20,7 +20,7 @@ const Login = ()=> {
     function handleSubmitBtnClick() {
         request();
         //added invoke cancel function to test, won't be found the data charlestest.json on network tab
-        cancel();
+        // cancel();
     }
 
     //当点击的时候，请求发了，数据改了，页面也跟着渲染了。渲染完成后给个提示，用useEffect. 把提示放在dom渲染完成之后做
