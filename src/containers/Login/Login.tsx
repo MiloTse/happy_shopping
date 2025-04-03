@@ -2,6 +2,10 @@ import './style.scss'
 import {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
 
+//1. 首先定义接口返回内容
+type ResponseData = {
+    name: string;
+}
 
 const Login = ()=> {
 
@@ -9,7 +13,9 @@ const Login = ()=> {
     const [password, setPassword] = useState('');
 
     //use custom hook to send request
-    const { data, error, loaded, request } = useRequest('/charlestest.json', 'GET', {});
+    //step1. 通过泛型传递给useRequest 方法
+    //step5.接受data 类型也一定为 ResponseType | null
+    const { data, error, loaded, request } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
         request();
