@@ -1,6 +1,6 @@
 import './style.scss'
 import {useState} from "react";
-import axios from "axios";
+import useRequest from "../../utils/useRequest";
 
 
 const Login = ()=> {
@@ -8,32 +8,14 @@ const Login = ()=> {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
 
-    //发送请求相关数据定义
-    //define the data related to sending request
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-    const [loaded,setLoaded] = useState(false);
+    //use custom hook to send request
+    const { data, error, loaded, request } = useRequest('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
-        axios.get('/charlestest.json').then((response)=>{
-            setLoaded(true);
-            setData(response.data);
-
-        }).catch((error)=>{
-            console.log(error);
-            setLoaded(true);
-            setError(error.message);
-        })
+        request();
     }
 
-    if(loaded){
-        setLoaded(false);
-        if(data){
-            alert("request success");
-        }else{
-           alert(error);
-        }
-    }
+
 
     return (
         <div className="page login-page">

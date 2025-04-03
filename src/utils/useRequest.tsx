@@ -1,6 +1,7 @@
 import axios, {AxiosRequestConfig, Method} from "axios";
 import {useState} from "react";
 
+
 //define a custom hook to send request
 function useRequest(url: string, method: Method, payload: AxiosRequestConfig) {
     const[data, setData] = useState(null);
@@ -25,17 +26,14 @@ function useRequest(url: string, method: Method, payload: AxiosRequestConfig) {
             });
             setData(response.data);
         }catch (e: any) {
-            setError(e.message);
+            setError(e.message || 'unknown request error.');
         }finally {
             //no matter success or fail
             setLoaded(true);
         }
-        //return
-        return {data, error, loaded, request};
     }
 
-
+    return {data, error, loaded, request};
 }
-
 
 export default useRequest;
