@@ -40,7 +40,6 @@ function useRequest<T>(
                 signal: controllerRef.current.signal,
                 data: payload
             });
-            const a = response.data;
             setData(response.data);
         }catch (e: any) {
             setError(e.message || 'unknown request error.');

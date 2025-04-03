@@ -15,7 +15,7 @@ const Login = ()=> {
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
-    const { data, error, loaded, request, cancel } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    const { data, error, request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
         request();
