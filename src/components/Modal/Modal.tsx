@@ -17,18 +17,18 @@ useEffect(() => {
 
 function Modal( ) {
 
-    // const [showModal, setShowModal] = useState(false);
-    // const [message, setMessage] = useState('');
+    const [showModal, setShowModal] = useState(false);
+    const [message, setMessage] = useState('');
 
 
 
-    return (
+    return showModal? (
         <div className="modal">
             <div className="modal-text">
-                 Hello world
+                {message}
             </div>
         </div>
-    );
+    ): null;
 }
 
 export default Modal;
