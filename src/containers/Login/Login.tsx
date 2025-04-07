@@ -15,16 +15,23 @@ const Login = ()=> {
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
-    const { data, error, request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    // const { data, error, request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    const {request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
-        request();
+        request().then((data)=>{
+            console.log('request success');
+            console.log(data);
+        }).catch((e:any)=>{
+            console.log('request fail');
+            alert(e?.message);
+         });
         //added invoke cancel function to test, won't be found the data charlestest.json on network tab
         // cancel();
     }
 
     //当点击的时候，请求发了，数据改了，页面也跟着渲染了。渲染完成后给个提示，用useEffect. 把提示放在dom渲染完成之后做
-    useEffect(()=>{
+/*    useEffect(()=>{
         //data或者error变化了，执行这个函数
         if(data) {
             alert('login success');
@@ -33,6 +40,7 @@ const Login = ()=> {
             alert('login fail');
         }
     },[data, error]);//用到了data和error，函数依赖这里要加上
+    */
 
     return (
         <div className="page login-page">
