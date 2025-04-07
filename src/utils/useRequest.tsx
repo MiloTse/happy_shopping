@@ -40,6 +40,7 @@ function useRequest<T>(
                 data: payload
             }).then(response => {
                 setData(response.data);
+                return response.data;
             }).catch(e => {
                 setError(e.message || 'unknown request error.');
             }).finally(()=>{
