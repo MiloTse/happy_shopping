@@ -5,7 +5,7 @@ function Modal() {
         <div className="modal">
             <div className="modal-text">
                 <span className="close">&times;</span>
-                <p>Apps Error occurred...</p>
+                <p>Opps! Error occurred...</p>
             </div>
         </div>
     );
