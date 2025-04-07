@@ -23,41 +23,13 @@ const Login = ()=> {
 
     function handleSubmitBtnClick() {
         request().then((data)=>{
-             //without tips of type, only show void
-/*
-            console.log(data);
-*/
-            //This is a TypeScript concept called type narrowing.
-            // The if statement here indicates that data definitely exists,
-            // so it is not of the outermost void type, but rather of the responseType type.
-  /*          if(data){
-                console.log("use if to show typescript's concept: type narrowing: ",data.name);
-            }
- */
-            //another way to show typescript's concept: type narrowing
-            data && console.log("another way to show typescript's concept: type narrowing: ",data.name);
-            alert(123);
-        }).catch((e:any)=>{
+            data && console.log(data.name);
+         }).catch((e:any)=>{
              // alert(e?.message);
             setShowModal(true);
             setMessage(e?.message || 'unknown error.');
         });
-        //added invoke cancel function to test, won't be found the data charlestest.json on network tab
-        // cancel();
     }
-
-    //当点击的时候，请求发了，数据改了，页面也跟着渲染了。渲染完成后给个提示，用useEffect. 把提示放在dom渲染完成之后做
-/*    useEffect(()=>{
-        //data或者error变化了，执行这个函数
-        if(data) {
-            alert('login success');
-        }
-        if(error) {
-            alert('login fail');
-        }
-    },[data, error]);//用到了data和error，函数依赖这里要加上
-    */
-
     //if showModal is true, close after 1.5s
     useEffect(() => {
         const timer = setTimeout(() => {
