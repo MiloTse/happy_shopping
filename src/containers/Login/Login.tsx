@@ -21,7 +21,14 @@ const Login = ()=> {
     function handleSubmitBtnClick() {
         request().then((data)=>{
             console.log('request success');
+            //without tips of type, only show void
             console.log(data);
+            //This is a TypeScript concept called type narrowing.
+            // The if statement here indicates that data definitely exists,
+            // so it is not of the outermost void type, but rather of the responseType type.
+            if(data){
+                alert(data.name);
+            }
         }).catch((e:any)=>{
             console.log('request fail');
             alert(e?.message);
