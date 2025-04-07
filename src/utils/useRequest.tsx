@@ -32,21 +32,19 @@ function useRequest<T>(
 
         //发送异步请求，捕捉异常
         //sending a request, catching an exception
-        try{
-            const response = await axios.request<T>({
+        return axios.request<T>({
                 //passing three parameters as obj
                 url,
                 method,
                 signal: controllerRef.current.signal,
                 data: payload
-            });
-            setData(response.data);
-        }catch (e: any) {
-            setError(e.message || 'unknown request error.');
-        }finally {
-            //no matter success or fail
-            setLoaded(true);
-        }
+            }).then(response => {
+                setData(response.data);
+            }).catch(e => {
+                setError(e.message || 'unknown request error.');
+            }).finally(()=>{
+                setLoaded(true);
+            })
     }
     //step4. 把data 返回， 返回 data 的类型一定为 ResponseType | null
     return {data, error, loaded, request, cancel};
