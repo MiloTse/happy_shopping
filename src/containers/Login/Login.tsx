@@ -13,6 +13,7 @@ const Login = ()=> {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [showModal, setShowModal] = useState(false);
+    const [message, setMessage] = useState('');
 
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
@@ -39,7 +40,8 @@ const Login = ()=> {
         }).catch((e:any)=>{
              // alert(e?.message);
             setShowModal(true);
-         });
+            setMessage(e?.message || 'unknown error.');
+        });
         //added invoke cancel function to test, won't be found the data charlestest.json on network tab
         // cancel();
     }
@@ -105,7 +107,7 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            {showModal? <Modal/>: null}
+            {showModal? <Modal>{message}</Modal>: null}
 
         </div>
 
