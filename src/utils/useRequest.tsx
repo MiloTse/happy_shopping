@@ -43,6 +43,7 @@ function useRequest<T>(
                 return response.data;
             }).catch(e => {
                 setError(e.message || 'unknown request error.');
+                throw new Error(e);
             }).finally(()=>{
                 setLoaded(true);
             })
