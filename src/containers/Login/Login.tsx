@@ -56,6 +56,15 @@ const Login = ()=> {
     },[data, error]);//用到了data和error，函数依赖这里要加上
     */
 
+    //if showModal is true, close after 1.5s
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            alert('login success');
+            setShowModal(false);
+        }, 1500);
+        //clean up the timer
+        return () => clearTimeout(timer);
+    }, [showModal]);
     return (
         <div className="page login-page">
             <div className="tab">
