@@ -26,19 +26,11 @@ const Login = ()=> {
             data && console.log(data.name);
          }).catch((e:any)=>{
              // alert(e?.message);
-            setShowModal(true);
-            setMessage(e?.message || 'unknown error.');
+            // setShowModal(true);
+            // setMessage(e?.message || 'unknown error.');
         });
     }
-    //if showModal is true, close after 1.5s
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            alert('login success');
-            setShowModal(false);
-        }, 1500);
-        //clean up the timer
-        return () => clearTimeout(timer);
-    }, [showModal]);
+
     return (
         <div className="page login-page">
             <div className="tab">
@@ -79,7 +71,7 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            {showModal? <Modal>{message}</Modal>: null}
+            <Modal />
 
         </div>
 
