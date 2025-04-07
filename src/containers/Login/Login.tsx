@@ -12,11 +12,12 @@ const Login = ()=> {
 
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
+    const [showModal, setShowModal] = useState(false);
 
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
-    // const { data, error, request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    // const { data, error, request, } = useRequest<ResponseData>('/charlestesta.json', 'GET', {});
     const {request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
@@ -36,8 +37,8 @@ const Login = ()=> {
             data && console.log("another way to show typescript's concept: type narrowing: ",data.name);
             alert(123);
         }).catch((e:any)=>{
-            console.log('request fail');
-            alert(e?.message);
+             // alert(e?.message);
+            setShowModal(true);
          });
         //added invoke cancel function to test, won't be found the data charlestest.json on network tab
         // cancel();
@@ -95,7 +96,8 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            <Modal/>
+            {showModal? <Modal/>: null}
+
         </div>
 
 
