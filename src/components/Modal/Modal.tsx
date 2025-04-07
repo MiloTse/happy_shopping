@@ -4,8 +4,7 @@ function Modal({children}: {children: string}) {
     return (
         <div className="modal">
             <div className="modal-text">
-                <span className="close">&times;</span>
-                <p>Opps! Error occurred...</p>
+                 <p>{children}</p>
             </div>
         </div>
     );
