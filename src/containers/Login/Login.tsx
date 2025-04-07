@@ -1,6 +1,7 @@
 import './style.scss'
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
+import Modal from "../../components/Modal/Modal";
 
 //1. 首先定义接口返回内容
 type ResponseData = {
@@ -94,6 +95,7 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
+            <Modal/>
         </div>
 
 
