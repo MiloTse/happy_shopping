@@ -1,5 +1,6 @@
 import axios, {AxiosRequestConfig} from "axios";
 import {useState, useRef} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 //define a custom hook to send request
@@ -14,6 +15,11 @@ function useRequest<T>(options: AxiosRequestConfig = {
 
                        }//defined options an initial value
 ) {
+
+    const navigate = useNavigate();
+
+
+
     //step3.data的类型定义为 ResponseType | null
     //data 要么是传递进来的数据类型，要么是null
     //data either has the type passed in, or is null
@@ -63,6 +69,9 @@ function useRequest<T>(options: AxiosRequestConfig = {
                 if(e?.resopnse?.status === 401) {//401 means unauthorized
                     //if token is invalid, clear it
                     localStorage.removeItem('token');
+                    //then directly redirect to login page
+                    navigate('/account/login');
+
                 }
 
                 setError(e.message || 'unknown request error.');
