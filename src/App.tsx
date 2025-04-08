@@ -4,8 +4,8 @@ import './styles/base.css';
 import {HashRouter, Routes, Route, BrowserRouter, createHashRouter, RouterProvider} from 'react-router-dom';
 import React from "react";
 import Guide from './containers/Guide/Guide';
-import Login from './containers/Login/Login';
-import Register from './containers/Register/Register';
+import Login from './containers/Account/Login';
+import Register from './containers/Account/Register';
 import Account from "./containers/Account/Account";
 
 const router = createHashRouter([{
