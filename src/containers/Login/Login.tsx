@@ -4,7 +4,7 @@ import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
 
 //1. 首先定义接口返回内容
-type ResponseData = {
+type ResponseType = {
     name: string;
 }
 
@@ -19,7 +19,7 @@ const Login = ()=> {
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
     // const { data, error, request, } = useRequest<ResponseData>('/charlestesta.json', 'GET', {});
-    const {request, } = useRequest<ResponseData>({
+    const {request, } = useRequest<ResponseType>({
         url: '/login.json',
         method: 'POST',
         data: {
