@@ -5,16 +5,17 @@
     margin:0 auto;
     padding:.5rem 0 .77rem 0;
     font-size:.18rem;
-    color:#242424;
   }
   .tab-item {
     display: inline-block;
     font-weight: bold;
-    &-left {
-      color:#73D13D;
-    }
     &-right {
       float: right;
+      color:#73D13D;
+    }
+    a {
+      color:#242424;
+      text-decoration: none;
     }
   }
   .form {

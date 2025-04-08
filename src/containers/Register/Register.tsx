@@ -52,10 +52,9 @@ const Register = ()=> {
             <div className="tab">
                 <div className="tab-item tab-item-left">
                     <Link to="/login">login</Link>
-
                 </div>
                 <div className="tab-item tab-item-right">
-                     <Link to="/register">register</Link>
+                     register
                 </div>
             </div>
             <div className="form">

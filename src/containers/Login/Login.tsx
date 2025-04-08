@@ -51,11 +51,10 @@ const Login = ()=> {
         <div className="page login-page">
             <div className="tab">
                 <div className="tab-item tab-item-left">
-                   <Link to="/login">login</Link>
+                    login
                 </div>
                 <div className="tab-item tab-item-right">
                     <Link to="/register">register</Link>
-
                 </div>
             </div>
             <div className="form">
