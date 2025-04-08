@@ -1,4 +1,4 @@
-import './style.scss'
+
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
