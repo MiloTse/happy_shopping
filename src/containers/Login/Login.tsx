@@ -23,8 +23,7 @@ const Login = ()=> {
         url: '/charlestesta.json',
         method: 'GET',
         params: {
-            name: 'warren',
-            password: 666666,
+            phoneNumber:phoneNumber, password:password,
         },
     });
 
