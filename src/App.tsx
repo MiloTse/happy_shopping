@@ -1,7 +1,7 @@
 import 'normalize.css';
 import './styles/border.css';
 import './styles/base.css';
-import {HashRouter, Routes, Route, BrowserRouter, createHashRouter, RouterProvider} from 'react-router-dom';
+import {createHashRouter, RouterProvider} from 'react-router-dom';
 import React from "react";
 import Guide from './containers/Guide/Guide';
 import Login from './containers/Account/Login';

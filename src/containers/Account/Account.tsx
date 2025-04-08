@@ -1,7 +1,5 @@
 import './style.scss'
-import React, {useEffect, useRef, useState} from "react";
-import useRequest from "../../utils/useRequest";
-import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
+import React, {useEffect} from "react";
 import {Link, Outlet, useLocation} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 

@@ -1,8 +1,6 @@
-
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
-import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 
 //1. 首先定义接口返回内容
@@ -15,8 +13,7 @@ const Login = ()=> {
     const modalRef = useRef<ModalInterfaceType>(null);
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
-    const [showModal, setShowModal] = useState(false);
-    const [message, setMessage] = useState('');
+
     const navigate = useNavigate();
 
     //use custom hook to send request
