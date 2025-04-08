@@ -5,28 +5,27 @@
         margin:0 auto;
         padding:.5rem 0 .77rem 0;
         font-size:.18rem;
-     }
-    .tab-item {
-        display: inline-block;
-        font-weight: bold;
-        &-active {
-            a{
-            color:#73D13D !important;
+        &-item {
+            display: inline-block;
+            font-weight: bold;
+            &-active {
+                a{
+                    color:#73D13D !important;
+                }
             }
+            &-left {
+                color:#73D13D;
+            }
+            &-right {
+                float: right;
+            }
+            a {
+                color:#242424;
+                text-decoration: none;
+            }
+        }
+     }
 
-        }
-
-        &-left {
-            color:#73D13D;
-        }
-        &-right {
-            float: right;
-        }
-        a {
-            color:#242424;
-            text-decoration: none;
-        }
-    }
     .form {
         margin-bottom:.2rem;
         &-item {
@@ -52,9 +51,9 @@
     .submit {
         margin: 0 .3rem .94rem .3rem;
         line-height: .5rem;
-        border-radius:25px;
+        border-radius: .25rem;
         background:#73D13D;
-        box-shadow:0px 6px 6px 0px #D9F7BE;
+        box-shadow:0rem .06rem .06rem 0rem #D9F7BE;
         font-size: .16rem;
         color:#FFFFFF;
         text-align:center
