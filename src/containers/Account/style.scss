@@ -9,6 +9,13 @@
     .tab-item {
         display: inline-block;
         font-weight: bold;
+        &-active {
+            a{
+            color:#73D13D !important;
+            }
+
+        }
+
         &-left {
             color:#73D13D;
         }
