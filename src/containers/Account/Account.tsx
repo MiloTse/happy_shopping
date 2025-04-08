@@ -6,7 +6,6 @@ import {Link, Outlet} from "react-router-dom";
 
 
 const Account = ()=> {
-
     return (
         <div className="page account-page">
             <div className="tab">
@@ -16,11 +15,8 @@ const Account = ()=> {
                 <div className="tab-item tab-item-right">
                     <Link to="/account/register">register</Link>
                 </div>
-
-                <Outlet />
             </div>
-
-
+            <Outlet />
         </div>
 
 
