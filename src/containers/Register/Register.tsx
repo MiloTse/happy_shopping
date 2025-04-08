@@ -47,7 +47,7 @@ const Register = ()=> {
     }
 
     return (
-        <div className="page login-page">
+        <div className="page register-page">
             <div className="tab">
                 <div className="tab-item tab-item-left">login</div>
                 <div className="tab-item tab-item-right">register</div>
