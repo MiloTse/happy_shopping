@@ -34,7 +34,8 @@ function useRequest<T>(options: AxiosRequestConfig
                 url: options.url,
                 method: options.method,
                 signal: controllerRef.current.signal,
-                data: options.data
+                data: options.data,
+                params: options.params
             }).then(response => {
                 setData(response.data);
                 return response.data;

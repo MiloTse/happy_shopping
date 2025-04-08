@@ -22,7 +22,10 @@ const Login = ()=> {
     const {request, } = useRequest<ResponseData>({
         url: '/charlestesta.json',
         method: 'GET',
-        data: {},
+        params: {
+            name: 'warren',
+            password: 666666,
+        },
     });
 
     function handleSubmitBtnClick() {
