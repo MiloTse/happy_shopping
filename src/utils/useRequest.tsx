@@ -4,7 +4,7 @@ import {useState, useRef} from "react";
 
 //define a custom hook to send request
 //step2.T 就变成了传递进来的数据类型 ResponseType
-function useRequest<T>(options: AxiosRequestConfig
+function useRequest<T>(options: AxiosRequestConfig = {}
 ) {
     //step3.data的类型定义为 ResponseType | null
     //data 要么是传递进来的数据类型，要么是null
