@@ -49,15 +49,7 @@ const Login = ()=> {
     }
 
     return (
-        <div className="page login-page">
-            <div className="tab">
-                <div className="tab-item tab-item-left">
-                    login
-                </div>
-                <div className="tab-item tab-item-right">
-                    <Link to="/register">register</Link>
-                </div>
-            </div>
+        <>
             <div className="form">
                 <div className="form-item">
                     <div className='form-item-title'>phone number</div>
@@ -94,8 +86,8 @@ const Login = ()=> {
             </p>
             <Modal ref={modalRef}/>
 
-        </div>
 
+        </>
 
 )
 
