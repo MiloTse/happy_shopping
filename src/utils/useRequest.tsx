@@ -54,11 +54,17 @@ function useRequest<T>(options: AxiosRequestConfig = {
                 signal: controllerRef.current.signal,
                 data: requestOptions?.data || options.data,
                 params: requestOptions?.params || options.params,
+            // headers,
             headers: {...headers, ...requestOptions?.headers}, //added token to header
             }).then(response => {
                 setData(response.data);
                 return response.data;
             }).catch(e => {
+                if(e?.resopnse?.status === 401) {//401 means unauthorized
+                    //if token is invalid, clear it
+                    localStorage.removeItem('token');
+                }
+
                 setError(e.message || 'unknown request error.');
                 throw new Error(e);
             }).finally(()=>{
