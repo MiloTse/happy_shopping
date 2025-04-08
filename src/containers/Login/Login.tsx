@@ -28,6 +28,11 @@ const Login = ()=> {
             return;
         }
 
+        if(!password ) {
+             modalRef.current?.showMessage('password should not be empty.');
+            return;
+        }
+
 
 
 
