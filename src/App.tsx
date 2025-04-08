@@ -1,29 +1,37 @@
 import 'normalize.css';
 import './styles/border.css';
 import './styles/base.css';
-import {HashRouter, Routes, Route, BrowserRouter} from 'react-router-dom';
+import {HashRouter, Routes, Route, BrowserRouter, createHashRouter, RouterProvider} from 'react-router-dom';
 import React from "react";
 import Guide from './containers/Guide/Guide';
 import Login from './containers/Login/Login';
 import Register from './containers/Register/Register';
 
+const router = createHashRouter([
+    {
+        path: "/", element: <Guide />
+    },
+    {
+        path: "/login", element: <Login />
+    },
+    {
+        path: "/register", element: <Register />
+    },
+
+]);
+
+
+
+
+
+
+
+
+
+
 const App =() => {
 
-    return (
-        <>
-
-        {/* <BrowserRouter> */}
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={<Guide />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-            </Routes>
-        </HashRouter>
-        {/*</BrowserRouter>*/}
-
-        </>
-     )
+    return <RouterProvider router={router}/>;
 }
 
 export default App;
