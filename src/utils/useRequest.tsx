@@ -4,7 +4,15 @@ import {useState, useRef} from "react";
 
 //define a custom hook to send request
 //step2.T 就变成了传递进来的数据类型 ResponseType
-function useRequest<T>(options: AxiosRequestConfig = {}
+function useRequest<T>(options: AxiosRequestConfig = {
+    //default initial value
+    url: '/',
+    method: 'GET',
+    data: {},
+    params: {},
+
+
+                       }//defined options an initial value
 ) {
     //step3.data的类型定义为 ResponseType | null
     //data 要么是传递进来的数据类型，要么是null
@@ -20,7 +28,8 @@ function useRequest<T>(options: AxiosRequestConfig = {}
         controllerRef.current.abort();
     }
 
-    const request = async () => {
+    //either passing or not passing options
+    const request =  (requestOptions?: AxiosRequestConfig) => {
         //每次请求之前先清空之前的状态
         //clear the previous state before each request
         setData(null);
@@ -31,11 +40,13 @@ function useRequest<T>(options: AxiosRequestConfig = {}
         //sending a request, catching an exception
         return axios.request<T>({
                 //passing three parameters as obj
-                url: options.url,
-                method: options.method,
+            //if passing, use requestOptions?.url
+            //if not passing, use options.url instead.(outer)
+                url: requestOptions?.url || options.url,
+                method: requestOptions?.method || options.method,
                 signal: controllerRef.current.signal,
-                data: options.data,
-                params: options.params
+                data: requestOptions?.data || options.data,
+                params: requestOptions?.params || options.params
             }).then(response => {
                 setData(response.data);
                 return response.data;
