@@ -51,7 +51,7 @@ const Login = ()=> {
         <div className="page login-page">
             <div className="tab">
                 <div className="tab-item tab-item-left">
-                    login
+                   <Link to="/login">login</Link>
                 </div>
                 <div className="tab-item tab-item-right">
                     <Link to="/register">register</Link>

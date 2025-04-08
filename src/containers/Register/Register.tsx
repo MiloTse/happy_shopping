@@ -2,6 +2,7 @@ import './style.scss'
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
+import {Link} from "react-router-dom";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -49,12 +50,27 @@ const Register = ()=> {
     return (
         <div className="page register-page">
             <div className="tab">
-                <div className="tab-item tab-item-left">login</div>
-                <div className="tab-item tab-item-right">register</div>
+                <div className="tab-item tab-item-left">
+                    <Link to="/login">login</Link>
+
+                </div>
+                <div className="tab-item tab-item-right">
+                     <Link to="/register">register</Link>
+                </div>
             </div>
             <div className="form">
                 <div className="form-item">
                     <div className='form-item-title'>phone number</div>
+                    <input value={phoneNumber}
+                           className='form-item-content'
+                           placeholder='please input phone number'
+                           onChange={(e)=>{
+                               setPhoneNumber(e.target.value);
+                           }}
+                    />
+                </div>
+                <div className="form-item">
+                    <div className='form-item-title'>phone number2</div>
                     <input value={phoneNumber}
                            className='form-item-content'
                            placeholder='please input phone number'
