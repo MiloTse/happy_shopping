@@ -31,19 +31,19 @@ const Login = ()=> {
             modalRef.current?.showMessage('phone number should not be empty.');
             return;
         }
-
         if(!password ) {
              modalRef.current?.showMessage('password should not be empty.');
             return;
         }
-
-
-
-
         request().then((data)=>{
             data && console.log(data);
-            //if login success, redirect to home page
-            navigate('/home');
+            //validate
+            const {data: token } = data;
+            if(token) {
+                localStorage.setItem('token', token);
+                //if login success, redirect to home page
+                navigate('/home');
+            }
          }).catch((e:any)=>{
              // alert(e?.message);
             // setShowModal(true);
