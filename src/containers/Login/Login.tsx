@@ -1,7 +1,7 @@
 import './style.scss'
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import Modal from "../../components/Modal/Modal";
+import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
 
 //1. 首先定义接口返回内容
 type ResponseData = {
@@ -9,7 +9,7 @@ type ResponseData = {
 }
 
 const Login = ()=> {
-
+    const modalRef = useRef<ModalInterfaceType>(null);
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [showModal, setShowModal] = useState(false);
@@ -28,6 +28,7 @@ const Login = ()=> {
              // alert(e?.message);
             // setShowModal(true);
             // setMessage(e?.message || 'unknown error.');
+            modalRef.current?.showMessage(e?.message || 'unknown error.');
         });
     }
 
@@ -71,7 +72,7 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            <Modal />
+            <Modal ref={modalRef}/>
 
         </div>
 
