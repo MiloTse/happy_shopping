@@ -14,14 +14,15 @@ const router = createHashRouter([
     },
     {
       path: "/account", element: <Account />,
-    },
-    {
-        path: "/login", element: <Login />
-    },
-    {
-        path: "/register", element: <Register />
-    },
-
+        children: [
+            {
+                path: "/account/login", element: <Login />
+            },
+            {
+                path: "/account/register", element: <Register />
+            }
+        ]
+    }
 ]);
 
 
