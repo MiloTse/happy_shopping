@@ -26,9 +26,13 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
 
     useImperativeHandle(ref,()=>{
         return {
-            showMessage: (msg: string)=>{
+            showMessage: (message: string)=>{
                 setShowModal(true);
-                setMessage(msg);
+                setMessage(message);
+                //add a timer to close the modal after 1.5s
+                setTimeout(()=>{
+                    setShowModal(false);
+                },1500);
             }
         }
     },[showModal, message]);
