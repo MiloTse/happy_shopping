@@ -5,7 +5,7 @@ import {HashRouter, Routes, Route, BrowserRouter} from 'react-router-dom';
 import React from "react";
 import Guide from './containers/Guide/Guide';
 import Login from './containers/Login/Login';
-
+import Register from './containers/Register/Register';
 
 const App =() => {
 
