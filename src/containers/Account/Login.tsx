@@ -35,10 +35,20 @@ const Login = ()=> {
              modalRef.current?.showMessage('password should not be empty.');
             return;
         }
-        request().then((data)=>{
+        request(
+            {
+                url: '/login.json',
+                method: 'POST',
+                data: {
+                    phoneNumber: phoneNumber,
+                    password: password,
+                }
+            }
+        ).then((data)=>{
             data && console.log(data);
             //validate
             const {data: token } = data;
+            console.log(token)
             if(token) {
                 localStorage.setItem('token', token);
                 //if login success, redirect to home page
