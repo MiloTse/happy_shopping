@@ -11,8 +11,10 @@ type ResponseType = {
 
 const Register = ()=> {
     const modalRef = useRef<ModalInterfaceType>(null);
+    const [userName, setUserName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
+    const [checkPassword, setCheckPassword] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState('');
 
@@ -59,17 +61,17 @@ const Register = ()=> {
             </div>
             <div className="form">
                 <div className="form-item">
-                    <div className='form-item-title'>phone number</div>
-                    <input value={phoneNumber}
+                    <div className='form-item-title'>username</div>
+                    <input value={userName}
                            className='form-item-content'
-                           placeholder='please input phone number'
+                           placeholder='please input username'
                            onChange={(e)=>{
-                               setPhoneNumber(e.target.value);
+                               setUserName(e.target.value);
                            }}
                     />
                 </div>
                 <div className="form-item">
-                    <div className='form-item-title'>phone number2</div>
+                    <div className='form-item-title'>phone number</div>
                     <input value={phoneNumber}
                            className='form-item-content'
                            placeholder='please input phone number'
@@ -86,6 +88,17 @@ const Register = ()=> {
                            placeholder="please input password"
                            onChange={(e)=>{
                                setPassword(e.target.value);
+                           }}
+                    />
+                </div>
+                <div className="form-item">
+                    <div className='form-item-title'>confirm password</div>
+                    <input value={checkPassword}
+                           type="password"
+                           className="form-item-content"
+                           placeholder="please re-input password"
+                           onChange={(e)=>{
+                               setCheckPassword(e.target.value);
                            }}
                     />
                 </div>
