@@ -6,7 +6,8 @@ import {Link} from "react-router-dom";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
-    name: string;
+    status:string,
+    data:string
 }
 
 const Register = ()=> {
@@ -65,7 +66,7 @@ const Register = ()=> {
             }
 
         ).then((data)=>{
-            data && console.log(data.name);
+            data && console.log(data);
         }).catch((e:any)=>{
             // alert(e?.message);
             // setShowModal(true);
