@@ -25,21 +25,46 @@ const Register = ()=> {
     const {request, } = useRequest<ResponseType>();
 
     function handleSubmitBtnClick() {
-        if(!phoneNumber ) {
+        if(!userName) {
+             modalRef.current?.showMessage('userName should not be empty.');
+            return;
+        }
+        if(!phoneNumber) {
             // alert('please input phone number!');
             modalRef.current?.showMessage('phone number should not be empty.');
             return;
         }
 
-        if(!password ) {
+        if(!password) {
             modalRef.current?.showMessage('password should not be empty.');
+            return;
+        }
+
+        if(password.length<6) {
+            modalRef.current?.showMessage('password length should not be less than 6.');
+            return;
+        }
+
+        if(password!=checkPassword) {
+            modalRef.current?.showMessage('password should be same as checkPassword.');
             return;
         }
 
 
 
 
-        request().then((data)=>{
+        request({
+                url:'/register.json',
+                method:'POST',
+                data:{
+                    userName:userName,
+                    phoneNumber:phoneNumber,
+                    password:password
+
+                }
+            }
+
+        ).then((data)=>{
             data && console.log(data.name);
         }).catch((e:any)=>{
             // alert(e?.message);
@@ -105,7 +130,7 @@ const Register = ()=> {
             </div>
 
             <div className="submit" onClick={handleSubmitBtnClick}>
-                login
+                register
             </div>
             <p className="notice">
                 <input type="checkbox"/>
