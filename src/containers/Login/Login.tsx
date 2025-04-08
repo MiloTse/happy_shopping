@@ -22,6 +22,15 @@ const Login = ()=> {
     const {request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
 
     function handleSubmitBtnClick() {
+        if(!phoneNumber ) {
+            // alert('please input phone number!');
+            modalRef.current?.showMessage('phone number should not be empty.');
+            return;
+        }
+
+
+
+
         request().then((data)=>{
             data && console.log(data.name);
          }).catch((e:any)=>{
