@@ -38,7 +38,7 @@ const Guide =() => {
 
     //simple way to handle click event without useCallback hook without buffering
     function handleIconClick() {
-        navigate('/login');
+        navigate('/account/login');
     }
 
 
