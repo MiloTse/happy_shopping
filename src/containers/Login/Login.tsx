@@ -2,6 +2,7 @@ import './style.scss'
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
+import {Link} from "react-router-dom";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -49,8 +50,13 @@ const Login = ()=> {
     return (
         <div className="page login-page">
             <div className="tab">
-                <div className="tab-item tab-item-left">login</div>
-                <div className="tab-item tab-item-right">register</div>
+                <div className="tab-item tab-item-left">
+                    login
+                </div>
+                <div className="tab-item tab-item-right">
+                    <Link to="/register">register</Link>
+
+                </div>
             </div>
             <div className="form">
                 <div className="form-item">
