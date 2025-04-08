@@ -11,10 +11,10 @@ const Account = ()=> {
         <div className="page account-page">
             <div className="tab">
                 <div className="tab-item tab-item-left">
-                    <Link to="/login">login</Link>
+                    <Link to="/account/login">login</Link>
                 </div>
                 <div className="tab-item tab-item-right">
-                    <Link to="/register">register</Link>
+                    <Link to="/account/register">register</Link>
                 </div>
 
                 <Outlet />
