@@ -76,15 +76,7 @@ const Register = ()=> {
     }
 
     return (
-        <div className="page register-page">
-            <div className="tab">
-                <div className="tab-item tab-item-left">
-                    <Link to="/login">login</Link>
-                </div>
-                <div className="tab-item tab-item-right">
-                     register
-                </div>
-            </div>
+        <>
             <div className="form">
                 <div className="form-item">
                     <div className='form-item-title'>username</div>
@@ -142,7 +134,7 @@ const Register = ()=> {
             </p>
             <Modal ref={modalRef}/>
 
-        </div>
+        </>
 
 
     )
