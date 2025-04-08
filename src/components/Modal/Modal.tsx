@@ -13,7 +13,8 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
     const [message, setMessage] = useState('');
 
     //store an unchangeable ref to store the div element
-    const divElement = useRef(document.createElement('div'));
+    const divRef = useRef(document.createElement('div'));
+    const divElement = divRef.current;
     useImperativeHandle(ref,()=>{
         return {
             showMessage: (message: string)=>{
@@ -27,6 +28,25 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
         }
     },[showModal, message]);
 
+
+
+    useEffect(()=>{
+        if(showModal){
+            //append the div element to the body
+            document.body.appendChild(divElement);
+        }else {
+            if(divElement.parentElement){
+                document.body.removeChild(divElement);
+            }
+        }
+        return ()=>{
+            if(divElement.parentElement){
+                document.body.removeChild(divElement);
+            }
+        }
+
+    },[showModal,divElement]);//divElement as the external ref, should be added to reference
+
     //store the first parameter <div> to the divElement
     return createPortal (
         <div className="modal">
@@ -34,7 +54,7 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
                 {message}
             </div>
         </div>,
-        divElement.current
+        divElement
     );
 
 
