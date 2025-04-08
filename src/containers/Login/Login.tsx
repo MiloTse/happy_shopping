@@ -21,7 +21,7 @@ const Login = ()=> {
     // const { data, error, request, } = useRequest<ResponseData>('/charlestesta.json', 'GET', {});
     const {request, } = useRequest<ResponseData>({
         url: '/charlestesta.json',
-        method: 'GET',
+        method: 'POST',
         params: {
             phoneNumber:phoneNumber, password:password,
         },
