@@ -7,6 +7,7 @@ import Guide from './containers/Guide/Guide';
 import Login from './containers/Account/Login';
 import Register from './containers/Account/Register';
 import Account from "./containers/Account/Account";
+import Home from "./containers/Home/Home";
 
 const router = createHashRouter([{
         path: "/",
@@ -23,6 +24,10 @@ const router = createHashRouter([{
                 element: <Register />
             }
         ]
+    },
+    {
+        path: "/home",
+        element: <Home />
     }
 ]);
 

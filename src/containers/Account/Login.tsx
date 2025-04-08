@@ -3,6 +3,7 @@ import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
 import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -16,6 +17,7 @@ const Login = ()=> {
     const [password, setPassword] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     //use custom hook to send request
     //step1. 通过泛型传递给useRequest 方法
@@ -40,6 +42,8 @@ const Login = ()=> {
 
         request().then((data)=>{
             data && console.log(data);
+            //if login success, redirect to home page
+            navigate('/home');
          }).catch((e:any)=>{
              // alert(e?.message);
             // setShowModal(true);
