@@ -1,13 +1,10 @@
-import axios, {AxiosRequestConfig, Method} from "axios";
+import axios, {AxiosRequestConfig} from "axios";
 import {useState, useRef} from "react";
 
 
 //define a custom hook to send request
 //step2.T 就变成了传递进来的数据类型 ResponseType
-function useRequest<T>(
-    url: string,
-    method: Method,
-    payload: AxiosRequestConfig
+function useRequest<T>(options: AxiosRequestConfig
 ) {
     //step3.data的类型定义为 ResponseType | null
     //data 要么是传递进来的数据类型，要么是null
@@ -34,10 +31,10 @@ function useRequest<T>(
         //sending a request, catching an exception
         return axios.request<T>({
                 //passing three parameters as obj
-                url,
-                method,
+                url: options.url,
+                method: options.method,
                 signal: controllerRef.current.signal,
-                data: payload
+                data: options.data
             }).then(response => {
                 setData(response.data);
                 return response.data;

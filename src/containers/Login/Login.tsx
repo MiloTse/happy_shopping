@@ -19,7 +19,11 @@ const Login = ()=> {
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
     // const { data, error, request, } = useRequest<ResponseData>('/charlestesta.json', 'GET', {});
-    const {request, } = useRequest<ResponseData>('/charlestest.json', 'GET', {});
+    const {request, } = useRequest<ResponseData>({
+        url: '/charlestesta.json',
+        method: 'GET',
+        data: {},
+    });
 
     function handleSubmitBtnClick() {
         if(!phoneNumber ) {
