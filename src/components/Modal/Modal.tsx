@@ -1,19 +1,7 @@
 import './style.scss';
-import {forwardRef, useEffect, useImperativeHandle, useState} from "react";
+import {forwardRef, useEffect, useImperativeHandle, useRef, useState} from "react";
+import {createPortal} from "react-dom";
 
-
-//if showModal is true, close after 1.5s
-/*
-useEffect(() => {
-    const timer = setTimeout(() => {
-        alert('login success');
-        setShowModal(false);
-    }, 1500);
-    //clean up the timer
-    return () => clearTimeout(timer);
-}, [showModal]);
-
-*/
 
 //模态框对应的TS类型
 export type ModalInterfaceType = {
@@ -24,6 +12,8 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
     const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState('');
 
+    //store an unchangeable ref to store the div element
+    const divElement = useRef(document.createElement('div'));
     useImperativeHandle(ref,()=>{
         return {
             showMessage: (message: string)=>{
@@ -37,13 +27,15 @@ const Modal = forwardRef<ModalInterfaceType>((props, ref)=>{
         }
     },[showModal, message]);
 
-    return showModal? (
+    //store the first parameter <div> to the divElement
+    return createPortal (
         <div className="modal">
             <div className="modal-text">
                 {message}
             </div>
-        </div>
-    ): null;
+        </div>,
+        divElement.current
+    );
 
 
 });
