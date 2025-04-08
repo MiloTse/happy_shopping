@@ -36,6 +36,13 @@ function useRequest<T>(options: AxiosRequestConfig = {
         setError('');
         setLoaded(false);
 
+        //bring login token to backend when sending request
+        const loginToken = localStorage.getItem('token');
+        const headers = loginToken ? {
+            token: loginToken,
+            Authorization: `Bearer ${loginToken}`,
+        } : {};
+
         //发送异步请求，捕捉异常
         //sending a request, catching an exception
         return axios.request<T>({
@@ -46,7 +53,8 @@ function useRequest<T>(options: AxiosRequestConfig = {
                 method: requestOptions?.method || options.method,
                 signal: controllerRef.current.signal,
                 data: requestOptions?.data || options.data,
-                params: requestOptions?.params || options.params
+                params: requestOptions?.params || options.params,
+            headers: {...headers, ...requestOptions?.headers}, //added token to header
             }).then(response => {
                 setData(response.data);
                 return response.data;
