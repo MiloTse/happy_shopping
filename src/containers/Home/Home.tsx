@@ -13,7 +13,7 @@ const Home =() => {
                     Ottawa(Chinatown Branch)
                 </h3>
                 <div className="search">
-                <span className="iconfont"></span>
+                <span className="iconfont">&#xe600;</span>
                     Input search words here
                 </div>
             </div>
