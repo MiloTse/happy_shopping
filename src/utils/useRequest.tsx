@@ -2,18 +2,17 @@ import axios, {AxiosRequestConfig} from "axios";
 import {useState, useRef, useCallback} from "react";
 import {useNavigate} from "react-router-dom";
 
-
-//define a custom hook to send request
-//step2.T 就变成了传递进来的数据类型 ResponseType
-function useRequest<T>(options: AxiosRequestConfig = {
+//默认请求参数
+const defaultRequestConfig= {
     //default initial value
     url: '/',
     method: 'GET',
     data: {},
     params: {},
-
-
-                       }//defined options an initial value
+}
+//define a custom hook to send request
+//step2.T 就变成了传递进来的数据类型 ResponseType
+function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defined options an initial value
 ) {
 
     const navigate = useNavigate();
