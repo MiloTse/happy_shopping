@@ -1,8 +1,9 @@
 import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
+import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
 
 
 const localLocation= localStorage.getItem('location');
@@ -21,12 +22,18 @@ const defaultRequestData = {
 const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
     const {request} = useRequest(requestData);
+    const modalRef = useRef<ModalInterfaceType>(null);
+
+
+
     //request backend server when requestData changed
     useEffect(() => {
         request().then((data)=>{
             console.log(data);
         }).catch(e=>{
             console.log(e?.message);
+            modalRef.current?.showMessage(e?.message || 'unknown error.');
+
         })
     }, [requestData, request ]);
 
@@ -98,6 +105,7 @@ const Home =() => {
                     <div className="pagination">{page}/2</div>
                 </div>
             </div>
+            <Modal ref={modalRef}/>
 
         </div>
     )
