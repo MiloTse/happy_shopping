@@ -79,7 +79,7 @@ function useRequest<T>(options: AxiosRequestConfig = {
             }).finally(()=>{
                 setLoaded(true);
             })
-    },[options, navigate]);
+    },[options, navigate]);//依赖项为 options 和 navigate
     //step4. 把data 返回， 返回 data 的类型一定为 ResponseType | null
     return {data, error, loaded, request, cancel};
 }
