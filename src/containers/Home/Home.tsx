@@ -23,9 +23,15 @@ const Home =() => {
                         onSlideChange={() => console.log('slide change')}
                     >
                         <SwiperSlide>
-                            <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                            <div className="swiper-item">
+                                <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                            </div>
                         </SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
+                        <SwiperSlide>
+                            <div className="swiper-item">
+                                <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                            </div>
+                        </SwiperSlide>
                         <SwiperSlide>Slide 3</SwiperSlide>
                         <SwiperSlide>Slide 4</SwiperSlide>
                     </Swiper>
