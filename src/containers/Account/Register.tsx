@@ -1,7 +1,8 @@
 
 import React, { useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
- import { message } from "../../utils/message";
+import { message } from "../../utils/message";
+import {useNavigate} from "react-router-dom";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -14,6 +15,7 @@ const Register = ()=> {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
+    const navigate = useNavigate();
 
 
     //use custom hook to send request
@@ -64,6 +66,9 @@ const Register = ()=> {
 
         ).then((data)=>{
             data && console.log(data);
+            if(data?.status=='success') {
+                navigate('/account/login');
+            }
         }).catch((e:any)=>{
             // alert(e?.message);
             // setShowModal(true);
