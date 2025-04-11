@@ -1,7 +1,7 @@
 
 import React, { useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
+ import { message } from "../../utils/message";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -10,8 +10,7 @@ type ResponseType = {
 }
 
 const Register = ()=> {
-    const modalRef = useRef<ModalInterfaceType>(null);
-    const [userName, setUserName] = useState('');
+     const [userName, setUserName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
@@ -25,27 +24,27 @@ const Register = ()=> {
 
     function handleSubmitBtnClick() {
         if(!userName) {
-             modalRef.current?.showMessage('userName should not be empty.');
+             message('userName should not be empty.');
             return;
         }
         if(!phoneNumber) {
             // alert('please input phone number!');
-            modalRef.current?.showMessage('phone number should not be empty.');
+            message('phone number should not be empty.');
             return;
         }
 
         if(!password) {
-            modalRef.current?.showMessage('password should not be empty.');
+            message('password should not be empty.');
             return;
         }
 
         if(password.length<6) {
-            modalRef.current?.showMessage('password length should not be less than 6.');
+            message('password length should not be less than 6.');
             return;
         }
 
         if(password!=checkPassword) {
-            modalRef.current?.showMessage('password should be same as checkPassword.');
+            message('password should be same as checkPassword.');
             return;
         }
 
@@ -69,7 +68,7 @@ const Register = ()=> {
             // alert(e?.message);
             // setShowModal(true);
             // setMessage(e?.message || 'unknown error.');
-            modalRef.current?.showMessage(e?.message || 'unknown error.');
+            message(e?.message || 'unknown error.');
         });
     }
 
@@ -130,7 +129,6 @@ const Register = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            <Modal ref={modalRef}/>
 
         </>
 
