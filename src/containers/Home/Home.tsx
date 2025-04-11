@@ -5,7 +5,7 @@ import React, {useState} from "react";
 
 
 const Home =() => {
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(1);
 
 
     return (
@@ -23,7 +23,7 @@ const Home =() => {
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
+                        onSlideChange={(e:any) => {setPage(e.activeIndex+1)}}
                     >
                         <SwiperSlide>
                             <div className="swiper-item">
@@ -37,7 +37,7 @@ const Home =() => {
                         </SwiperSlide>
 
                     </Swiper>
-                    <div className="pagination">{page+1}/2</div>
+                    <div className="pagination">{page}/2</div>
                 </div>
             </div>
 
