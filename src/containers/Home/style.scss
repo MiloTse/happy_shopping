@@ -25,7 +25,15 @@
              margin-left:.12rem;
             margin-right:.08rem;
          }
+       }
+      .swiper-item {
+        margin-left: .18rem;
+
+        &-img {
+          width: 3.4rem;
+          height: .9rem;
         }
+      }
     }
 }
 

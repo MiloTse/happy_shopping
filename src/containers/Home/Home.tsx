@@ -24,12 +24,12 @@ const Home =() => {
                     >
                         <SwiperSlide>
                             <div className="swiper-item">
-                                <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                                <img className="swiper-item-img" src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="swiper-item">
-                                <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                                <img  className="swiper-item-img"  src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>Slide 3</SwiperSlide>
