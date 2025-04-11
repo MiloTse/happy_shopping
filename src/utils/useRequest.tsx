@@ -1,5 +1,5 @@
 import axios, {AxiosRequestConfig} from "axios";
-import {useState, useRef} from "react";
+import {useState, useRef, useCallback} from "react";
 import {useNavigate} from "react-router-dom";
 
 
@@ -35,7 +35,7 @@ function useRequest<T>(options: AxiosRequestConfig = {
     }
 
     //either passing or not passing options
-    const request =  (requestOptions?: AxiosRequestConfig) => {
+    const request =  useCallback((requestOptions?: AxiosRequestConfig) => {
         //每次请求之前先清空之前的状态
         //clear the previous state before each request
         setData(null);
@@ -79,7 +79,7 @@ function useRequest<T>(options: AxiosRequestConfig = {
             }).finally(()=>{
                 setLoaded(true);
             })
-    }
+    },[options, navigate]);
     //step4. 把data 返回， 返回 data 的类型一定为 ResponseType | null
     return {data, error, loaded, request, cancel};
 }
