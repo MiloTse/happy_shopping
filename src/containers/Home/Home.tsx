@@ -3,13 +3,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import React, {useEffect, useState} from "react";
 
+
+const localLocation= localStorage.getItem('location');
+const locationHistory= localLocation ? JSON.parse(localLocation) : null;
+
 //defaultRequestData
 const defaultRequestData = {
     url: '/home.json',
     method: 'POST',
     data: {
-        latitude:45.3497856,
-        longitude: -75.7554394,
+        latitude:locationHistory? locationHistory.latitude: 45.3497856,
+        longitude: locationHistory? locationHistory.longitude: -75.7554394,
     }
 }
 
@@ -17,12 +21,17 @@ const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
 
     useEffect(()=>{
-         if(navigator.geolocation){
+        //get user location if locationHistory not exist, else used the locationHistory
+         if(navigator.geolocation && !locationHistory){
              navigator.geolocation.getCurrentPosition((position)=>{
                  console.log(position);
                  const { coords } = position;
                  const { latitude, longitude } = coords;
                  console.log(latitude,longitude);
+                 //store the location to localStorage
+                 localStorage.setItem('location', JSON.stringify({
+                     latitude, longitude
+                 }));
                  //setRequestData if can get location, and copy to new object
                  const newRequestData = {
                      ... defaultRequestData,
