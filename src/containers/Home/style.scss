@@ -26,14 +26,32 @@
             margin-right:.08rem;
          }
        }
-      .swiper-item {
-        margin-left: .18rem;
+      .swiper-area {
+        position: relative;
+        .swiper-item {
+          margin-left: .18rem;
 
-        &-img {
-          width: 3.4rem;
-          height: .9rem;
+          &-img {
+            width: 3.4rem;
+            height: .9rem;
+          }
+        }
+        .pagination {
+          position: absolute;
+          z-index:999;
+          left:50%;
+          bottom:.26rem;
+          transform: translatex(-50%);
+          color: #FFF;
+          font-size:.12rem;
+          line-height:.2rem;
+          text-align: center;
+          background:#52C41A;
+          border-radius: .1rem;
+          padding:0 .1rem;
         }
       }
+
     }
 }
 

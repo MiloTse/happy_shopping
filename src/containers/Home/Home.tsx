@@ -1,10 +1,13 @@
 import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import React from "react";
+import React, {useState} from "react";
 
 
 const Home =() => {
+    const [page, setPage] = useState(0);
+
+
     return (
         <div className="page home-page">
             <div className="banner">
@@ -32,9 +35,9 @@ const Home =() => {
                                 <img  className="swiper-item-img"  src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
+
                     </Swiper>
+                    <div className="pagination">{page+1}/2</div>
                 </div>
             </div>
 
