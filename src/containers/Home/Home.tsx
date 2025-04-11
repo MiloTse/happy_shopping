@@ -2,6 +2,7 @@ import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import React, {useEffect, useState} from "react";
+import useRequest from "../../utils/useRequest";
 
 
 const localLocation= localStorage.getItem('location');
@@ -19,6 +20,16 @@ const defaultRequestData = {
 
 const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
+    const {request} = useRequest(requestData);
+    //request backend server when requestData changed
+    useEffect(() => {
+        request().then((data)=>{
+            console.log(data);
+        }).catch(e=>{
+            console.log(e?.message);
+        })
+    }, [requestData, request ]);
+
 
     //obtain user location
     useEffect(()=>{
