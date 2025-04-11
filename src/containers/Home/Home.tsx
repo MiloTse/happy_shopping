@@ -20,6 +20,7 @@ const defaultRequestData = {
 const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
 
+    //obtain user location
     useEffect(()=>{
         //get user location if locationHistory not exist, else used the locationHistory
          if(navigator.geolocation && !locationHistory){
