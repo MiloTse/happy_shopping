@@ -28,7 +28,8 @@ const element = document.createElement('div');
 
 const root = ReactDOM.createRoot(element);
 
-export const message = (message: string)=>{
+//timeout default 3000ms, can be covered by timeout parameter
+export const message = (message: string, timeout=3000)=>{
     root.render(
         <div style={modalstyle}>
             <div style={modalTextStyle} >{message}</div>
@@ -39,7 +40,7 @@ export const message = (message: string)=>{
         document.body.appendChild(element);
         setTimeout(()=>{
             document.body.removeChild(element);
-        },3000);
+        },timeout);
     }
 
 

@@ -31,7 +31,7 @@ const Home =() => {
         }).catch(e=>{
             console.log(e?.message);
 
-            message(e?.message || 'unknown error.');
+            message(e?.message, 1500);
         })
     }, [requestData, request ]);
 
