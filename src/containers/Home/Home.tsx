@@ -1,10 +1,35 @@
 import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
 const Home =() => {
+/*    const [requestData, setRequestData] = useState<any>({
+        url: '/home.json',
+        method: 'POST',
+        data: {
+            latitude:45.3497856,
+            longitude: -75.7554394,
+        }
+
+    });*/
+
+    useEffect(()=>{
+         if(navigator.geolocation){
+             navigator.geolocation.getCurrentPosition((position)=>{
+                 console.log(position);
+             },(error)=>{
+                 console.log(error);
+             },{
+                 timeout: 1000,
+             })
+         }
+    })
+
+
+
+
     const [page, setPage] = useState(1);
 
 
@@ -13,7 +38,7 @@ const Home =() => {
             <div className="banner">
                 <h3 className="location">
                     <span className="iconfont">&#xe68e;</span>
-                    Ottawa(Chinatown Branch)
+                    Ottawa(Algonquin College store)
                 </h3>
                 <div className="search">
                 <span className="iconfont">&#xe600;</span>
