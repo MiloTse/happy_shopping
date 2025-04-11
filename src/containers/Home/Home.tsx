@@ -3,29 +3,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import React, {useEffect, useState} from "react";
 
+//defaultRequestData
+const defaultRequestData = {
+    url: '/home.json',
+    method: 'POST',
+    data: {
+        latitude:45.3497856,
+        longitude: -75.7554394,
+    }
+}
 
 const Home =() => {
-/*    const [requestData, setRequestData] = useState<any>({
-        url: '/home.json',
-        method: 'POST',
-        data: {
-            latitude:45.3497856,
-            longitude: -75.7554394,
-        }
-
-    });*/
+    const [requestData, setRequestData] = useState(defaultRequestData);
 
     useEffect(()=>{
          if(navigator.geolocation){
              navigator.geolocation.getCurrentPosition((position)=>{
                  console.log(position);
+                 const { coords } = position;
+                 const { latitude, longitude } = coords;
+                 console.log(latitude,longitude);
+                 //setRequestData if can get location, and copy to new object
+                 const newRequestData = {
+                     ... defaultRequestData,
+                     data: {
+                         latitude, longitude
+                 }};
+                 setRequestData(newRequestData);
+
              },(error)=>{
                  console.log(error);
              },{
-                 timeout: 1000,
+                 timeout: 500,
              })
          }
-    })
+    } );
 
 
 
