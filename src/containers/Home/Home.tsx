@@ -22,7 +22,9 @@ const Home =() => {
                         slidesPerView={1}
                         onSlideChange={() => console.log('slide change')}
                     >
-                        <SwiperSlide>Slide 1</SwiperSlide>
+                        <SwiperSlide>
+                            <img src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
+                        </SwiperSlide>
                         <SwiperSlide>Slide 2</SwiperSlide>
                         <SwiperSlide>Slide 3</SwiperSlide>
                         <SwiperSlide>Slide 4</SwiperSlide>
