@@ -1,7 +1,7 @@
 import React, {useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import Modal,{ ModalInterfaceType } from "../../components/Modal/Modal";
-import {useNavigate} from "react-router-dom";
+ import {useNavigate} from "react-router-dom";
+import { message } from "../../utils/message";
 
 //1. 首先定义接口返回内容
 type ResponseType = {
@@ -10,8 +10,7 @@ type ResponseType = {
 }
 
 const Login = ()=> {
-    const modalRef = useRef<ModalInterfaceType>(null);
-    const [phoneNumber, setPhoneNumber] = useState('');
+     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
@@ -25,11 +24,11 @@ const Login = ()=> {
     function handleSubmitBtnClick() {
         if(!phoneNumber ) {
             // alert('please input phone number!');
-            modalRef.current?.showMessage('phone number should not be empty.');
+            message('phone number should not be empty.');
             return;
         }
         if(!password ) {
-             modalRef.current?.showMessage('password should not be empty.');
+             message('password should not be empty.');
             return;
         }
         request(
@@ -55,7 +54,7 @@ const Login = ()=> {
              // alert(e?.message);
             // setShowModal(true);
             // setMessage(e?.message || 'unknown error.');
-            modalRef.current?.showMessage(e?.message || 'unknown error.');
+            message(e?.message || 'unknown error.');
         });
     }
 
@@ -95,7 +94,6 @@ const Login = ()=> {
                 &
                 <a href="#">Privacy Policy</a>
             </p>
-            <Modal ref={modalRef}/>
 
 
         </>
