@@ -86,10 +86,14 @@ function useRequest<T>(
     //传递参数发生变化，自动发送请求
     //useRequest 封装了useEffect
     useEffect(() => {
-        //here should handle the exception thrown by request
-        request(options).catch(e=>{
-            message(e?.message, 1500);
-        })
+        if(!options.manual) {//if not manual, automatically send request
+            //here should handle the exception thrown by request
+            request(options).catch(e=>{
+                message(e?.message, 1500);
+            })
+
+        }
+
     }, [options,request]);
 
 
