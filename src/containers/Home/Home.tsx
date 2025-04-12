@@ -39,7 +39,7 @@ const defaultRequestData = {
 const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
     //data： 请求发送返回的结果
-    const {data} = useRequest(requestData);
+    const {data} = useRequest<ResponseType>(requestData);
 
     console.log(data);
 
