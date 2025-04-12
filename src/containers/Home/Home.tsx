@@ -1,11 +1,11 @@
 import './style.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import type {ResponseType} from "./types";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
 import {simplifyRange} from "semver";
 //import { message } from "../../utils/message";
-import {ResponseType} from "./types";
 
 
 

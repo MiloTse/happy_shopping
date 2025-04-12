@@ -1,8 +1,8 @@
+import type {LoginResponseType} from "./types";
 import React, {useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
- import {useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { message } from "../../utils/message";
-import {LoginResponseType} from "./types";
 //1. 首先定义接口返回内容
 // type ResponseType = {
 //     status:string,
