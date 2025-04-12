@@ -3,22 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
+import {simplifyRange} from "semver";
 //import { message } from "../../utils/message";
+import {ResponseType} from "./type";
 
-//返回内容类型
-type ResponseType = {
-    success: boolean;
-    data: {
-        location: {
-            id: string;
-            address: string;
-        };
-        banners: Array<{
-            id: string,
-            url: string
-        }>
-    }
-}
 
 
 
