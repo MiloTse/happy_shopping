@@ -13,7 +13,8 @@ const defaultRequestConfig= {
 }
 //define a custom hook to send request
 //step2.T 就变成了传递进来的数据类型 ResponseType
-function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defined options an initial value
+function useRequest<T>(
+    options: AxiosRequestConfig & {manual ? : boolean}= defaultRequestConfig//defined options an initial value
 ) {
 
     const navigate = useNavigate();
