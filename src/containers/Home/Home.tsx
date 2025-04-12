@@ -5,7 +5,7 @@ import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
 import {simplifyRange} from "semver";
 //import { message } from "../../utils/message";
-import {ResponseType} from "./type";
+import {ResponseType} from "./types";
 
 
 
