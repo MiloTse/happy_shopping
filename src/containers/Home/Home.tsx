@@ -109,16 +109,23 @@ const Home =() => {
                         slidesPerView={1}
                         onSlideChange={(e:any) => {setPage(e.activeIndex+1)}}
                     >
-                        <SwiperSlide>
-                            <div className="swiper-item">
-                                <img className="swiper-item-img" src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="swiper-item">
-                                <img  className="swiper-item-img"  src='http://statics.dell-lee.com/shopping/banner.png' alt='轮播图'/>
-                            </div>
-                        </SwiperSlide>
+                        {
+                            (
+                                data?.data.banners || []
+                            ).map(
+                                item => {
+                                    return (
+
+                                        <SwiperSlide key={item.id}>
+                                            <div className="swiper-item">
+                                                <img className="swiper-item-img" src= {item.url} alt='轮播图'/>
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                }
+                            )
+                        }
+
 
                     </Swiper>
                     <div className="pagination">{page}/{data?.data.banners.length || 0}</div>
