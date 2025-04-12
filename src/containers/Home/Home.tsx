@@ -5,6 +5,24 @@ import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
 //import { message } from "../../utils/message";
 
+//返回内容类型
+type ResponseType = {
+    success: boolean;
+    data: {
+        location: {
+            id: string;
+            address: string;
+        };
+        banners: Array<{
+            id: string,
+            url: string
+        }>
+    }
+}
+
+
+
+
 const localLocation= localStorage.getItem('location');
 const locationHistory= localLocation ? JSON.parse(localLocation) : null;
 
