@@ -1,5 +1,5 @@
-import React, { useEffect, useRef} from 'react';
 import './style.scss';
+import React, { useEffect, useRef} from 'react';
 import {useNavigate} from "react-router-dom";
 
 //define a custom hook to handle animation

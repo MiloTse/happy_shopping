@@ -2,12 +2,12 @@ import React, {useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
  import {useNavigate} from "react-router-dom";
 import { message } from "../../utils/message";
-
+import {LoginResponseType} from "./types";
 //1. 首先定义接口返回内容
-type ResponseType = {
-    status:string,
-    data:string
-}
+// type ResponseType = {
+//     status:string,
+//     data:string
+// }
 
 const Login = ()=> {
      const [phoneNumber, setPhoneNumber] = useState('');
@@ -19,7 +19,7 @@ const Login = ()=> {
     //step1. 通过泛型传递给useRequest 方法
     //step5.接受data 类型也一定为 ResponseType | null
     // const { data, error, request, } = useRequest<ResponseData>('/charlestesta.json', 'GET', {});
-    const {request, } = useRequest<ResponseType>({manual: true});
+    const {request, } = useRequest<LoginResponseType>({manual: true});
 
     function handleSubmitBtnClick() {
         if(!phoneNumber ) {
