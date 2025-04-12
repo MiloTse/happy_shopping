@@ -1,6 +1,17 @@
 {
   "success": true,
   "data": {
-    "address": "Ottawa(Chinatown store)"
+    "location": {
+      "id": "001",
+      "address": "Ottawa(Chinatown store)"
+    },
+    "banners":[{
+      "id": "1135",
+      "url":"http://statics.dell-lee.com/shopping/banner.png"},
+      {
+      "id": "1136",
+      "url": "http://statics.dell-lee.com/shopping/banner.png"
+    }]
+
   }
 }
