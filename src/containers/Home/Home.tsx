@@ -121,7 +121,7 @@ const Home =() => {
                         </SwiperSlide>
 
                     </Swiper>
-                    <div className="pagination">{page}/2</div>
+                    <div className="pagination">{page}/{data?.data.banners.length || 0}</div>
                 </div>
             </div>
 
