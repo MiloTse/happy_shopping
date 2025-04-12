@@ -78,7 +78,7 @@ function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defin
             }).finally(()=>{
                 setLoaded(true);
             })
-    },[options, navigate]);//依赖项为 options 和 navigate
+    },[navigate]);//依赖项为 options 和 navigate
 
 
     //传递参数发生变化，自动发送请求

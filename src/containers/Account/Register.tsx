@@ -1,5 +1,5 @@
 
-import React, { useRef, useState} from "react";
+import React, {  useState} from "react";
 import useRequest from "../../utils/useRequest";
 import { message } from "../../utils/message";
 import {useNavigate} from "react-router-dom";
@@ -45,7 +45,7 @@ const Register = ()=> {
             return;
         }
 
-        if(password!=checkPassword) {
+        if(password!==checkPassword) {
             message('password should be same as checkPassword.');
             return;
         }
@@ -66,7 +66,7 @@ const Register = ()=> {
 
         ).then((data)=>{
             data && console.log(data);
-            if(data?.status=='success') {
+            if(data?.status==='success') {
                 navigate('/account/login');
             }
         }).catch((e:any)=>{

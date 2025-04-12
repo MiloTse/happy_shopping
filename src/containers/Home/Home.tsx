@@ -1,9 +1,9 @@
 import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
- import { message } from "../../utils/message";
+//import { message } from "../../utils/message";
 
 const localLocation= localStorage.getItem('location');
 const locationHistory= localLocation ? JSON.parse(localLocation) : null;
@@ -20,9 +20,10 @@ const defaultRequestData = {
 
 const Home =() => {
     const [requestData, setRequestData] = useState(defaultRequestData);
-    const {request} = useRequest(requestData);
+    //data： 请求发送返回的结果
+    const {data} = useRequest(requestData);
 
-
+    console.log(data);
 
     //request backend server when requestData changed
 /* useRequest 已经封装了，这里不需要重新写请求
@@ -53,7 +54,7 @@ const Home =() => {
                  }));
                  //setRequestData if can get location, and copy to new object
                  const newRequestData = {
-                     ... defaultRequestData,
+                     ...defaultRequestData,
                      data: {
                          latitude, longitude
                  }};
