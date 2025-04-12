@@ -97,7 +97,7 @@ const Home =() => {
             <div className="banner">
                 <h3 className="location">
                     <span className="iconfont">&#xe68e;</span>
-                    Ottawa(Algonquin College store)
+                    {data?.data?.location?.address || ''}
                 </h3>
                 <div className="search">
                 <span className="iconfont">&#xe600;</span>
