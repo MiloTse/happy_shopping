@@ -25,6 +25,7 @@ const Home =() => {
 
 
     //request backend server when requestData changed
+/* useRequest 已经封装了，这里不需要重新写请求
     useEffect(() => {
         request().then((data)=>{
             console.log(data);
@@ -35,6 +36,7 @@ const Home =() => {
         })
     }, [requestData, request ]);
 
+*/
 
     //obtain user location
     useEffect(()=>{

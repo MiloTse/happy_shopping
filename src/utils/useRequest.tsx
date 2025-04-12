@@ -1,5 +1,5 @@
 import axios, {AxiosRequestConfig} from "axios";
-import {useState, useRef, useCallback} from "react";
+import {useState, useRef, useCallback, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 
 //默认请求参数
@@ -34,7 +34,7 @@ function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defin
     }
 
     //either passing or not passing options
-    const request =  useCallback((requestOptions?: AxiosRequestConfig) => {
+    const request =  useCallback((requestOptions: AxiosRequestConfig) => {
         //每次请求之前先清空之前的状态
         //clear the previous state before each request
         setData(null);
@@ -54,13 +54,13 @@ function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defin
                 //passing three parameters as obj
             //if passing, use requestOptions?.url
             //if not passing, use options.url instead.(outer)
-                url: requestOptions?.url || options.url,
-                method: requestOptions?.method || options.method,
+                url: requestOptions.url,
+                method: requestOptions.method,
                 signal: controllerRef.current.signal,
-                data: requestOptions?.data || options.data,
-                params: requestOptions?.params || options.params,
-            // headers,
-            headers: {...headers, ...requestOptions?.headers}, //added token to header
+                data: requestOptions.data,
+                params: requestOptions.params,
+                headers,
+            // headers: {...headers, ...requestOptions.headers}, //added token to header
             }).then(response => {
                 setData(response.data);
                 return response.data;
@@ -79,6 +79,23 @@ function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defin
                 setLoaded(true);
             })
     },[options, navigate]);//依赖项为 options 和 navigate
+
+
+    //传递参数发生变化，自动发送请求
+    //useRequest 封装了useEffect
+    useEffect(() => {
+        request(options)
+    }, [options,request]);
+
+
+
+
+
+
+
+
+
+
     //step4. 把data 返回， 返回 data 的类型一定为 ResponseType | null
     return {data, error, loaded, request, cancel};
 }
