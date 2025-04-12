@@ -1,6 +1,7 @@
 import axios, {AxiosRequestConfig} from "axios";
 import {useState, useRef, useCallback, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import {message} from "./message";
 
 //默认请求参数
 const defaultRequestConfig= {
@@ -84,7 +85,10 @@ function useRequest<T>(options: AxiosRequestConfig = defaultRequestConfig//defin
     //传递参数发生变化，自动发送请求
     //useRequest 封装了useEffect
     useEffect(() => {
-        request(options)
+        //here should handle the exception thrown by request
+        request(options).catch(e=>{
+            message(e?.message, 1500);
+        })
     }, [options,request]);
 
 
