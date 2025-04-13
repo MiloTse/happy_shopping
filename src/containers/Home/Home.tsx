@@ -190,7 +190,7 @@ const Home =() => {
                     新品尝鲜
                 <div className="card-title-more">
                     更多
-                    <span className="iconfont">&#xe614;</span>
+                    <span className="iconfont">&#xe70d;</span>
                 </div>
                 </h3>
                 <div className="card-content">
