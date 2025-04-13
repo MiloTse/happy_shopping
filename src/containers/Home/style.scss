@@ -1,9 +1,8 @@
 .home-page {
     background: #F5F9FA;
     .banner {
-      position: relative;
-
-      height:2.3rem;
+        position: relative;
+        height:2.3rem;
         background: #73D13D;
         .location {
           line-height:.24rem;
@@ -11,9 +10,9 @@
           color:#FFF;
           font-size:.16rem;
           font-weight: normal;
-            .iconfont {
-                 margin-right:.1rem;
-            }
+          .iconfont {
+               margin-right:.1rem;
+          }
         }
        .search {
          margin:0 auto .2rem auto;
@@ -60,6 +59,7 @@
       flex-wrap: wrap;
       font-size: .12rem;
       padding-bottom:.2rem;
+      background:   #FFF;
       &-item {
         flex:0 0 25%;
         text-align: center;
