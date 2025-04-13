@@ -94,7 +94,7 @@
           width: 24px;
         }
         &-more {
-          font-size: .14rem;
+          font-size: .18rem;
           line-height: .18rem;
           position: absolute;
           bottom: 0;
@@ -103,8 +103,24 @@
             margin-left:.06rem;
           }
         }
-
-
+      }
+      &-content {
+        overflow-x: scroll;
+        white-space:nowrap;
+        height: 1.82rem;
+        margin-top:.2rem;
+        margin-bottom:.14rem;
+        &-item {
+          margin-right:.06rem;
+          display: inline-block;
+          width: 1.1rem;
+          background:red;
+          &-img {
+            width: 1.1rem;
+            height: 1.1rem;
+            border-radius: .04rem;
+          }
+        }
       }
     }
 }

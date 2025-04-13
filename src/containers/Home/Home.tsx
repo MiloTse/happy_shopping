@@ -189,7 +189,7 @@ const Home =() => {
                         src="http://statics.dell-lee.com/shopping/hot.png"/>
                     新品尝鲜
                 <div className="card-title-more">
-                    更多
+                    more
                     <span className="iconfont">&#xe70d;</span>
                 </div>
                 </h3>
