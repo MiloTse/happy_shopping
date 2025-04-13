@@ -122,62 +122,19 @@ const Home =() => {
                 </div>
             </div>
             <div className="category">
+                {
+                    (data?.data.categories || []).map((item)=>{
+                        return (
+                            <div className="category-item" key={item.id}>
+                                <img className='category-item-img'
+                                     alt={item.name}
+                                     src={item.imgUrl}/>
+                                <p className='category-item-desc'>{item.name}</p>
+                            </div>
+                        )
+                    })
+                }
 
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
-
-                <div className="category-item">
-                    <img className='category-item-img'
-                         alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
-                    <p className='category-item-desc'>新鲜蔬菜</p>
-                </div>
 
             </div>
 
