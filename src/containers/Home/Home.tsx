@@ -173,7 +173,7 @@ const Home =() => {
                 </div>
             </div>
             <div className="docker">
-                <div className="docker-item">
+                <div className="docker-item docker-item-active">
                     <p className="iconfont">&#xe608;</p>
                     <p className="docker-item-title">首页</p>
                 </div>
