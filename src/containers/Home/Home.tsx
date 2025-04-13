@@ -88,14 +88,16 @@ const Home =() => {
                     {data?.data?.location?.address || ''}
                 </h3>
                 <div className="search">
-                <span className="iconfont">&#xe600;</span>
+                    <span className="iconfont">&#xe600;</span>
                     Input search words here
                 </div>
                 <div className="swiper-area">
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={1}
-                        onSlideChange={(e:any) => {setPage(e.activeIndex+1)}}
+                        onSlideChange={(e: any) => {
+                            setPage(e.activeIndex + 1)
+                        }}
                     >
                         {
                             (
@@ -106,7 +108,7 @@ const Home =() => {
 
                                         <SwiperSlide key={item.id}>
                                             <div className="swiper-item">
-                                                <img className="swiper-item-img" src= {item.url} alt='轮播图'/>
+                                                <img className="swiper-item-img" src={item.url} alt='轮播图'/>
                                             </div>
                                         </SwiperSlide>
                                     )
@@ -124,62 +126,75 @@ const Home =() => {
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
-                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                         src='http://statics.dell-lee.com/shopping/category-1.png'/>
                     <p className='category-item-desc'>新鲜蔬菜</p>
                 </div>
 
             </div>
+
+            <div className='card'>
+                <h3 className='card-title'>
+                    <img
+                        alt='新品尝鲜‘ className=' card-title-img
+                        src='http://statics.dell-lee.com/shopping/hot.png'/>
+                    新品尝鲜
+                </h3>
+                <div className='card-title-more'>
+                    更多
+                    <span className='iconfont'></span>
+            </div>
         </div>
-    )
+</div>
+)
 }
 
 export default Home;
