@@ -79,6 +79,34 @@
         }
       }
     }
+    .card {
+      margin-top:.1rem;
+      background:#FFF;
+      font-size:.12rem;
+      &-title {
+        position: relative;
+        padding: .14rem .1rem 0.1rem;
+        color: #242424;
+        font-size: .2rem;
+        line-height: .24rem;
+        &-img {
+          float: left;
+          width: 24px;
+        }
+        &-more {
+          font-size: .14rem;
+          line-height: .18rem;
+          position: absolute;
+          bottom: 0;
+          right: .1rem;
+          .iconfont {
+            margin-left:.06rem;
+          }
+        }
+
+
+      }
+    }
 }
 
 
