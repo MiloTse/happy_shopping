@@ -143,14 +143,32 @@
               right: 0.06rem;
               bottom:.02rem;
               color:#73D13D;
-
             }
-
           }
-
+          &-yen {
+            font-size: .12rem;
+          }
         }
       }
     }
+  .docker {
+    height:.49rem;
+    display: flex;
+    border-top:.01rem solid #F5F9FA;
+    font-size:.12rem;
+    color:#B3C1C4;
+    text-align: center;
+    &-item {
+      flex:1;
+      &-icon {
+        margin:.04rem;
+        font-size:.18rem;
+      }
+      &-title {
+
+      }
+    }
+  }
 }
 
 

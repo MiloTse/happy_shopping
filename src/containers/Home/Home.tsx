@@ -137,7 +137,6 @@ const Home =() => {
 
 
             </div>
-
             <div className="card">
                 <h3 className="card-title">
                     <img
@@ -171,6 +170,24 @@ const Home =() => {
                         })
                     }
 
+                </div>
+            </div>
+            <div className="docker">
+                <div className="docker-item">
+                    <p className="iconfont">&#xe68e;</p>
+                    <p className="docker-item-title">首页</p>
+                </div>
+                <div className="docker-item">
+                    <p className="iconfont">&#xe68e;</p>
+                    <p className="docker-item-title">分类</p>
+                </div>
+                <div className="docker-item">
+                    <p className="iconfont">&#xe68e;</p>
+                    <p className="docker-item-title">购物车</p>
+                </div>
+                <div className="docker-item">
+                    <p className="iconfont">&#xe68e;</p>
+                    <p className="docker-item-title">我的</p>
                 </div>
             </div>
         </div>
