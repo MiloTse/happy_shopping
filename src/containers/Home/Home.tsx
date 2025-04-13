@@ -174,19 +174,19 @@ const Home =() => {
             </div>
             <div className="docker">
                 <div className="docker-item">
-                    <p className="iconfont">&#xe68e;</p>
+                    <p className="iconfont">&#xe608;</p>
                     <p className="docker-item-title">首页</p>
                 </div>
                 <div className="docker-item">
-                    <p className="iconfont">&#xe68e;</p>
+                    <p className="iconfont">&#xe609;</p>
                     <p className="docker-item-title">分类</p>
                 </div>
                 <div className="docker-item">
-                    <p className="iconfont">&#xe68e;</p>
+                    <p className="iconfont">&#xe601;</p>
                     <p className="docker-item-title">购物车</p>
                 </div>
                 <div className="docker-item">
-                    <p className="iconfont">&#xe68e;</p>
+                    <p className="iconfont">&#xe602;</p>
                     <p className="docker-item-title">我的</p>
                 </div>
             </div>

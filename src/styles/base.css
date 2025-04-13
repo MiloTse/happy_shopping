@@ -10,11 +10,11 @@ input:-webkit-autofill:active {
     -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
 }
 
- @font-face {
+@font-face {
     font-family: 'iconfont';  /* Project id 4876302 */
-    src: url('//at.alicdn.com/t/c/font_4876302_81lw4tssaqv.woff2?t=1744522368638') format('woff2'),
-    url('//at.alicdn.com/t/c/font_4876302_81lw4tssaqv.woff?t=1744522368638') format('woff'),
-    url('//at.alicdn.com/t/c/font_4876302_81lw4tssaqv.ttf?t=1744522368638') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_4876302_fkh4n124wob.woff2?t=1744527588619') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4876302_fkh4n124wob.woff?t=1744527588619') format('woff'),
+    url('//at.alicdn.com/t/c/font_4876302_fkh4n124wob.ttf?t=1744527588619') format('truetype');
 }
 
 .iconfont {
