@@ -9,19 +9,14 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 99999s;
     -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
 }
-/*@font-face {*/
-/*    font-family: "iconfont"; !* Project id 4876302 *!*/
-/*    src: url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.woff2?t=1743386370639') format('woff2'),*/
-/*    url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.woff?t=1743386370639') format('woff'),*/
-/*    url('//at.alicdn.com/t/c/font_4876302_sb2rb2pz7ye.ttf?t=1743386370639') format('truetype');*/
-/*}*/
-/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
+
+ @font-face {
     font-family: 'iconfont';  /* Project id 4876302 */
-    src: url('//at.alicdn.com/t/c/font_4876302_jbpmkvf4svs.woff2?t=1744521182143') format('woff2'),
-    url('//at.alicdn.com/t/c/font_4876302_jbpmkvf4svs.woff?t=1744521182143') format('woff'),
-    url('//at.alicdn.com/t/c/font_4876302_jbpmkvf4svs.ttf?t=1744521182143') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_4876302_7fxia6ymq47.woff2?t=1744521918697') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4876302_7fxia6ymq47.woff?t=1744521918697') format('woff'),
+    url('//at.alicdn.com/t/c/font_4876302_7fxia6ymq47.ttf?t=1744521918697') format('truetype');
 }
+
 .iconfont {
     font-family: "iconfont" !important;
 

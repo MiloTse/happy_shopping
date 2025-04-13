@@ -181,20 +181,35 @@ const Home =() => {
 
             </div>
 
-            <div className='card'>
-                <h3 className='card-title'>
+            <div className="card">
+                <h3 className="card-title">
                     <img
-                        alt='新品尝鲜‘ className=' card-title-img
-                        src='http://statics.dell-lee.com/shopping/hot.png'/>
+                        alt="新品尝鲜"
+                        className="card-title-img"
+                        src="http://statics.dell-lee.com/shopping/hot.png"/>
                     新品尝鲜
-                </h3>
-                <div className='card-title-more'>
+                <div className="card-title-more">
                     更多
-                    <span className='iconfont'>&#xe614;</span>
+                    <span className="iconfont">&#xe614;</span>
+                </div>
+                </h3>
+                <div className="card-content">
+                    <div className="card-content-item">
+                        <img
+                            alt=""
+                            className="card-content-item-img"
+                            src="http://statics.dell-lee.com/shopping/hot.png"/>
+                        <p className='card-content-item-desc'>金锣国产猪肉去皮猪五花肉块.</p>
+                        <p className='card-content-item-price'>
+                            <span className='card-content-item-yen'>&yen;</span>
+                            66.9
+                            <div className='iconfont'>&#xe6b2;</div>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-</div>
-)
+    )
 }
 
 export default Home;
