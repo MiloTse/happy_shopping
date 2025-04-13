@@ -55,11 +55,14 @@
 
     }
     .category {
+      position: relative;
+      margin-top: -.2rem;
       display: flex;
       flex-wrap: wrap;
       font-size: .12rem;
       padding-bottom:.2rem;
-      background:   #FFF;
+      background: #FFF;
+      border-radius: .2rem .2rem 0 0;
       &-item {
         flex:0 0 25%;
         text-align: center;
