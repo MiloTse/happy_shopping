@@ -10,5 +10,11 @@ export type ResponseType = {
             id: string,
             url: string
         }>
+        categories: Array<{
+            id: string,
+            name: string,
+            imgUrl: string
+        }>
+
     }
 }
