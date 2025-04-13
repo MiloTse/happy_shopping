@@ -54,6 +54,27 @@
       }
 
     }
+    .category {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: .12rem;
+      padding-bottom:.2rem;
+      &-item {
+        flex:0 0 25%;
+        text-align: center;
+        &-img {
+          margin-top:.16rem;
+          margin-bottom:.13rem;
+          width:.42rem;
+          height:.36rem;
+        }
+        &-desc {
+          color: #242424;
+          line-height: .18rem;
+          text-align: center;
+        }
+      }
+    }
 }
 
 

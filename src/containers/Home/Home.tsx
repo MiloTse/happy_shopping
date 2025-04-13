@@ -120,6 +120,56 @@ const Home =() => {
                 </div>
             </div>
             <div className="category">
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
+                <div className="category-item">
+                    <img className='category-item-img'
+                         alt='新鲜蔬菜'
+                         src='http://statics.dell-lee.com/shopping/category-1.png' />
+                    <p className='category-item-desc'>新鲜蔬菜</p>
+                </div>
+
                 <div className="category-item">
                     <img className='category-item-img'
                          alt='新鲜蔬菜'
