@@ -127,6 +127,22 @@
             white-space: normal;
             word-break:break-all;
           }
+          &-price {
+            position: relative;
+            margin:0 .06rem;
+            color:#F81C00;
+            font-size:.2rem;
+            line-height:.24rem;
+            .iconfont {
+              position: absolute;
+              right:0.6rem;
+              bottom:.02rem;
+              color:#73D13D;
+
+            }
+
+          }
+
         }
       }
     }
