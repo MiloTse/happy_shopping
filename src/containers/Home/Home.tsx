@@ -161,15 +161,15 @@ const Home =() => {
                                         className="card-content-item-img"
                                         src={item.imgUrl}/>
                                     <p className='card-content-item-desc'>{item.name}</p>
+                                    <div className='card-content-item-price'>
+                                        <span className='card-content-item-yen'>&yen;</span>
+                                        {item.price}
+                                        <div className='iconfont'>&#xe6b2;</div>
+                                    </div>
                                 </div>
                             )
                         })
                     }
-
-
-
-
-
 
                 </div>
             </div>

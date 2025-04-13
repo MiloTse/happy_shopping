@@ -107,7 +107,7 @@
       &-content {
         overflow-x: scroll;
         white-space:nowrap;
-        height: 1.82rem;
+
         margin-top:.2rem;
         padding-bottom:.14rem;
         &-item {
@@ -120,11 +120,16 @@
             border-radius: .04rem;
           }
           &-desc {
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
             margin:.06rem;
-            color: #242424;
-            font-size: .12rem;
+            color:#242424;
+            font-size:.12rem;
             line-height:.18rem;
-            white-space: normal;
+            white-space:normal;
             word-break:break-all;
           }
           &-price {
