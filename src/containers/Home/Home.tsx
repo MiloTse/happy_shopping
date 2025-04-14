@@ -1,10 +1,9 @@
 import './style.scss';
 import 'swiper/css';
 import type {ResponseType} from "./types";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
-import {simplifyRange} from "semver";
+import Banner from "./components/Banner";
 //import { message } from "../../utils/message";
 
 
@@ -77,51 +76,11 @@ const Home =() => {
 
 
 
-    const [page, setPage] = useState(1);
 
 
     return (
         <div className="page home-page">
-            <div className="banner">
-                <h3 className="location">
-                    <span className="iconfont">&#xe68e;</span>
-                    {data?.data?.location?.address || ''}
-                </h3>
-                <div className="search">
-                    <span className="iconfont">&#xe600;</span>
-                    Input search words here
-                </div>
-                <div className="swiper-area">
-                    <Swiper
-                        spaceBetween={0}
-                        slidesPerView={1}
-                        onSlideChange={(e: any) => {
-                            setPage(e.activeIndex + 1)
-                        }}
-                    >
-                        {
-                            (
-                                data?.data.banners || []
-                            ).map(
-                                item => {
-                                    return (
-
-                                        <SwiperSlide key={item.id}>
-                                            <div className="swiper-item">
-                                                <img className="swiper-item-img" src={item.imgUrl} alt='轮播图'/>
-                                            </div>
-                                        </SwiperSlide>
-                                    )
-                                }
-                            )
-                        }
-
-
-                    </Swiper>
-                    <div className="pagination">{page}/{data?.data.banners.length || 0}</div>
-                </div>
-            </div>
-            <div className="category">
+             <div className="category">
                 {
                     (data?.data.categories || []).map((item)=>{
                         return (
