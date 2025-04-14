@@ -172,6 +172,9 @@ const Home =() => {
 
                 </div>
             </div>
+            <div className="bottom">
+             -- I am the bottom line --
+            </div>
             <div className="docker">
                 <div className="docker-item docker-item-active">
                     <p className="iconfont">&#xe608;</p>
