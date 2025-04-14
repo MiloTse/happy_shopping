@@ -152,7 +152,7 @@ const Home =() => {
                 <div className="card-content">
 
                     {
-                        (data?.data.freshes || []).map((item)=> {
+                        (data?.data.fresh || []).map((item)=> {
                             return (
                                 <div className="card-content-item" key={item.id}>
                                     <img

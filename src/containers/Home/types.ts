@@ -15,7 +15,7 @@ export type ResponseType = {
             name: string,
             imgUrl: string
         }>
-        freshes: Array<{
+        fresh: Array<{
             id: string,
             name: string,
             imgUrl: string,
