@@ -108,7 +108,7 @@ const Home =() => {
 
                                         <SwiperSlide key={item.id}>
                                             <div className="swiper-item">
-                                                <img className="swiper-item-img" src={item.url} alt='轮播图'/>
+                                                <img className="swiper-item-img" src={item.imgUrl} alt='轮播图'/>
                                             </div>
                                         </SwiperSlide>
                                     )

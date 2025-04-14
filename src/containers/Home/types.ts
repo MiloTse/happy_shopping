@@ -8,7 +8,7 @@ export type ResponseType = {
         };
         banners: Array<{
             id: string,
-            url: string
+            imgUrl: string
         }>
         categories: Array<{
             id: string,
