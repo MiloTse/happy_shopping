@@ -1,17 +1,11 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import {Swiper, SwiperSlide} from "swiper/react";
 import React, {useState} from "react";
-
+import {BannersType, LocationType} from "../types";
 //outer passing props might be undefined
 type BannerPropsType = {
-    location: {
-        id: string;
-        address: string;
-    } | undefined;
-    banners: Array<{
-        id: string,
-        imgUrl: string
-    }> | undefined;
+    location: LocationType | undefined;
+    banners: BannersType | undefined;
 }
 
 

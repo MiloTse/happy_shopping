@@ -1,10 +1,12 @@
 
 
+//位置信息类型, an object
+export type LocationType = {
+    id: string,
+    address: string
+}
 
-export type LocationType = Array<{
-    id: string;
-    address: string;
-}>
+//轮播图信息类型 Array
 export type BannersType = Array<{
     id: string,
     imgUrl: string

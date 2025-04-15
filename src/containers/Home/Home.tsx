@@ -4,6 +4,7 @@ import type {ResponseType} from "./types";
 import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Banner from "./components/Banner";
+import Category from "./components/Category";
 //import { message } from "../../utils/message";
 
 
@@ -81,22 +82,7 @@ const Home =() => {
     return (
         <div className="page home-page">
             <Banner location={data?.data.location} banners={data?.data.banners}/>
-             <div className="category">
-                {
-                    (data?.data.categories || []).map((item)=>{
-                        return (
-                            <div className="category-item" key={item.id}>
-                                <img className='category-item-img'
-                                     alt={item.name}
-                                     src={item.imgUrl}/>
-                                <p className='category-item-desc'>{item.name}</p>
-                            </div>
-                        )
-                    })
-                }
-
-
-            </div>
+            <Category categories={data?.data.categories}/>
             <div className="card">
                 <h3 className="card-title">
                     <img
