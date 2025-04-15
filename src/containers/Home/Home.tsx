@@ -5,6 +5,7 @@ import React, {useEffect,  useState} from "react";
 import useRequest from "../../utils/useRequest";
 import Banner from "./components/Banner";
 import Category from "./components/Category";
+import Card from "./components/Card";
 //import { message } from "../../utils/message";
 
 
@@ -83,7 +84,7 @@ const Home =() => {
         <div className="page home-page">
             <Banner location={data?.data.location} banners={data?.data.banners}/>
             <Category categories={data?.data.categories}/>
-
+            <Card title="新品尝鲜" list={data?.data.fresh}/>
             <div className="bottom">
              -- I am the bottom line --
             </div>

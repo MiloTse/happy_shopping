@@ -3,6 +3,7 @@ import { CardListType} from "../types";
 
 
 type CardPropsType = {
+    title: string;
     list: CardListType | undefined;
 }
 
@@ -10,15 +11,15 @@ type CardPropsType = {
 
 
 const Card = (props: CardPropsType) => {
-    const {list} = props;
+    const {title, list} = props;
      return (
         <div className="card">
             <h3 className="card-title">
                 <img
-                    alt="新品尝鲜"
+                    alt={title}
                     className="card-title-img"
                     src="http://statics.dell-lee.com/shopping/hot.png"/>
-                新品尝鲜
+                {title}
                 <div className="card-title-more">
                     more
                     <span className="iconfont">&#xe70d;</span>
