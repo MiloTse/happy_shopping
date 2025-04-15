@@ -77,15 +77,23 @@ const Home =() => {
 
 
 
-
+    let  location, banners, categories, fresh  = undefined;
+    const dataResult = data?.data;
+    //assign value if dataResult exist
+    if(dataResult) {
+        location = dataResult.location;
+        banners = dataResult.banners;
+        categories = dataResult.categories;
+        fresh = dataResult.fresh;
+    }
 
 
     return (
         <div className="page home-page">
-            <Banner location={data?.data.location} banners={data?.data.banners}/>
-            <Category categories={data?.data.categories}/>
-            <Card title="新品尝鲜" list={data?.data.fresh}/>
-            <Card title="限时抢购" list={data?.data.fresh}/>
+            <Banner location={location} banners={banners}/>
+            <Category categories={categories}/>
+            <Card title="新品尝鲜" list={fresh}/>
+            <Card title="限时抢购" list={fresh}/>
             <div className="bottom">
              -- I am the bottom line --
             </div>
