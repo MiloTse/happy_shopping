@@ -20,6 +20,16 @@ export type CategoriesType = Array<{
 }>
 
 
+
+//列表信息类型
+export type CardListType = Array<{
+    id: string,
+    name: string,
+    imgUrl: string,
+    price:string
+}>
+
+
 //返回内容类型
 export type ResponseType = {
     success: boolean;
@@ -27,13 +37,6 @@ export type ResponseType = {
         location: LocationType;
         banners: BannersType;
         categories: CategoriesType;
-
-        fresh: Array<{
-            id: string,
-            name: string,
-            imgUrl: string,
-            price:string
-        }>
-
+        fresh: CardListType;
     }
 }
