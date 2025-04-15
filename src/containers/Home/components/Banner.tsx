@@ -1,4 +1,5 @@
-import {Swiper, SwiperSlide} from "swiper/swiper-react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import React, {useState} from "react";
 
 //outer passing props might be undefined

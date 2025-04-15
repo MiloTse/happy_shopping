@@ -80,6 +80,7 @@ const Home =() => {
 
     return (
         <div className="page home-page">
+            <Banner location={data?.data.location} banners={data?.data.banners}/>
              <div className="category">
                 {
                     (data?.data.categories || []).map((item)=>{
