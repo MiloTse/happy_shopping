@@ -1,7 +1,17 @@
 import React from "react";
+import { CardListType} from "../types";
 
-const Card = () => {
-    return (
+
+type CardPropsType = {
+    list: CardListType | undefined;
+}
+
+
+
+
+const Card = (props: CardPropsType) => {
+    const {list} = props;
+     return (
         <div className="card">
             <h3 className="card-title">
                 <img
@@ -17,7 +27,7 @@ const Card = () => {
             <div className="card-content">
 
                 {
-                    (data?.data.fresh || []).map((item) => {
+                    (list || []).map((item) => {
                         return (
                             <div className="card-content-item" key={item.id}>
                                 <img
