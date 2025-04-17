@@ -47,40 +47,41 @@
   }
 
   .subtitle {
-    padding: 0.1rem 0.12rem;
+    padding: 0.08rem 0.12rem;
     font-size: 0.14rem;
     color: #333;
     background: #f5f5f5;
-    margin-top: 0.12rem;
   }
 
   .store-list {
     &-item {
-      padding: 0.12rem;
+      padding: 0.08rem 0.12rem;
       border-bottom: 1px solid #f0f0f0;
       position: relative;
 
       &-title {
         font-size: 0.15rem;
         color: #333;
-        margin-bottom: 0.06rem;
+        margin-bottom: 0.04rem;
       }
 
       &-desc {
         font-size: 0.13rem;
         color: #666;
-        margin-bottom: 0.04rem;
+        margin-bottom: 0.02rem;
+        line-height: 1.2;
       }
 
       &-address {
         font-size: 0.13rem;
         color: #666;
+        line-height: 1.2;
       }
 
       &-right {
         position: absolute;
         right: 0.12rem;
-        top: 0.12rem;
+        top: 0.08rem;
         color: #999;
         font-size: 0.13rem;
         display: flex;
