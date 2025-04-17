@@ -82,7 +82,7 @@ const Home =() => {
                  timeout: 500,
              })
          }
-    } );
+    },[locationHistory] );//when locationHistory has changed, send request again
 
 
 
