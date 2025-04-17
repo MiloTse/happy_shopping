@@ -21,13 +21,17 @@ const Banner = (props: BannerPropsType) => {
         navigate('/nearby');
     };
 
+    const handleSearchClick = () => {
+        navigate('/search');
+    };
+
     return (
         <div className="banner">
             <h3 className="location" onClick={handleLocationClick} style={{ cursor: 'pointer' }}>
                 <span className="iconfont">&#xe68e;</span>
                 {location?.address || ''}
             </h3>
-            <div className="search">
+            <div className="search" onClick={handleSearchClick} style={{ cursor: 'pointer' }}>
                 <span className="iconfont">&#xe600;</span>
                 Input search words here
             </div>

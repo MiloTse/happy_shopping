@@ -1,11 +1,16 @@
 import './style.scss';
+import {useNavigate} from "react-router-dom";
 
 const Search = () => {
-
+    const navigate = useNavigate();
+    const handleGoBackClick = () => {
+        navigate('/home');
+    };
     return (
         <div className="page search-page">
             <div className="search">
-                <div className="search-back iconfont">&#xe6a9;</div>
+                <div className="search-back iconfont"  onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
+                    &#xe6a9;</div>
                 <div className="search-area">
                     <div className="search-icon iconfont">&#xe600;</div>
                     <input className="search-input" placeholder="Please enter product name"/>
