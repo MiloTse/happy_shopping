@@ -1,9 +1,23 @@
 import './style.scss';
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
+import useRequest from "../../utils/useRequest";
+import type {ResponseType} from "./types";
 
+
+//defaultRequestData
+const defaultRequestData = {
+    url: '/hotSearchList.json',
+    method: 'GET',
+
+}
 
 const Search = () => {
+    const {data} = useRequest<ResponseType>(defaultRequestData);
+    const hotList = data?.data || [];
+
+
+
 
     const localSearchList= localStorage.getItem('search-list');
     const searchHistory: string[] = localSearchList ? JSON.parse(localSearchList) : [];
@@ -65,33 +79,44 @@ const Search = () => {
                                 &#xe610;</div>
                         </div>
 
+                        <ul className="list">
+                            {
+                                historyList.map((item, index) => {
+                                    return (
+                                        <li key={index + item} className='list-item'>{item}</li>
+                                    )
+                                })
+                            }
+
+
+                        </ul>
                     </>
                 ) : null
             }
 
+            {
+                hotList.length? (
+                    <>
+                        <div className="title">
+                            Hot Search
+                        </div>
+                        <ul className="list">
+                            {
+                                hotList.map(item =>
+                                    (
+                                        <li key={item.id} className='list-item'>{item.keyword}</li>
+                                    )
+                                )
+                            }
+                            <li className='list-item'>steak</li>
+                        </ul>
 
-            <ul className="list">
-                {
-                    historyList.map((item, index) => {
-                        return (
-                            <li key={index + item} className='list-item'>{item}</li>
-                        )
-                    })
-                }
+                    </>
 
 
-            </ul>
-            <div className="title">
-                Hot Search
-            </div>
-            <ul className="list">
-                <li className='list-item'>shrimp ball</li>
-                <li className='list-item'>pork</li>
-                <li className='list-item'>chicken</li>
-                <li className='list-item'>chip</li>
-                <li className='list-item'>banana</li>
-                <li className='list-item'>steak</li>
-            </ul>
+                ) : null
+            }
+
         </div>
     );
 };
