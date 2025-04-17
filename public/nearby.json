@@ -3,21 +3,21 @@
   "data": [
     {
       "id": "8318",
-      "name": "优果购",
-      "phone": "17194091107",
-      "address": "北京市昌平区南邵镇四合园59号",
+      "name": "College Square Store",
+      "phone": "1-613-001-9999",
+      "address": "1385 Woodroffe Ave, Ottawa, ON K4S 1A6, Canada",
       "distance": "799m",
-      "latitude": "37.7239",
-      "longitude": "-122.8349"
+      "latitude": "45.3498",
+      "longitude": "-75.7553"
     },
     {
       "id": "8317",
-      "name": "喜梅蔬菜店",
-      "phone": "18500331766",
-      "address": "北京市昌平区南邵镇风景丽苑69号",
+      "name": "Kanata Technology Park Store",
+      "phone": "1-613-003-8888",
+      "address": "350 Legget Dr, Kanata, ON K2K 3N1, Canada",
       "distance": "1.1km",
-      "latitude": "37.7258",
-      "longitude": "-122.8348"
+      "latitude": "45.333",
+      "longitude": "-75.7369"
     }
   ]
 }

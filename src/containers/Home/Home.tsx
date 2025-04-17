@@ -101,8 +101,8 @@ const Home =() => {
         <div className="page home-page">
             <Banner location={location} banners={banners}/>
             <Category categories={categories}/>
-            <Card title="新品尝鲜" list={fresh}/>
-            <Card title="限时抢购" list={fresh}/>
+            <Card title="New Product" list={fresh}/>
+            <Card title="Flash Sale" list={fresh}/>
             <div className="bottom">
              -- I am the bottom line --
             </div>
