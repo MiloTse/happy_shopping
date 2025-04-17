@@ -12,20 +12,29 @@ import Card from "./components/Card";
 
 
 
-const localLocation= localStorage.getItem('location');
-const locationHistory= localLocation ? JSON.parse(localLocation) : null;
+
 
 //defaultRequestData
 const defaultRequestData = {
     url: '/home.json',
     method: 'POST',
     data: {
-        latitude:locationHistory? locationHistory.latitude: 45.3497856,
-        longitude: locationHistory? locationHistory.longitude: -75.7554394,
+        //default value
+        latitude:  45.3497856,
+        longitude: -75.7554394,
     }
 }
 
 const Home =() => {
+    const localLocation= localStorage.getItem('location');
+    const locationHistory= localLocation ? JSON.parse(localLocation) : null;
+    if(locationHistory) {
+        defaultRequestData.data.latitude = locationHistory.latitude;
+        defaultRequestData.data.longitude = locationHistory.longitude;
+    }
+
+
+
     const [requestData, setRequestData] = useState(defaultRequestData);
     //data： 请求发送返回的结果
     const {data} = useRequest<ResponseType>(requestData);
