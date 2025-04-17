@@ -13,7 +13,7 @@ const Search = () => {
     function handleKeyDown(key: string) {
         if(key === 'Enter') {
             const newHistoryList = [...historyList];
-            newHistoryList.push(keyword);
+            newHistoryList.unshift(keyword);
             setHistoryList(newHistoryList);
             setKeyword('');
 
