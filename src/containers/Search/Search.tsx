@@ -2,12 +2,17 @@ import './style.scss';
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 
+
+const localSearchList= localStorage.getItem('search-list');
+const searchHistory: string[] = localSearchList ? JSON.parse(localSearchList) : [];
+
 const Search = () => {
     const navigate = useNavigate();
     const handleGoBackClick = () => {
         navigate('/home');
     };
-    const [historyList, setHistoryList] = useState<string[]> ([]);
+    //load search history from local storage
+    const [historyList, setHistoryList] = useState (searchHistory);
     const [keyword, setKeyword] = useState('');
 
     function handleKeyDown(key: string) {
