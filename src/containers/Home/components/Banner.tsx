@@ -2,6 +2,8 @@ import 'swiper/css';
 import {Swiper, SwiperSlide} from "swiper/react";
 import React, {useState} from "react";
 import {BannersType, LocationType} from "../types";
+import { useNavigate } from 'react-router-dom';
+
 //outer passing props might be undefined
 type BannerPropsType = {
     location: LocationType | undefined;
@@ -10,12 +12,18 @@ type BannerPropsType = {
 
 
 const Banner = (props: BannerPropsType) => {
+    const navigate = useNavigate();
     const [page, setPage] = useState(1);
     //passing location and banners from props
     const {location, banners} = props;
+
+    const handleLocationClick = () => {
+        navigate('/nearby');
+    };
+
     return (
         <div className="banner">
-            <h3 className="location">
+            <h3 className="location" onClick={handleLocationClick} style={{ cursor: 'pointer' }}>
                 <span className="iconfont">&#xe68e;</span>
                 {location?.address || ''}
             </h3>
