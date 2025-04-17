@@ -50,18 +50,18 @@ const Nearby = () => {
                          onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
                         &#xe6a9;</div>
 
-                切换门店
+                Switch Store
             </div>
             <div className="search">
                 <span className="search-icon iconfont">&#xe600;</span>
                 <input 
                     className="search-input"
-                    placeholder="请输入地址"
+                    placeholder="Please enter a keyword"
                     value={keyword}
                     onChange={(e) => setKeyword(e.target.value)}
                 />
             </div>
-            <div className="subtitle">附近门店</div>
+            <div className="subtitle">Nearby Store</div>
             <ul className="store-list">
                 {list.map(item => (
                     <li
@@ -71,7 +71,7 @@ const Nearby = () => {
                     >
                         <div className="store-list-item-title">{item.name}</div>
                         <div className="store-list-item-desc">
-                            <span>联系电话：{item.phone}</span>
+                            <span>Tel：{item.phone}</span>
                         </div>
                         <div className="store-list-item-address">{item.address}</div>
                         <div className="store-list-item-right">
