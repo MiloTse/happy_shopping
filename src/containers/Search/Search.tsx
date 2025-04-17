@@ -14,6 +14,9 @@ const Search = () => {
         if(key === 'Enter') {
             const newHistoryList = [...historyList];
             newHistoryList.unshift(keyword);
+            if(newHistoryList.length > 5) {
+                newHistoryList.pop();
+            }
             setHistoryList(newHistoryList);
             setKeyword('');
 
