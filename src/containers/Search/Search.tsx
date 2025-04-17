@@ -23,6 +23,9 @@ const Search = () => {
         }
     }
 
+    function handleHistoryListClean(){
+        setHistoryList([]);
+    }
     return (
         <div className="page search-page">
             <div className="search">
@@ -42,7 +45,10 @@ const Search = () => {
             </div>
             <div className="title">
                 History Search
-                <div className="iconfont title-close">&#xe610;</div>
+                <div onClick={handleHistoryListClean}
+                    className="iconfont title-close"
+                >
+                    &#xe610;</div>
             </div>
             <ul className="list">
                 {
