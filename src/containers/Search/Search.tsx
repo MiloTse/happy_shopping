@@ -52,6 +52,17 @@ const Search = () => {
                 </div>
 
             </div>
+
+            {
+                historyList.length? (
+                        <>
+
+
+
+                        </>
+                ):null
+            }
+
             <div className="title">
                 History Search
                 <div onClick={handleHistoryListClean}
