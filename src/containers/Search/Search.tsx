@@ -3,10 +3,12 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 
 
-const localSearchList= localStorage.getItem('search-list');
-const searchHistory: string[] = localSearchList ? JSON.parse(localSearchList) : [];
-
 const Search = () => {
+
+    const localSearchList= localStorage.getItem('search-list');
+    const searchHistory: string[] = localSearchList ? JSON.parse(localSearchList) : [];
+
+
     const navigate = useNavigate();
     const handleGoBackClick = () => {
         navigate('/home');
