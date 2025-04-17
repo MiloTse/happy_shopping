@@ -1,11 +1,25 @@
 import './style.scss';
 import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 const Search = () => {
     const navigate = useNavigate();
     const handleGoBackClick = () => {
         navigate('/home');
     };
+    const [historyList, setHistoryList] = useState<string[]> ([]);
+    const [keyword, setKeyword] = useState('');
+
+    function handleKeyDown(key: string) {
+        if(key === 'Enter') {
+            const newHistoryList = [...historyList];
+            newHistoryList.push(keyword);
+            setHistoryList(newHistoryList);
+            setKeyword('');
+
+        }
+    }
+
     return (
         <div className="page search-page">
             <div className="search">
@@ -13,7 +27,13 @@ const Search = () => {
                     &#xe6a9;</div>
                 <div className="search-area">
                     <div className="search-icon iconfont">&#xe600;</div>
-                    <input className="search-input" placeholder="Please enter product name"/>
+                    <input
+                        className="search-input"
+                           placeholder="Please enter product name"
+                        value={keyword}
+                        onChange={(e) => setKeyword(e.target.value)}
+                        onKeyDown={(e) => {handleKeyDown(e.key)} }
+                    />
                 </div>
 
             </div>
