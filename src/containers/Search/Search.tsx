@@ -55,26 +55,26 @@ const Search = () => {
 
             {
                 historyList.length? (
-                        <>
+                    <>
 
+                        <div className="title">
+                            History Search
+                            <div onClick={handleHistoryListClean}
+                                 className="iconfont title-close"
+                            >
+                                &#xe610;</div>
+                        </div>
 
-
-                        </>
-                ):null
+                    </>
+                ) : null
             }
 
-            <div className="title">
-                History Search
-                <div onClick={handleHistoryListClean}
-                    className="iconfont title-close"
-                >
-                    &#xe610;</div>
-            </div>
+
             <ul className="list">
                 {
                     historyList.map((item, index) => {
                         return (
-                            <li key={index+item} className='list-item'>{item}</li>
+                            <li key={index + item} className='list-item'>{item}</li>
                         )
                     })
                 }
