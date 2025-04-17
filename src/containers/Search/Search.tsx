@@ -42,12 +42,15 @@ const Search = () => {
                 <div className="iconfont title-close">&#xe610;</div>
             </div>
             <ul className="list">
-                <li className='list-item'>shrimp ball</li>
-                <li className='list-item'>pork</li>
-                <li className='list-item'>chicken</li>
-                <li className='list-item'>chip</li>
-                <li className='list-item'>banana</li>
-                <li className='list-item'>steak</li>
+                {
+                    historyList.map((item, index) => {
+                        return (
+                            <li key={index+item} className='list-item'>{item}</li>
+                        )
+                    })
+                }
+
+
             </ul>
             <div className="title">
                 Hot Search
