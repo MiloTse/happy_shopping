@@ -24,12 +24,14 @@ const Search = () => {
             }
             setHistoryList(newHistoryList);
             setKeyword('');
+            localStorage.setItem('search-list', JSON.stringify(newHistoryList));
 
         }
     }
 
     function handleHistoryListClean(){
         setHistoryList([]);
+        localStorage.setItem('search-list', JSON.stringify([]));
     }
     return (
         <div className="page search-page">
