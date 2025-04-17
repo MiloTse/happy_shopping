@@ -3,16 +3,15 @@
   min-height: 100vh;
 
   .title {
-    display: flex;
     align-items: center;
+    display: flex;
     padding: 0.12rem;
     font-size: 0.16rem;
-    border-bottom: 1px solid #f0f0f0;
 
     .title-icon {
-      margin-right: 0.1rem;
+      margin-right: 1.4rem;
       font-size: 0.16rem;
-      color: #666;
+      color: #242424;
     }
   }
 

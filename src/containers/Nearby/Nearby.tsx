@@ -39,13 +39,17 @@ const Nearby = () => {
         }));
         navigate('/home');
     }
-
+    const handleGoBackClick = () => {
+        navigate('/home');
+    };
     return (
         <div className='page nearby-page'>
             <div className="title">
-                <Link to="/home">
-                    <div className="iconfont title-icon">&#xe608;</div>
-                </Link>
+
+                    <div className="iconfont title-icon"
+                         onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
+                        &#xe6a9;</div>
+
                 切换门店
             </div>
             <div className="search">
@@ -60,7 +64,7 @@ const Nearby = () => {
             <div className="subtitle">附近门店</div>
             <ul className="store-list">
                 {list.map(item => (
-                    <li 
+                    <li
                         key={item.id} 
                         className="store-list-item"
                         onClick={() => handleItemClick(item.latitude, item.longitude)}
