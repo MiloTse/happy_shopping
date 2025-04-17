@@ -108,8 +108,7 @@ const Search = () => {
                                     )
                                 )
                             }
-                            <li className='list-item'>steak</li>
-                        </ul>
+                         </ul>
 
                     </>
 
