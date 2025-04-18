@@ -39,15 +39,19 @@ const Search = () => {
     }
 
     function handleKeyDown(key: string) {
-        if(key === 'Enter') {
-            const newHistoryList = [...historyList];
-            newHistoryList.unshift(keyword);
-            if(newHistoryList.length > 5) {
-                newHistoryList.pop();
+        if(key === 'Enter' && keyword) {
+            //add search keyword to historyList when can't find the keyword in history list
+            if(!historyList.find(item=>item === keyword)){
+                const newHistoryList = [...historyList];
+                newHistoryList.unshift(keyword);
+                if(newHistoryList.length > 5) {
+                    newHistoryList.pop();
+                }
+                setHistoryList(newHistoryList);
+                localStorage.setItem('search-list', JSON.stringify(newHistoryList));
             }
-            setHistoryList(newHistoryList);
+
             setKeyword('');
-            localStorage.setItem('search-list', JSON.stringify(newHistoryList));
 
         }
     }
