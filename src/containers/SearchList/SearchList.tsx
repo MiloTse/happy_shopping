@@ -31,7 +31,7 @@ const SearchList = () => {
             <div className="list">
 
                 <div className="item">
-                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
                     <div className="item-content">
                         <p className="item-title">
                             Fresh frozen squid head frozen squid tentacles 400g...
@@ -47,7 +47,7 @@ const SearchList = () => {
 
                 </div>
                 <div className="item">
-                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
                     <div className="item-content">
                         <p className="item-title">
                             Fresh frozen squid head frozen squid tentacles 400g...
@@ -63,7 +63,7 @@ const SearchList = () => {
 
                 </div>
                 <div className="item">
-                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
                     <div className="item-content">
                         <p className="item-title">
                             Fresh frozen squid head frozen squid tentacles 400g...
@@ -79,7 +79,7 @@ const SearchList = () => {
 
                 </div>
                 <div className="item">
-                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
                     <div className="item-content">
                         <p className="item-title">
                             Fresh frozen squid head frozen squid tentacles 400g...
