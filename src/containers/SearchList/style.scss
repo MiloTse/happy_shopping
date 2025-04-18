@@ -51,8 +51,12 @@
       flex: 1;
       line-height: .4rem;
       text-align: center;
-      color: #242424;
+      color: #B1B1B1;
       font-size: .14rem;
+    }
+    &-item-active {
+      color: #242424;
+      border-bottom: .02rem solid #0084FF;
     }
   }
 }
