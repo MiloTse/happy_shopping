@@ -18,7 +18,7 @@ const SearchList = () => {
                         placeholder="Please enter product name"
                     />
                 </div>
-                <div className="search-close iconfont">&#xe610;</div>
+                <div className="search-clear iconfont">&#xe610;</div>
             </div>
         </div>
     )

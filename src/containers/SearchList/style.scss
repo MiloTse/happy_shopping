@@ -3,6 +3,9 @@
   .search {
     display: flex;
     padding:.08rem .32rem .06rem 0;
+    &-back-link {
+      text-decoration: none;
+    }
      &-back {
       line-height:.32rem;
       width: .48rem;
@@ -26,17 +29,19 @@
       }
       .search-input {
         flex:1;
-        padding-right:.2rem;
+        padding-right:.1rem;
         background:none;
         outline:none;
         border: none;
         color: #242424;
       }
-      .search-close {
-        position: absolute;
-        font-size:.18rem;
-        color: #75818F;
-      }
+    }
+    &-clear {
+      position: absolute;
+      font-size:.2rem;
+      color: #75818F;
+      right: .4rem;
+      top:.1rem;
     }
   }
 
