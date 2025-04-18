@@ -33,24 +33,27 @@ const Search = () => {
 
     //gain shopId from url
     const params = useParams<{shopId:string}>();
-    console.log("shopId",params.shopId);
+    // console.log("shopId",params.shopId);
     if(params.shopId){
         defaultRequestData.params.shopId = params.shopId;
     }
 
     function handleKeyDown(key: string) {
         if(key === 'Enter' && keyword) {
+            const keywordIndex = historyList.findIndex(item=>item === keyword);
             //add search keyword to historyList when can't find the keyword in history list
-            if(!historyList.find(item=>item === keyword)){
-                const newHistoryList = [...historyList];
-                newHistoryList.unshift(keyword);
-                if(newHistoryList.length > 5) {
-                    newHistoryList.pop();
-                }
-                setHistoryList(newHistoryList);
-                localStorage.setItem('search-list', JSON.stringify(newHistoryList));
+            const newHistoryList = [...historyList];
+            //if search keyword existed, remove it from the list from keywordIndex.
+            if(keywordIndex > -1){
+                 newHistoryList.splice(keywordIndex, 1);
             }
-
+            //put new keyword at the beginning of the list
+            newHistoryList.unshift(keyword);
+            if(newHistoryList.length > 5) {
+                newHistoryList.pop();
+            }
+            setHistoryList(newHistoryList);
+            localStorage.setItem('search-list', JSON.stringify(newHistoryList));
             setKeyword('');
 
         }
