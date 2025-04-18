@@ -10,6 +10,7 @@ import Account from "./containers/Account/Account";
 import Home from "./containers/Home/Home";
 import Nearby from "./containers/Nearby/Nearby";
 import Search from "./containers/Search/Search";
+import SearchList from "./containers/SearchList/SearchList";
 
 const router = createHashRouter([{
         path: "/",
@@ -38,6 +39,10 @@ const router = createHashRouter([{
     {
         path: "/search",
         element: <Search />
+    },
+    {
+        path: "/searchList",
+        element: <SearchList />
     }
 ]);
 
