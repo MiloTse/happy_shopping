@@ -7,6 +7,7 @@ const SearchList = () => {
 
     return (
         <div className="page search-list-page">
+            {/*search input area*/}
             <div className="search">
                 <Link to="/home" className="search-back-link">
                     <div className="search-back-icon iconfont">&#xe6a9;</div>
@@ -19,6 +20,12 @@ const SearchList = () => {
                     />
                 </div>
                 <div className="search-clear iconfont">&#xe610;</div>
+            </div>
+            {/*item list area*/}
+            <div className="tab">
+                <div className="tab-item tab-item-active">Default</div>
+                <div className="tab-item ">Default</div>
+                <div className="tab-item ">Price</div>
             </div>
         </div>
     )
