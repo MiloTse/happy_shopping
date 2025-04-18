@@ -37,7 +37,7 @@ const router = createHashRouter([{
         element: <Nearby />
     },
     {
-        path: "/search",
+        path: "/search/:shopId",
         element: <Search />
     },
     {

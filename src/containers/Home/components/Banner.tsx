@@ -22,7 +22,11 @@ const Banner = (props: BannerPropsType) => {
     };
 
     const handleSearchClick = () => {
-        navigate('/search');
+        //在typescript中叫做类型收紧.use if condition or ? to avoid undefined
+        navigate(`/search/${location?.id}`);
+        if(location){
+            navigate(`/search/${location.id}`);
+        }
     };
 
     return (
