@@ -1,6 +1,6 @@
 import './style.scss';
 import useRequest from "../../utils/useRequest";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import React, {useState} from "react";
 import type {ResponseType} from "./types";
 
@@ -25,8 +25,7 @@ const Nearby = () => {
 
     const { data } = useRequest<ResponseType>(defaultRequestData);
     const navigate = useNavigate();
-    const { pathname } = useLocation();
-    const [keyword, setKeyword] = useState('');
+     const [keyword, setKeyword] = useState('');
 
     // use the search keyword to filter the list
     const list = (data?.data || []).filter(
