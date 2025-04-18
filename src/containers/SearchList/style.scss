@@ -3,14 +3,17 @@
   .search {
     display: flex;
     padding:.08rem .32rem .06rem 0;
-    &-back {
+     &-back {
       line-height:.32rem;
       width: .48rem;
       font-size: .18rem;
       text-align: center;
       color: #242424;
+
     }
+
     &-area {
+      position: relative;
       display: flex;
       line-height: .32rem;
       background: #F5F9FA;
@@ -19,6 +22,7 @@
       .search-icon {
         width:.3rem;
         text-align: center;
+        color: #75818F;
       }
       .search-input {
         flex:1;
@@ -27,6 +31,11 @@
         outline:none;
         border: none;
         color: #242424;
+      }
+      .search-close {
+        position: absolute;
+        font-size:.18rem;
+        color: #75818F;
       }
     }
   }
