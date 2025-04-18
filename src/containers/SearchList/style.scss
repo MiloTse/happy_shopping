@@ -86,20 +86,20 @@
         bottom: 0;
         left: 0;
         color: #F81C00;
-        font-size: .16rem;
+        font-size: .17rem;
         line-height:.24em;
       }
       &-price-symbol {
-        font-size: .15rem;
+        font-size: .17rem;
         margin-right: .04rem;
       }
       &-sales {
         position: absolute;
         right: 0;
-        bottom: .06rem;
+        bottom: 0.06rem;
         color: #B1B1B1;
-        font-size: .12rem;
-        line-height:.26rem;
+        font-size: .15rem;
+        line-height:.01rem;
       }
     }
   }
