@@ -24,7 +24,7 @@ const SearchList = () => {
             {/*item list area*/}
             <div className="tab">
                 <div className="tab-item tab-item-active">Default</div>
-                <div className="tab-item ">Default</div>
+                <div className="tab-item ">Sale</div>
                 <div className="tab-item ">Price</div>
             </div>
         </div>
