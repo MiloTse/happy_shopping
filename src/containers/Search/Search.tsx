@@ -9,7 +9,7 @@ import type {ResponseType} from "./types";
 const defaultRequestData = {
     url: '/hotSearchList.json',
     method: 'GET',
-
+    params: { shopId: ''},
 }
 
 const Search = () => {
@@ -34,7 +34,9 @@ const Search = () => {
     //gain shopId from url
     const params = useParams<{shopId:string}>();
     console.log("shopId",params.shopId);
-
+    if(params.shopId){
+        defaultRequestData.params.shopId = params.shopId;
+    }
 
     function handleKeyDown(key: string) {
         if(key === 'Enter') {
