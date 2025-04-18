@@ -1,5 +1,5 @@
 import './style.scss';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useState} from "react";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
@@ -30,6 +30,11 @@ const Search = () => {
     //load search history from local storage
     const [historyList, setHistoryList] = useState (searchHistory);
     const [keyword, setKeyword] = useState('');
+
+    //gain shopId from url
+    const params = useParams<{shopId:string}>();
+    console.log("shopId",params.shopId);
+
 
     function handleKeyDown(key: string) {
         if(key === 'Enter') {
