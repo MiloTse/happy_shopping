@@ -27,6 +27,10 @@ const SearchList = () => {
                 <div className="tab-item ">Sale</div>
                 <div className="tab-item ">Price</div>
             </div>
+            {/*bottom line*/}
+            <div className="bottom">
+                -- I am the bottom line --
+            </div>
         </div>
     )
 }
