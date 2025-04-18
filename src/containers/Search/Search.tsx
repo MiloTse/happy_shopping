@@ -52,7 +52,7 @@ const Search = () => {
     return (
         <div className="page search-page">
             <div className="search">
-                <div className="search-back iconfont"  onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
+                <div className="search-back-icon iconfont"  onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
                     &#xe6a9;</div>
                 <div className="search-area">
                     <div className="search-icon iconfont">&#xe600;</div>

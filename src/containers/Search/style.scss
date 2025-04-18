@@ -3,7 +3,10 @@
   .search {
     display: flex;
     padding:.08rem .32rem .06rem 0;
-    &-back {
+    &-back-link {
+      text-decoration: none;
+    }
+    &-back-icon {
       line-height:.32rem;
       width: .48rem;
       font-size: .18rem;
