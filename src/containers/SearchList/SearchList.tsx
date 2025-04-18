@@ -27,6 +27,77 @@ const SearchList = () => {
                 <div className="tab-item ">Sale</div>
                 <div className="tab-item ">Price</div>
             </div>
+            {/*product list area*/}
+            <div className="list">
+
+                <div className="item">
+                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <div className="item-content">
+                        <p className="item-title">
+                            Fresh frozen squid head frozen squid tentacles 400g...
+                        </p>
+                        <div className="item-price">
+                            <span className="item-price-symbol">
+                                &#36;
+                            </span>
+                            49.9
+                        </div>
+                        <div className="item-sales">sold 982</div>
+                    </div>
+
+                </div>
+                <div className="item">
+                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <div className="item-content">
+                        <p className="item-title">
+                            Fresh frozen squid head frozen squid tentacles 400g...
+                        </p>
+                        <div className="item-price">
+                            <span className="item-price-symbol">
+                                &#36;
+                            </span>
+                            49.9
+                        </div>
+                        <div className="item-sales">sold 982</div>
+                    </div>
+
+                </div>
+                <div className="item">
+                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <div className="item-content">
+                        <p className="item-title">
+                            Fresh frozen squid head frozen squid tentacles 400g...
+                        </p>
+                        <div className="item-price">
+                            <span className="item-price-symbol">
+                                &#36;
+                            </span>
+                            49.9
+                        </div>
+                        <div className="item-sales">sold 982</div>
+                    </div>
+
+                </div>
+                <div className="item">
+                    <img alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                    <div className="item-content">
+                        <p className="item-title">
+                            Fresh frozen squid head frozen squid tentacles 400g...
+                        </p>
+                        <div className="item-price">
+                            <span className="item-price-symbol">
+                                &#36;
+                            </span>
+                            49.9
+                        </div>
+                        <div className="item-sales">sold 982</div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
             {/*bottom line*/}
             <div className="bottom">
                 -- I am the bottom line --
