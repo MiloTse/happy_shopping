@@ -41,7 +41,7 @@ const router = createHashRouter([{
         element: <Search />
     },
     {
-        path: "/searchList",
+        path: "/searchList/:shopId/:keyword",
         element: <SearchList />
     }
 ]);
