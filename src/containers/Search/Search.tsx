@@ -64,6 +64,11 @@ const Search = () => {
         setHistoryList([]);
         localStorage.setItem('search-list', JSON.stringify([]));
     }
+
+    function handleKeywordClick(keyword: string) {
+        navigate(`/searchList/${params.shopId}/${keyword}`);
+    }
+
     return (
         <div className="page search-page">
             <div className="search">
@@ -79,36 +84,31 @@ const Search = () => {
                         onKeyDown={(e) => {handleKeyDown(e.key)} }
                     />
                 </div>
-
             </div>
-
             {
                 historyList.length? (
                     <>
-
                         <div className="title">
                             History Search
                             <div onClick={handleHistoryListClean}
-                                 className="iconfont title-close"
-                            >
-                                &#xe610;</div>
+                                 className="iconfont title-close">
+                                &#xe610;
+                            </div>
                         </div>
-
                         <ul className="list">
                             {
                                 historyList.map((item, index) => {
                                     return (
-                                        <li key={index + item} className='list-item'>{item}</li>
+                                        <li key={index + item} className='list-item' onClick={()=>handleKeywordClick(item)} >
+                                            {item}
+                                        </li>
                                     )
                                 })
                             }
-
-
                         </ul>
                     </>
                 ) : null
             }
-
             {
                 hotList.length? (
                     <>
@@ -119,7 +119,9 @@ const Search = () => {
                             {
                                 hotList.map(item =>
                                     (
-                                        <li key={item.id} className='list-item'>{item.keyword}</li>
+                                        <li key={item.id} className='list-item' onClick={()=>handleKeywordClick(item.keyword)} >
+                                            {item.keyword}
+                                        </li>
                                     )
                                 )
                             }
