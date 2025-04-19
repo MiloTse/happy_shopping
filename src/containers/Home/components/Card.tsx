@@ -37,7 +37,7 @@ const Card = (props: CardPropsType) => {
                                     src={item.imgUrl}/>
                                 <p className='card-content-item-desc'>{item.name}</p>
                                 <div className='card-content-item-price'>
-                                    <span className='card-content-item-yen'>&#36;</span>
+                                    <span className='card-content-item-price-symbol'>&#36;</span>
                                     {item.price}
                                     <div className='iconfont'>&#xe6b2;</div>
                                 </div>
