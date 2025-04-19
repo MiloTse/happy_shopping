@@ -30,8 +30,7 @@ const Search = () => {
     //load search history from local storage
     const [historyList, setHistoryList] = useState (searchHistory);
     const [keyword, setKeyword] = useState('');
-
-    //gain shopId from url
+     //gain shopId from url
     const params = useParams<{shopId:string}>();
     // console.log("shopId",params.shopId);
     if(params.shopId){
@@ -54,6 +53,8 @@ const Search = () => {
             }
             setHistoryList(newHistoryList);
             localStorage.setItem('search-list', JSON.stringify(newHistoryList));
+            //navigate to searchList page
+            navigate(`/searchList/${params.shopId}/${keyword}`);
             setKeyword('');
 
         }
