@@ -74,7 +74,7 @@ const SearchList = () => {
         <div className="page search-list-page">
             {/*search input area*/}
             <div className="search">
-                <Link to="/home" className="search-back-link">
+                <Link to={`/search/${params.shopId}`} className="search-back-link">
                     <div className="search-back-icon iconfont">&#xe6a9;</div>
                 </Link>
                 <div className="search-area">
