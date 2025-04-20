@@ -7,10 +7,9 @@ import type {ResponseType} from "./types";
 const SearchList = () => {
     const params = useParams<{ shopId : string; keyword: string}>();
     const [keyword, setKeyword] = useState(params.keyword);
-    console.log(params.keyword,params.shopId);
 
     const [requestData, setRequestData] = useState({
-        url: '/api/searchList.json',
+        url: '/api/shopSearchList.json',
         method: 'GET',
         params: {
             keyword: params.keyword,
@@ -22,6 +21,7 @@ const SearchList = () => {
 
     });
     const {data} = useRequest<ResponseType>(requestData);
+    console.log(data);
 
 
     function handleClearKeyword() {
