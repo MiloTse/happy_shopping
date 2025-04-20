@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './style.scss';
 import {Link, useParams} from 'react-router-dom';
 import useRequest from "../../utils/useRequest";
-
+import type {ResponseType} from "./types";
 
 const SearchList = () => {
     const params = useParams<{ shopId : string; keyword: string}>();
