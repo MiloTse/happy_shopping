@@ -7,7 +7,7 @@ import type {ResponseType} from "./types";
 const SearchList = () => {
     const params = useParams<{ shopId : string; keyword: string}>();
     const [keyword, setKeyword] = useState(params.keyword);
-
+    const [tabValue,setTabValue] = useState('default');
     const [requestData, setRequestData] = useState({
         url: '/shopSearchList.json',
         method: 'GET',
@@ -16,7 +16,7 @@ const SearchList = () => {
             shopId: params.shopId,
             // page: 0,
             // pageSize: 8,
-            type: 'default'
+            type: tabValue
         },
 
     });
@@ -60,6 +60,10 @@ const SearchList = () => {
         }
     }
 
+    function handleTabClick(tabValue: string) {
+        setTabValue(tabValue);
+    }
+
     return (
         <div className="page search-list-page">
             {/*search input area*/}
@@ -81,9 +85,10 @@ const SearchList = () => {
             </div>
             {/*item list area*/}
             <div className="tab">
-                <div className="tab-item tab-item-active">Default</div>
-                <div className="tab-item ">Sale</div>
-                <div className="tab-item ">Price</div>
+                <div className={tabValue==='default'? "tab-item tab-item-active" : "tab-item " } onClick={()=>handleTabClick('default')}>Default</div>
+                <div className={tabValue==='sales'? "tab-item tab-item-active" : "tab-item " }   onClick={()=>handleTabClick('sales')}>Sale</div>
+                <div className={tabValue==='price'? "tab-item tab-item-active" : "tab-item " }   onClick={()=>handleTabClick('price')}>Price</div>
+
             </div>
             {/*product list area*/}
             <div className="list">
