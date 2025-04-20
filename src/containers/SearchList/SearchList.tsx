@@ -28,6 +28,33 @@ const SearchList = () => {
         setKeyword('');
     }
 
+    function handleKeyDown(key: string) {
+        if(key === 'Enter' && keyword) {
+            //更新本地存储内容
+            //update local storage content
+            const localSearchList= localStorage.getItem('search-list');
+            const searchHistory: string[] = localSearchList ? JSON.parse(localSearchList) : [];
+
+
+
+            const keywordIndex = searchHistory.findIndex(item=>item === keyword);
+            //add search keyword to historyList when can't find the keyword in history list
+            const newHistoryList = [...searchHistory];
+            //if search keyword existed, remove it from the list from keywordIndex.
+            if(keywordIndex > -1){
+                newHistoryList.splice(keywordIndex, 1);
+            }
+            //put new keyword at the beginning of the list
+            newHistoryList.unshift(keyword);
+            if(newHistoryList.length > 5) {
+                newHistoryList.pop();
+            }
+             localStorage.setItem('search-list', JSON.stringify(newHistoryList));
+
+
+        }
+    }
+
     return (
         <div className="page search-list-page">
             {/*search input area*/}
@@ -42,6 +69,7 @@ const SearchList = () => {
                         placeholder="Please enter product name"
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
+                        onKeyDown={(e) => {handleKeyDown(e.key)} }
                     />
                 </div>
                 <div className="search-clear iconfont" onClick={handleClearKeyword}>&#xe610;</div>
