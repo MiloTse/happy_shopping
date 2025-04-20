@@ -9,7 +9,7 @@ const SearchList = () => {
     const [keyword, setKeyword] = useState(params.keyword);
 
     const [requestData, setRequestData] = useState({
-        url: '/api/shopSearchList.json',
+        url: '/shopSearchList.json',
         method: 'GET',
         params: {
             keyword: params.keyword,
