@@ -1,12 +1,28 @@
 import React, {useState} from 'react';
 import './style.scss';
 import {Link, useParams} from 'react-router-dom';
+import useRequest from "../../utils/useRequest";
 
 
 const SearchList = () => {
     const params = useParams<{ shopId : string; keyword: string}>();
     const [keyword, setKeyword] = useState(params.keyword);
     console.log(params.keyword,params.shopId);
+
+    const [requestData, setRequestData] = useState({
+        url: '/api/searchList.json',
+        method: 'GET',
+        params: {
+            keyword: params.keyword,
+            shopId: params.shopId,
+            // page: 0,
+            // pageSize: 8,
+            type: 'default'
+        },
+
+    });
+    const {data} = useRequest<ResponseType>(requestData);
+
 
     function handleClearKeyword() {
         setKeyword('');
