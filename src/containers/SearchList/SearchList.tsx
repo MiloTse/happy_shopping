@@ -22,7 +22,7 @@ const SearchList = () => {
     });
     const {data} = useRequest<ResponseType>(requestData);
     console.log(data);
-
+    const list = data?.data || [];
 
     function handleClearKeyword() {
         setKeyword('');
@@ -54,71 +54,34 @@ const SearchList = () => {
             </div>
             {/*product list area*/}
             <div className="list">
+                {
+                    list.map(item=>{
+                        return (
 
-                <div className="item">
-                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
-                    <div className="item-content">
-                        <p className="item-title">
-                            Fresh frozen squid head frozen squid tentacles 400g...
-                        </p>
-                        <div className="item-price">
+                            <div className="item">
+                                <img className="item-img" alt=''
+                                     src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                                <div className="item-content">
+                                    <p className="item-title">
+                                        Fresh frozen squid head frozen squid tentacles 400g...
+                                    </p>
+                                    <div className="item-price">
                             <span className="item-price-symbol">
                                 &#36;
                             </span>
-                            49.9
-                        </div>
-                        <div className="item-sales">sold 982</div>
-                    </div>
+                                        49.9
+                                    </div>
+                                    <div className="item-sales">sold 982</div>
+                                </div>
+                            </div>
 
-                </div>
-                <div className="item">
-                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
-                    <div className="item-content">
-                        <p className="item-title">
-                            Fresh frozen squid head frozen squid tentacles 400g...
-                        </p>
-                        <div className="item-price">
-                            <span className="item-price-symbol">
-                                &#36;
-                            </span>
-                            49.9
-                        </div>
-                        <div className="item-sales">sold 982</div>
-                    </div>
 
-                </div>
-                <div className="item">
-                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
-                    <div className="item-content">
-                        <p className="item-title">
-                            Fresh frozen squid head frozen squid tentacles 400g...
-                        </p>
-                        <div className="item-price">
-                            <span className="item-price-symbol">
-                                &#36;
-                            </span>
-                            49.9
-                        </div>
-                        <div className="item-sales">sold 982</div>
-                    </div>
+                        )
 
-                </div>
-                <div className="item">
-                    <img className="item-img" alt='' src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
-                    <div className="item-content">
-                        <p className="item-title">
-                            Fresh frozen squid head frozen squid tentacles 400g...
-                        </p>
-                        <div className="item-price">
-                            <span className="item-price-symbol">
-                                &#36;
-                            </span>
-                            49.9
-                        </div>
-                        <div className="item-sales">sold 982</div>
-                    </div>
+                    })
+                }
 
-                </div>
+
 
 
 
