@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.scss';
 import {Link, useParams} from 'react-router-dom';
 
 
 const SearchList = () => {
     const params = useParams<{ shopId : string; keyword: string}>();
+    const [keyword, setKeyword] = useState(params.keyword);
     console.log(params.keyword,params.shopId);
+
+    function handleClearKeyword() {
+        setKeyword('');
+    }
 
     return (
         <div className="page search-list-page">
@@ -19,9 +24,11 @@ const SearchList = () => {
                     <input
                         className="search-input"
                         placeholder="Please enter product name"
+                        value={keyword}
+                        onChange={(e) => setKeyword(e.target.value)}
                     />
                 </div>
-                <div className="search-clear iconfont">&#xe610;</div>
+                <div className="search-clear iconfont" onClick={handleClearKeyword}>&#xe610;</div>
             </div>
             {/*item list area*/}
             <div className="tab">
