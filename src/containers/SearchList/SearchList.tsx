@@ -62,6 +62,12 @@ const SearchList = () => {
 
     function handleTabClick(tabValue: string) {
         setTabValue(tabValue);
+
+        const newRequestData = {
+            ...requestData,
+        }
+         newRequestData.params.type = tabValue;
+        setRequestData(newRequestData);
     }
 
     return (
