@@ -50,8 +50,13 @@ const SearchList = () => {
                 newHistoryList.pop();
             }
              localStorage.setItem('search-list', JSON.stringify(newHistoryList));
-
-
+            //request data. old data assign to new data
+            const newRequestData = {
+                ...requestData,
+            }
+            //current key assign to newRequestData's keyword when data changed
+            newRequestData.params.keyword = keyword;
+            setRequestData(newRequestData);
         }
     }
 
