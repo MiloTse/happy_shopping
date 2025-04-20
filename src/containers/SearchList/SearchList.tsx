@@ -58,20 +58,19 @@ const SearchList = () => {
                     list.map(item=>{
                         return (
 
-                            <div className="item">
-                                <img className="item-img" alt=''
-                                     src='http://statics.dell-lee.com/shopping/fresh-4.png'/>
+                            <div className="item" key={item.id}>
+                                <img className="item-img" alt={item.title}  src={item.imgUrl}/>
                                 <div className="item-content">
                                     <p className="item-title">
-                                        Fresh frozen squid head frozen squid tentacles 400g...
+                                        {item.title}
                                     </p>
                                     <div className="item-price">
-                            <span className="item-price-symbol">
-                                &#36;
-                            </span>
-                                        49.9
+                                        <span className="item-price-symbol">
+                                            &#36;
+                                        </span>
+                                        {item.price}
                                     </div>
-                                    <div className="item-sales">sold 982</div>
+                                    <div className="item-sales">sold {item.sales} </div>
                                 </div>
                             </div>
 
