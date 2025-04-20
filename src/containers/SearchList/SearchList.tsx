@@ -1,9 +1,11 @@
 import React from 'react';
 import './style.scss';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 
 const SearchList = () => {
+    const params = useParams<{ shopId : string; keyword: string}>();
+    console.log(params.keyword,params.shopId);
 
     return (
         <div className="page search-list-page">
