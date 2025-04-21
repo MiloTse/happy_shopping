@@ -131,7 +131,30 @@
     height: .64rem;
     display: flex;
     background: #FFF;
+    border-top:.01rem solid #F5F9FA ;
+    .cart-icon {
+      width: 1.2rem;
+      text-align:center;
+      .iconfont {
+        margin-top: .1rem ;
+        font-size:.24rem;
+      }
+      .icon-text {
+        font-size:.14rem;
+      }
+    }
 
+    .cart-button {
+      flex:1;
+      margin-right:.16rem;
+      height:.44rem;
+      line-height:.44rem;
+      font-size:.16rem;
+      background:#73D13D;
+      border-radius:.22rem;
+      text-align: center;
+      color: #FFF;
+    }
 
   }
 }
