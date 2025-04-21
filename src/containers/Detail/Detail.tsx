@@ -48,6 +48,9 @@ const Detail = () => {
 
                 </div>
             </div>
+            {/*docker area */}
+            <div className='docker'>
+            </div>
         </div>
     )
 
