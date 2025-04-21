@@ -1,5 +1,7 @@
 .detail-page {
+  overflow-y: scroll;
   background: #F5F9FA;
+  padding-bottom: .78rem;
   .title {
     position: relative;
     line-height:.44rem;
@@ -101,6 +103,24 @@
         font-size:.14rem;
         line-height:.2rem;
       }
+    }
+  }
+  .detail {
+    margin:.1rem.08rem0.08rem;
+    border-radius: 15px;
+    background:#FFF;
+    &-title {
+      margin-left:.1rem;
+      color:#242424;
+      font-size:.16rem;
+      line-height:.4rem;
+    }
+    &-content {
+      padding: .13rem .16rem .16rem .16rem;
+      color:#242424;
+      font-size:.16rem;
+      line-height:.27rem;
+
     }
   }
 }

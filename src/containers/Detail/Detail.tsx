@@ -42,7 +42,9 @@ const Detail = () => {
             <div className='detail'>
                 <div className='detail-title'>product detail</div>
                 <div className='detail-content'>
-
+                    普罗旺斯西红柿不同于别的西红柿品种，它的表面有沟有棱，不像高粉西红柿那样表面光滑饱
+                    满，看起来更像秋天的软柿子或者甜椒，正因为有沟有棱，所以它里面显得很空，草莓心，尤其
+                    是第一二层最为明显，第三四层就会好很多，第五层基本不会存在这种情况。
 
                 </div>
             </div>
