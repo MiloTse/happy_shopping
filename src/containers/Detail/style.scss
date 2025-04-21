@@ -32,7 +32,17 @@
       &-symbol {
         font-size:.14rem;
         margin-right:.02rem;
+        font-weight: normal;
       }
+    }
+    &-sales  {
+      position: absolute;
+      color:#FFF;
+      font-size:.16rem;
+      right:.1rem;
+      top:.1rem;
+      font-weight: bold;
+
     }
   }
 }
