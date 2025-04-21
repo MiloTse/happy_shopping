@@ -11,6 +11,7 @@ import Home from "./containers/Home/Home";
 import Nearby from "./containers/Nearby/Nearby";
 import Search from "./containers/Search/Search";
 import SearchList from "./containers/SearchList/SearchList";
+import Detail from "./containers/Detail/Detail";
 
 const router = createHashRouter([{
         path: "/",
@@ -43,6 +44,10 @@ const router = createHashRouter([{
     {
         path: "/searchList/:shopId/:keyword",
         element: <SearchList />
+    },
+    {
+        path: "/detail",
+        element: <Detail />
     }
 ]);
 
