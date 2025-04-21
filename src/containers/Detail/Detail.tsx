@@ -50,6 +50,8 @@ const Detail = () => {
             </div>
             {/*docker area */}
             <div className='docker'>
+                <div className='iconfont'>&#xe949;</div>
+                <div className='cart-button'>Add to Cart</div>
             </div>
         </div>
     )
