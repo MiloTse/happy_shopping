@@ -5,15 +5,21 @@ import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
 
+{/*one time request*/}
+const requestData = {
+    url: '/detail.json',
+    method: 'GET',
+    params: { id: ''},
+}
 
 const Detail = () => {
     const navigate = useNavigate();
     const params = useParams<{id:string}>();
-    const [requestData, setRequestData] = React.useState({
-        url: '/detail.json',
-        method: 'GET',
-        params: { id: params.id},
-    })
+    //assign value
+    if(params.id){
+        requestData.params.id = params.id;
+    }
+
 
     const {data} = useRequest<ResponseType>(requestData);
     return (
