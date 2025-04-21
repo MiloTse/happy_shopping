@@ -66,4 +66,30 @@
       }
     }
   }
+  .spec {
+    margin:.1rem.08rem0.08rem;
+    border-radius: 15px;
+    background:#FFF;
+    &-title {
+      margin-left:.1rem;
+      color:#242424;
+      font-size:.16rem;
+      line-height:.4rem;
+    }
+    &-content {
+      margin:00.12rem.12rem.12rem;
+      display: flex;
+      &-left {
+        width: 0.62rem;
+      }
+      &-right {
+        flex: 1;
+
+      }
+      &-item {
+        color: #242424;
+        font-size:.14rem;
+      }
+    }
+  }
 }
