@@ -36,7 +36,7 @@ const Detail = () => {
     };
 
 
-    return (
+    return result ? (
         <div className="page detail-page">
             {/*title area */}
             <div className="title">
@@ -89,7 +89,7 @@ const Detail = () => {
                 <div className='cart-button'>Add to Cart</div>
             </div>
         </div>
-    )
+    ) : null;
 
 }
 
