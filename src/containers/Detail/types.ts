@@ -4,9 +4,6 @@ export type ResponseType = {
     data: Array<{
         id: string;
         keyword:string;
-        imgUrl: string;
-        title:string;
-        price: number;
-        sales: number;
+
     }>
 }

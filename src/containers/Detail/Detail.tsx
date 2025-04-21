@@ -2,15 +2,20 @@
 import './style.scss';
 import React from "react";
 import {useNavigate, useParams} from "react-router-dom";
+import useRequest from "../../utils/useRequest";
+import type {ResponseType} from "./types";
+
 
 const Detail = () => {
     const navigate = useNavigate();
     const params = useParams<{id:string}>();
-    const [requestParams, setRequestParams] = React.useState({
+    const [requestData, setRequestData] = React.useState({
         url: '/detail.json',
         method: 'GET',
         params: { id: params.id},
     })
+
+    const {data} = useRequest<ResponseType>(requestData);
     return (
         <div className="page detail-page">
             {/*title area */}
