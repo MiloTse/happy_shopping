@@ -1,13 +1,16 @@
 
 import './style.scss';
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 const Detail = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="page detail-page">
+            {/*title area */}
             <div className="title">
-                <div className="iconfont">&#xe6a9;</div>
+                <div className="iconfont" onClick={()=>{navigate(-1)}}>&#xe6a9;</div>
                 <div className="text">Detail</div>
             </div>
             <img className='image' alt='' src='http://statics.dell-lee.com/shopping/detail.png'/>
