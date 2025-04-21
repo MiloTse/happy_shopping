@@ -11,6 +11,7 @@ const Detail = () => {
                 <div className="text">Detail</div>
             </div>
             <img className='image' alt='' src='http://statics.dell-lee.com/shopping/detail.png'/>
+            {/*main area */}
             <div className='main'>
                 <div className='main-price'><span className="main-price-symbol">&#36;</span>
                 139.9</div>
@@ -23,7 +24,20 @@ const Detail = () => {
                 </div>
 
             </div>
-
+            {/*specification area */}
+            <div className='spec'>
+                <div className='spec-title'>spec info</div>
+                <div className='spec-content'>
+                    <div className='spec-content-left'>
+                        <p className='spec-content-item'>origin</p>
+                        <p className='spec-content-item'>spec</p>
+                    </div>
+                    <div className='spec-content-right'>
+                        <p className='spec-content-item'>The actual batch of purchased products shall prevail.</p>
+                        <p className='spec-content-item'>2kg</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 
