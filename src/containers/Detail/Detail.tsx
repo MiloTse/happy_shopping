@@ -10,7 +10,7 @@ const Detail = () => {
                 <div className="iconfont">&#xe6a9;</div>
                 <div className="text">Detail</div>
             </div>
-            <img className='image' alt='' src='http://statics.dell-lee.com/shopping/list-1.png' />
+            <img className='image' alt='' src='http://statics.dell-lee.com/shopping/detail.png' />
 
         </div>
     )
