@@ -26,7 +26,7 @@ const Detail = () => {
             </div>
             {/*specification area */}
             <div className='spec'>
-                <div className='spec-title'>spec info</div>
+                <div className='spec-title'>specification info</div>
                 <div className='spec-content'>
                     <div className='spec-content-left'>
                         <p className='spec-content-item'>origin</p>
@@ -36,6 +36,14 @@ const Detail = () => {
                         <p className='spec-content-item'>Actual batch of purchased products shall prevail.</p>
                         <p className='spec-content-item'>2kg</p>
                     </div>
+                </div>
+            </div>
+            {/*product detail area */}
+            <div className='detail'>
+                <div className='detail-title'>product detail</div>
+                <div className='detail-content'>
+
+
                 </div>
             </div>
         </div>
