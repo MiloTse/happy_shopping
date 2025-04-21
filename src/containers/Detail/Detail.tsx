@@ -33,7 +33,7 @@ const Detail = () => {
                         <p className='spec-content-item'>spec</p>
                     </div>
                     <div className='spec-content-right'>
-                        <p className='spec-content-item'>The actual batch of purchased products shall prevail.</p>
+                        <p className='spec-content-item'>Actual batch of purchased products shall prevail.</p>
                         <p className='spec-content-item'>2kg</p>
                     </div>
                 </div>

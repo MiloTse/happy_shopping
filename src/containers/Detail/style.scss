@@ -81,6 +81,8 @@
       display: flex;
       &-left {
         width: 0.62rem;
+        background: #F2F3F5;
+        text-align: center;
       }
       &-right {
         flex: 1;
@@ -89,6 +91,7 @@
       &-item {
         color: #242424;
         font-size:.14rem;
+        line-height:.25rem;
       }
     }
   }
