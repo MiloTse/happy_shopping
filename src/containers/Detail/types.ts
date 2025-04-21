@@ -1,7 +1,7 @@
 //返回内容类型
 export type ResponseType = {
     success: boolean,
-    data: Array<{
+    data: {
         id: string;
         imgUrl: string;
         title: string;
@@ -12,5 +12,5 @@ export type ResponseType = {
         specification: string;
         detail: string;
 
-    }>
+    }
 }
