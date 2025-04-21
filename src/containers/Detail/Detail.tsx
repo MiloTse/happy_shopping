@@ -20,8 +20,22 @@ const Detail = () => {
         requestData.params.id = params.id;
     }
 
-
+    //data is a dynamic data fetch from api detail.json
     const {data} = useRequest<ResponseType>(requestData);
+    //define default value if undefined or null
+    const result = data?.data || {
+        id: '',
+        imgUrl: '',
+        title: '',
+        subtitle: '',
+        price: 0,
+        sales: 0,
+        origin: '',
+        specification: '',
+        detail: ''
+    };
+
+
     return (
         <div className="page detail-page">
             {/*title area */}
@@ -29,7 +43,7 @@ const Detail = () => {
                 <div className="iconfont" onClick={()=>{navigate(-1)}}>&#xe6a9;</div>
                 <div className="text">Detail</div>
             </div>
-            <img className='image' alt='' src='http://statics.dell-lee.com/shopping/detail.png'/>
+            <img className='image' alt='' src={result.imgUrl}/>
             {/*main area */}
             <div className='main'>
                 <div className='main-price'><span className="main-price-symbol">&#36;</span>
