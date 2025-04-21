@@ -1,6 +1,7 @@
 .search-list-page {
   font-size:.14rem;
   background: #F5F9FA;
+  overflow-y: scroll;
   .search {
     display: flex;
     padding:.08rem .32rem .06rem 0;
