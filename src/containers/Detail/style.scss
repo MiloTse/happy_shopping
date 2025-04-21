@@ -17,4 +17,22 @@
     width: 100vw;
     height: 100vw;
   }
+  .main {
+    position:relative;
+    padding-top:.74rem;
+    font-size:.18rem;
+    background:#52C41A;
+    border-radius:.15rem;
+    &-price {
+      position: absolute;
+      color:#FFF;
+      font-size:.2rem;
+      top:.08rem;
+      left:.08rem;
+      &-symbol {
+        font-size:.14rem;
+        margin-right:.02rem;
+      }
+    }
+  }
 }
