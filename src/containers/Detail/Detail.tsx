@@ -47,13 +47,13 @@ const Detail = () => {
             {/*main area */}
             <div className='main'>
                 <div className='main-price'><span className="main-price-symbol">&#36;</span>
-                139.9</div>
-                <div className='main-sales'>sold 546</div>
+                    {result.price}</div>
+                <div className='main-sales'>sold {result.sales}</div>
                  <div className='main-content'>
                     <div
-                        className='main-content-title'>山东海阳普罗旺斯西红柿自然熟沙飘番茄新鲜水果蔬菜健康轻食严选彩箱5斤装
+                        className='main-content-title'>{result.title}
                     </div>
-                    <p className='main-content-subtitle'>山东海阳普罗旺斯西红柿自然熟沙飘番茄新鲜水果蔬菜健康轻食严选彩箱5斤装</p>
+                    <p className='main-content-subtitle'>{result.subtitle}</p>
                 </div>
 
             </div>
@@ -66,8 +66,8 @@ const Detail = () => {
                         <p className='spec-content-item'>spec</p>
                     </div>
                     <div className='spec-content-right'>
-                        <p className='spec-content-item'>Actual batch of purchased products shall prevail.</p>
-                        <p className='spec-content-item'>2kg</p>
+                        <p className='spec-content-item'>{result.origin}</p>
+                        <p className='spec-content-item'>{result.specification}</p>
                     </div>
                 </div>
             </div>
@@ -75,9 +75,7 @@ const Detail = () => {
             <div className='detail'>
                 <div className='detail-title'>product detail</div>
                 <div className='detail-content'>
-                    普罗旺斯西红柿不同于别的西红柿品种，它的表面有沟有棱，不像高粉西红柿那样表面光滑饱
-                    满，看起来更像秋天的软柿子或者甜椒，正因为有沟有棱，所以它里面显得很空，草莓心，尤其
-                    是第一二层最为明显，第三四层就会好很多，第五层基本不会存在这种情况。
+                    {result.detail}
 
                 </div>
             </div>
