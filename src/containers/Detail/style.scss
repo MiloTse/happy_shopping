@@ -77,21 +77,29 @@
       line-height:.4rem;
     }
     &-content {
-      margin:00.12rem.12rem.12rem;
+      margin:0 .12rem .12rem .12rem;
+      padding-bottom: .12rem;
       display: flex;
       &-left {
+        padding: .05rem 0;
         width: 0.62rem;
         background: #F2F3F5;
         text-align: center;
+        border:1px solid #D7D7D7;
+        border-radius:  .05rem 0 0 .05rem;
       }
       &-right {
+        padding: .05rem 0;
         flex: 1;
-
+        border-top:1px solid #D7D7D7;
+        border-right:1px solid #D7D7D7;
+        border-bottom:1px solid #D7D7D7;
+        border-radius:0 .05rem .05rem 0;
       }
       &-item {
         color: #242424;
         font-size:.14rem;
-        line-height:.25rem;
+        line-height:.2rem;
       }
     }
   }
