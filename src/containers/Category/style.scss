@@ -1,4 +1,18 @@
 .category-page {
+  .title {
+    position: relative;
+    line-height:.44rem;
+    font-size: .18rem;
+    color: #242424;
+    text-align: center;
+    background: #fff;
+    .iconfont {
+      position: absolute;
+      left:.1rem;
+      top:0;
+
+    }
+  }
   .docker {
     position: fixed;
     left:0;
