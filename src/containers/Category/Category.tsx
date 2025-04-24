@@ -1,11 +1,19 @@
 import './style.scss';
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 
 const Category = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="page category-page">
+            <div className="title">
+                <div className="iconfont" onClick={() => {
+                    navigate(-1)
+                }}>&#xe6a9;</div>
+                <div className="text">Category</div>
+            </div>
             <div className="docker">
                 <div className="docker-item ">
                     <p className="iconfont">&#xe608;</p>
