@@ -18,14 +18,13 @@ const Category = () => {
                     <input
                         className="search-input"
                         placeholder="Please enter product name"
-                        value={keyword}
-                        onChange={(e) => setKeyword(e.target.value)}
-                        onKeyDown={(e) => {
-                            handleKeyDown(e.key)
+
                         }}
                     />
                 </div>
-                <div className="search-clear iconfont" onClick={handleClearKeyword}>&#xe610;</div>
+                <div className="search-clear iconfont"
+
+                >&#xe610;</div>
             </div>
 
             <div className="docker">
