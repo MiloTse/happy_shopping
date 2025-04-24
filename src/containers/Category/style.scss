@@ -13,20 +13,8 @@
     }
   }
   .search {
-    display: flex;
     padding:.08rem .32rem .06rem 0;
     background: #fff;
-    &-back-link {
-      text-decoration: none;
-    }
-    &-back-icon {
-      line-height:.32rem;
-      width: .48rem;
-      font-size: .18rem;
-      text-align: center;
-      color: #242424;
-    }
-
     &-area {
       position: relative;
       display: flex;
@@ -48,13 +36,7 @@
         color: #242424;
       }
     }
-    &-clear {
-      position: absolute;
-      font-size:.2rem;
-      color: #75818F;
-      right: .4rem;
-      top:.1rem;
-    }
+
   }
   .docker {
     position: fixed;
