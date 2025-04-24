@@ -19,12 +19,10 @@ const Category = () => {
                         className="search-input"
                         placeholder="Please enter product name"
 
-                        }}
+
                     />
                 </div>
-                <div className="search-clear iconfont"
 
-                >&#xe610;</div>
             </div>
 
             <div className="docker">
