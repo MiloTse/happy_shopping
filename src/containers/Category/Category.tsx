@@ -23,7 +23,7 @@ const Category = () => {
                 </div>
 
             </div>
-
+            <div className="category"></div>
             <div className="docker">
                 <div className="docker-item ">
                     <p className="iconfont">&#xe608;</p>
