@@ -19,7 +19,6 @@ const Category = () => {
                         className="search-input"
                         placeholder="Please enter product name"
 
-
                     />
                 </div>
 
