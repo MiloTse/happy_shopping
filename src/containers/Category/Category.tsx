@@ -1,6 +1,6 @@
 import './style.scss';
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 const Category = () => {
@@ -9,11 +9,25 @@ const Category = () => {
     return (
         <div className="page category-page">
             <div className="title">
-                <div className="iconfont" onClick={() => {
-                    navigate(-1)
-                }}>&#xe6a9;</div>
+                <div className="iconfont">&#xe6a9;</div>
                 <div className="text">Category</div>
             </div>
+            <div className="search">
+                <div className="search-area">
+                    <div className="search-icon iconfont">&#xe600;</div>
+                    <input
+                        className="search-input"
+                        placeholder="Please enter product name"
+                        value={keyword}
+                        onChange={(e) => setKeyword(e.target.value)}
+                        onKeyDown={(e) => {
+                            handleKeyDown(e.key)
+                        }}
+                    />
+                </div>
+                <div className="search-clear iconfont" onClick={handleClearKeyword}>&#xe610;</div>
+            </div>
+
             <div className="docker">
                 <div className="docker-item ">
                     <p className="iconfont">&#xe608;</p>
