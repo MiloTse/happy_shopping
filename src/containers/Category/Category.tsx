@@ -34,8 +34,8 @@ const Category = () => {
                 <div className="category-item">Products</div>
             </div>
             <div className="tag">
-                <div className="tag-item tag-item-active">Products</div>
                 <div className="tag-item">Products</div>
+                <div className="tag-item  tag-item-active">Products</div>
                 <div className="tag-item">Products</div>
                 <div className="tag-item">Products</div>
                 <div className="tag-item">Products</div>
