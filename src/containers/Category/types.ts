@@ -1,7 +1,11 @@
 //返回内容类型
-export type ResponseType = {
+export type CategoryAndTagResponseType = {
     success: boolean,
     data:  {
-        id: string;
+        category: Array<{
+            id: string;
+            name: string;
+        }>;
+        tags: Array<{}>;
     }
 }

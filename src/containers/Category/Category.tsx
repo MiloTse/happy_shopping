@@ -1,11 +1,14 @@
 import './style.scss';
 import React, {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+
+import useRequest from "../../utils/useRequest";
+import type {CategoryAndTagResponseTy} from "./types";
 
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
     const [tags, setTags] = useState();
+    const {request, } = useRequest<CategoryAndTagResponseTy>({manual: true});
 
     useEffect(() => {
 
