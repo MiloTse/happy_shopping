@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import { CategoryAndTagResponseType, ProductResponseType} from "./types";
 import {message} from "../../utils/message";
+import {d} from "@pmmmwh/react-refresh-webpack-plugin/types/options";
 
 
 const Category = () => {
@@ -21,13 +22,13 @@ const Category = () => {
         },
     })
     //not send request until call request manually
-    const {request: tagRequest } = useRequest<CategoryAndTagResponseType>({manual: true});
+    const {request  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
-    const {request: productRequest } = useRequest<ProductResponseType>(productRequestData);
-
+    const {data } = useRequest<ProductResponseType>(productRequestData);
+console.log(data);
     useEffect(() => {
 
-        tagRequest({
+        request({
                 url:'/categoryAndTagList.json',
                 method:'GET',
 
