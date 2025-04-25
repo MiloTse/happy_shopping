@@ -14,12 +14,10 @@ const Category = () => {
     const [productRequestData, setProductRequestData] = useState({
         url: 'categoryAndTagList.json',
         method: 'POST',
-        params: {
-            keyword: keyword,
-            shopId: '1',
-            // page: 0,
-            // pageSize: 8,
-            // type: tabValue
+        data: {
+            tag:'',
+            keyword:'',
+            category:'',
         },
     })
     //not send request until call request manually
