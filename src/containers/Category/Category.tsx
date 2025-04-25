@@ -2,7 +2,7 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import { CategoryAndTagResponseType} from "./types";
+import { CategoryAndTagResponseType, ProductResponseType} from "./types";
 import {message} from "../../utils/message";
 
 
@@ -13,7 +13,7 @@ const Category = () => {
 
     //not send request until call request manually
     const {request: tagRequest } = useRequest<CategoryAndTagResponseType>({manual: true});
-    const {request: productRequest } = useRequest<CategoryAndTagResponseType>( );
+    const {request: productRequest } = useRequest<ProductResponseType>( );
 
     useEffect(() => {
 
