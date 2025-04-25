@@ -1,10 +1,18 @@
 import './style.scss';
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 
 
 const Category = () => {
-    const navigate = useNavigate();
+    const [categories, setCategories] = useState([]);
+    const [tags, setTags] = useState();
+
+    useEffect(() => {
+
+    },[])
+
+
+
 
     return (
         <div className="page category-page">
