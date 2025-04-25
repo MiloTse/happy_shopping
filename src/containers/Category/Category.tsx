@@ -32,22 +32,7 @@ const Category = () => {
                 <div className="category-item">Featured Products</div>
                 <div className="category-item">Featured Products</div>
                 <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
+
 
 
 
