@@ -26,6 +26,7 @@ const Category = () => {
                  const result = data.data;
                 console.log(result);
                 setCategories(result.category);
+                setTags(result.tags);
             }
         }).catch((e:any)=>{
             message(e?.message);
