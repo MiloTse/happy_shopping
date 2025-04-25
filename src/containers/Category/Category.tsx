@@ -12,11 +12,12 @@ const Category = () => {
     const [keyword, setKeyword] = useState('');
 
     //not send request until call request manually
-    const {request, } = useRequest<CategoryAndTagResponseType>({manual: true});
+    const {request: tagRequest } = useRequest<CategoryAndTagResponseType>({manual: true});
+    const {request: productRequest } = useRequest<CategoryAndTagResponseType>( );
 
     useEffect(() => {
 
-        request({
+        tagRequest({
                 url:'/categoryAndTagList.json',
                 method:'GET',
 
