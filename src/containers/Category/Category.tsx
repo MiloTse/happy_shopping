@@ -24,8 +24,9 @@ const Category = () => {
     //not send request until call request manually
     const {request  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
-    const {data } = useRequest<ProductResponseType>(productRequestData);
+    const {data  } = useRequest<ProductResponseType>(productRequestData);
 console.log(data);
+const productList = data?.data || [];
     useEffect(() => {
 
         request({
@@ -95,7 +96,7 @@ console.log(data);
 
             </div>
             <div className="product">
-                <div className="product-title">精选商品({data?.data.length})</div>
+                <div className="product-title">精选商品({productList.length})</div>
                 <div className="product-item">
                     <img className="product-item-img"
                         src="http://statics.dell-lee.com/shopping/fresh-1.png"
