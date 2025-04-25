@@ -56,7 +56,7 @@ const Category = () => {
                             <span className="product-item-price-symbol">&#36;  </span>156
                         </div>
                         <div className="product-item-button">
-                            buy now
+                            buy
                         </div>
                     </div>
 

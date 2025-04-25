@@ -122,6 +122,13 @@
       }
       &-button {
         position: absolute;
+        bottom:0;
+        right:0;
+        background:#73D13D;
+        width:.4rem;
+        line-height: .24rem;
+        text-align: center;
+        color:#FFF;
       }
 
     }
