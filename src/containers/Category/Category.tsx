@@ -23,7 +23,9 @@ const Category = () => {
 
         ).then((data)=>{
              if(data?.success) {
-                console.log(data.data);
+                 const result = data.data;
+                console.log(result);
+                setCategories(result.category);
             }
         }).catch((e:any)=>{
             message(e?.message);
