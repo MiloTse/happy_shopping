@@ -3,14 +3,40 @@ import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
 import { CategoryAndTagResponseType} from "./types";
+import {message} from "../../utils/message";
 
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
     const [tags, setTags] = useState();
+
+    //not send request until call request manually
     const {request, } = useRequest<CategoryAndTagResponseType>({manual: true});
 
     useEffect(() => {
+
+        request({
+                url:'/categoryAndTagList.json',
+                method:'GET',
+
+            }
+
+        ).then((data)=>{
+             if(data?.success) {
+                console.log(data.data);
+            }
+        }).catch((e:any)=>{
+            message(e?.message);
+        });
+
+
+
+
+
+
+
+
+
 
     },[])
 
