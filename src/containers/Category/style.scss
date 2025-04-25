@@ -121,6 +121,10 @@
         font-size:.16rem;
         line-height:.24rem;
         color:#CF1322;
+        &-symbol {
+          font-size:.12rem;
+          margin-right:.02rem;
+        }
       }
       &-button {
         position: absolute;
