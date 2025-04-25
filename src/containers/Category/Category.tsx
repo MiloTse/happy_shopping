@@ -24,18 +24,14 @@ const Category = () => {
 
             </div>
             <div className="category">
-                <div className="category-item category-item-active">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-                <div className="category-item">Featured Products</div>
-
-
-
-
+                <div className="category-item category-item-active">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
+                <div className="category-item">Products</div>
             </div>
             <div className="docker">
                 <div className="docker-item ">
