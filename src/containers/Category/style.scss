@@ -58,6 +58,27 @@
        }
     }
   }
+  .tag {
+    position: absolute;
+    left: .96rem;
+    top: .88rem;
+    right: 0;
+    height: .52rem;
+     background:#CCC;
+    font-size:0;
+    overflow-x: scroll;
+    white-space: nowrap;
+    &-item{
+      margin-top: .1rem;
+      display: inline-block;
+      font-size: .14rem;
+      width: .62rem;
+      height:.32rem;
+       &-active {
+        background:#fff;
+       }
+    }
+  }
   .docker {
     position: fixed;
     left:0;
