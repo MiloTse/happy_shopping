@@ -64,14 +64,12 @@ const Category = () => {
 
             </div>
             <div className="category">
-                <div className="category-item category-item-active">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
-                <div className="category-item">Products</div>
+                <div className="category-item category-item-active">全部商品</div>
+                {
+                    categories.map((category)=>{
+                        return(<div key={category.id} className="category-item">{category.name}</div>)
+                    })
+                }
             </div>
             <div className="tag">
                 <div className="tag-item">Products</div>
