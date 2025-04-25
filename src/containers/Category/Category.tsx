@@ -44,6 +44,7 @@ const Category = () => {
                 <div className="tag-item">Products</div>
             </div>
             <div className="product">
+                <div className="product-title">精选商品(50)</div>
                 <div className="product-item">
                     <img className="product-item-img"
                         src="http://statics.dell-lee.com/shopping/fresh-1.png"

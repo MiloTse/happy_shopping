@@ -93,6 +93,12 @@
     bottom:.5rem;
 
     overflow-y: scroll;
+    &-title {
+      margin:.08rem;
+      font-size:.12rem;
+      line-height:.16rem;
+      color:#242424;
+    }
     &-item {
       position: relative;
       padding:.1rem;
