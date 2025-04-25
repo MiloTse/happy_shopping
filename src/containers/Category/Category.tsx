@@ -26,7 +26,7 @@ console.log(categories,tags);
                  const result = data.data;
                 console.log(result);
                 setCategories(result.category);
-                setTags(result.tags);
+                setTags(result.tag);//should same as ts file and json
             }
         }).catch((e:any)=>{
             message(e?.message);
@@ -61,14 +61,17 @@ console.log(categories,tags);
                 }
             </div>
             <div className="tag">
-                <div className="tag-item">Products</div>
-                <div className="tag-item  tag-item-active">Products</div>
-                <div className="tag-item">Products</div>
-                <div className="tag-item">Products</div>
-                <div className="tag-item">Products</div>
-                <div className="tag-item">Products</div>
-                <div className="tag-item">Products</div>
-                <div className="tag-item">Products</div>
+                <div className="tag-item tag-item-active">全部</div>
+                {
+                    tags.map((tag,index)=>(
+
+
+                            <div className="tag-item" key={tag+index}>{tag}</div>
+
+                    ))
+                }
+
+
             </div>
             <div className="product">
                 <div className="product-title">精选商品(50)</div>

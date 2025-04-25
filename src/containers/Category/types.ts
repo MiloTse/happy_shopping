@@ -6,6 +6,6 @@ export type CategoryAndTagResponseType = {
             id: string;
             name: string;
         }>;
-        tags: Array<string>;
+        tag: Array<string>;
     }
 }
