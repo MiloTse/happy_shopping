@@ -46,9 +46,14 @@
     top: .88rem;
     bottom: .5rem;
     width: .96rem;
-    background: #ccc;
-    &-item{
 
+    overflow-y: scroll;
+    background:#F5F9FA;
+    &-item{
+      color:#242424;
+      font-size:.14rem;
+      line-height:.52rem;
+      text-align:center;
     }
   }
   .docker {
