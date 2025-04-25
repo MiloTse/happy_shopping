@@ -85,6 +85,47 @@
        }
     }
   }
+  .product {
+    position: absolute;
+    left:.96rem;
+    top:.88rem;
+    right:0;
+    height:.52rem;
+    &-item {
+      position: relative;
+      background: #CCC;
+      font-size: .14rem;
+      &-img {
+        width: .78rem;
+        height: .78rem;
+        margin-right: .08rem;
+      }
+      &-content {
+        flex:1；
+      }
+      &-title {
+        color:#242424;
+        font-size:.14rem;
+        line-height:.22rem;
+      }
+      &-sale {
+        margin-top:.1rem;
+        font-size:.12rem;
+        line-height:.16rem;
+        color:#B1B1B1;
+      }
+      &-price {
+        margin-top:.1rem;
+        font-size:.16rem;
+        line-height:.24rem;
+        color:#CF1322;
+      }
+      &-button {
+        position: absolute;
+      }
+
+    }
+  }
   .docker {
     position: fixed;
     left:0;
