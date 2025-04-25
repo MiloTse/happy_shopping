@@ -59,8 +59,70 @@ const Category = () => {
                             buy
                         </div>
                     </div>
-
-
+                </div>
+                <div className="product-item">
+                    <img className="product-item-img"
+                        src="http://statics.dell-lee.com/shopping/fresh-1.png"
+                        alt=""
+                    />
+                    <div className="product-item-content">
+                        <div className="product-item-title">chicken wing middle 1000g/...</div>
+                        <div className="product-item-sales">sold 156</div>
+                        <div className="product-item-price">
+                            <span className="product-item-price-symbol">&#36;  </span>156
+                        </div>
+                        <div className="product-item-button">
+                            buy
+                        </div>
+                    </div>
+                </div>
+                <div className="product-item">
+                    <img className="product-item-img"
+                        src="http://statics.dell-lee.com/shopping/fresh-1.png"
+                        alt=""
+                    />
+                    <div className="product-item-content">
+                        <div className="product-item-title">chicken wing middle 1000g/...</div>
+                        <div className="product-item-sales">sold 156</div>
+                        <div className="product-item-price">
+                            <span className="product-item-price-symbol">&#36;  </span>156
+                        </div>
+                        <div className="product-item-button">
+                            buy
+                        </div>
+                    </div>
+                </div>
+                <div className="product-item">
+                    <img className="product-item-img"
+                        src="http://statics.dell-lee.com/shopping/fresh-1.png"
+                        alt=""
+                    />
+                    <div className="product-item-content">
+                        <div className="product-item-title">chicken wing middle 1000g/...</div>
+                        <div className="product-item-sales">sold 156</div>
+                        <div className="product-item-price">
+                            <span className="product-item-price-symbol">&#36;  </span>156
+                        </div>
+                        <div className="product-item-button">
+                            buy
+                        </div>
+                    </div>
+                </div>
+                <div className="product-item">
+                    <img className="product-item-img"
+                        src="http://statics.dell-lee.com/shopping/fresh-1.png"
+                        alt=""
+                    />
+                    <div className="product-item-content">
+                        <div className="product-item-title">chicken wing middle 1000g/...</div>
+                        <div className="product-item-sales">sold 156</div>
+                        <div className="product-item-price">
+                            <span className="product-item-price-symbol">&#36;  </span>156
+                        </div>
+                        <div className="product-item-button">
+                            buy
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="docker">
