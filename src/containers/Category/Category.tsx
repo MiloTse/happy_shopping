@@ -22,7 +22,8 @@ const Category = () => {
     })
     //not send request until call request manually
     const {request: tagRequest } = useRequest<CategoryAndTagResponseType>({manual: true});
-    const {request: productRequest } = useRequest<ProductResponseType>( );
+    //passing request data productRequestData to useRequest
+    const {request: productRequest } = useRequest<ProductResponseType>(productRequestData);
 
     useEffect(() => {
 
