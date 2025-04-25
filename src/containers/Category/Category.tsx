@@ -2,13 +2,13 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import type {CategoryAndTagResponseTy} from "./types";
+import { CategoryAndTagResponseType} from "./types";
 
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
     const [tags, setTags] = useState();
-    const {request, } = useRequest<CategoryAndTagResponseTy>({manual: true});
+    const {request, } = useRequest<CategoryAndTagResponseType>({manual: true});
 
     useEffect(() => {
 
