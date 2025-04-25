@@ -10,7 +10,18 @@ const Category = () => {
     const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
-
+    //define request parameter
+    const [productRequestData, setProductRequestData] = useState({
+        url: 'categoryAndTagList.json',
+        method: 'POST',
+        params: {
+            keyword: keyword,
+            shopId: '1',
+            // page: 0,
+            // pageSize: 8,
+            // type: tabValue
+        },
+    })
     //not send request until call request manually
     const {request: tagRequest } = useRequest<CategoryAndTagResponseType>({manual: true});
     const {request: productRequest } = useRequest<ProductResponseType>( );
