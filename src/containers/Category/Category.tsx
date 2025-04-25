@@ -39,7 +39,7 @@ const Category = () => {
 
     function handleKeyDown(key: string) {
         if(key === 'Enter' && keyword) {
-
+            console.log('hello')
         }
     }
     return (
