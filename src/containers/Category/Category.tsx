@@ -50,8 +50,8 @@ const Category = () => {
                         alt=""
                     />
                     <div className="product-item-content">
-                        <div className="product-item-title">HD food chicken wing 1000g</div>
-                        <div className="product-item-sales">monthly sold 156</div>
+                        <div className="product-item-title">chicken wing middle 1000g/...</div>
+                        <div className="product-item-sales">sold 156</div>
                         <div className="product-item-price">
                             <span className="product-item-price-symbol">&#36;  </span>156
                         </div>
