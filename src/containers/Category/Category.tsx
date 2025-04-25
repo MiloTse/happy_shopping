@@ -8,7 +8,7 @@ import {message} from "../../utils/message";
 
 const Category = () => {
     const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
-    const [tags, setTags] = useState();
+    const [tags, setTags] = useState<string[]>([]);
 
     //not send request until call request manually
     const {request, } = useRequest<CategoryAndTagResponseType>({manual: true});
