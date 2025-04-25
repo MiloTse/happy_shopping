@@ -36,6 +36,12 @@ const Category = () => {
 
     },[])
 
+
+    function handleKeyDown(key: string) {
+        if(key === 'Enter' && keyword) {
+
+        }
+    }
     return (
         <div className="page category-page">
             <div className="title">
@@ -48,7 +54,9 @@ const Category = () => {
                     <input
                         className="search-input"
                         placeholder="Please enter product name"
-
+                        value={keyword}
+                        onChange={(e) => setKeyword(e.target.value)}
+                        onKeyDown={(e) => {handleKeyDown(e.key)} }
                     />
                 </div>
 
