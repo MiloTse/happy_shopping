@@ -67,6 +67,7 @@ const Category = () => {
             console.log('hello')
         }
     }
+    console.log(products)
     return (
         <div className="page category-page">
             <div className="title">
@@ -113,7 +114,7 @@ const Category = () => {
                     products.map((product)=> {
 
                             return(
-                                <div className="product-item">
+                                <div className="product-item" key={product.id}>
                                     <img className="product-item-img"
                                          src={product.imgUrl}
                                          alt={product.title}
