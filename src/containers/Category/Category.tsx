@@ -61,9 +61,9 @@ const Category = () => {
     },[]);
 
 
-    function handleKeyDown(key: string, target: EventTarget) {
-        if(key === 'Enter' && keyword) {
-            console.log('hello')
+    function handleKeyDown(key: string, target: any) {
+        if(key === 'Enter') {
+            console.log(target.value)
         }
     }
     console.log(products)
