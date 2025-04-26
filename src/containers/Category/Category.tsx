@@ -14,7 +14,8 @@ const Category = () => {
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
 
-
+    const [currentTag, setCurrentTag] = useState('');
+    const  [ currentCategory,  setCurrentCategory ]=useState('');
     //not send request until call request manually
     const {request: tagRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
@@ -25,7 +26,7 @@ const Category = () => {
                 url:'/categoryProduct.json',
                 method:'POST',
                 data: {
-                    tag:'',
+                    tag:currentTag,
                     keyword ,
                     category:'',
                 },
