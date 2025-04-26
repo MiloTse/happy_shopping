@@ -28,7 +28,7 @@ const Category = () => {
                 data: {
                     tag:currentTag,
                     keyword ,
-                    category:'',
+                    category: currentCategory,
                 },
             }
         ).then((data)=>{
