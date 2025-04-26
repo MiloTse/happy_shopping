@@ -92,7 +92,13 @@ const Category = () => {
                 <div className="category-item category-item-active">全部商品</div>
                 {
                     categories.map((category)=>{
-                        return(<div key={category.id} className="category-item">{category.name}</div>)
+                        return(
+                            <div key={category.id}
+                                 className="category-item"
+                                 onClick={()=>{setCurrentCategory(category.id)}}
+                            >
+                                {category.name}
+                            </div>)
                     })
                 }
             </div>
