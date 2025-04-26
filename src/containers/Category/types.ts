@@ -9,13 +9,15 @@ export type CategoryAndTagResponseType = {
         tag: Array<string>;
     }
 }
+export type ProductType = {
+    "id":string;
+    "imgUrl": string;
+    "title":string;
+    "price":number;
+    "sales":number;
+}
+
 export type ProductResponseType = {
     success: boolean,
-    data:  [{
-        "id": string;
-        "imgUrl": string;
-        "title":string;
-        "price": number;
-        "sales":number;
-    }]
+    data: Array<ProductType>;
 }
