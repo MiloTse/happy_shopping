@@ -26,7 +26,7 @@ const Category = () => {
                 method:'POST',
                 data: {
                     tag:'',
-                    keyword:'',
+                    keyword ,
                     category:'',
                 },
             }
@@ -34,12 +34,11 @@ const Category = () => {
             if(data?.success) {
                 const result = data.data;
                 setProducts(result);
-
             }
         }).catch((e:any)=>{
             message(e?.message);
         });
-    },[]);
+    },[keyword]);
 
 
 
@@ -99,10 +98,7 @@ const Category = () => {
                 <div className="tag-item tag-item-active">全部</div>
                 {
                     tags.map((tag,index)=>(
-
-
                             <div className="tag-item" key={tag+index}>{tag}</div>
-
                     ))
                 }
 
