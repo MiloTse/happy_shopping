@@ -94,7 +94,7 @@ const Category = () => {
                     categories.map((category)=>{
                         return(
                             <div key={category.id}
-                                 className="category-item"
+                                 className={category.id === currentCategory ? "category-item category-item-active":"category-item "}
                                  onClick={()=>{setCurrentCategory(category.id)}}
                             >
                                 {category.name}
