@@ -61,7 +61,7 @@ const Category = () => {
     },[]);
 
 
-    function handleKeyDown(key: string) {
+    function handleKeyDown(key: string, target: EventTarget) {
         if(key === 'Enter' && keyword) {
             console.log('hello')
         }
@@ -79,9 +79,9 @@ const Category = () => {
                     <input
                         className="search-input"
                         placeholder="Please enter product name"
-                        value={keyword}
-                        onChange={(e) => setKeyword(e.target.value)}
-                        onKeyDown={(e) => {handleKeyDown(e.key)} }
+
+
+                        onKeyDown={(e) => {handleKeyDown(e.key, e.target)} }
                     />
                 </div>
 
