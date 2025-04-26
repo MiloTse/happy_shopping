@@ -39,7 +39,7 @@ const Category = () => {
         }).catch((e:any)=>{
             message(e?.message);
         });
-    },[keyword]);
+    },[keyword, currentTag, currentCategory]);
 
 
 
