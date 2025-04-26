@@ -63,7 +63,8 @@ const Category = () => {
 
     function handleKeyDown(key: string, target: any) {
         if(key === 'Enter') {
-            console.log(target.value)
+            console.log(target.value);
+            setKeyword(target.value);
         }
     }
     console.log(products)
