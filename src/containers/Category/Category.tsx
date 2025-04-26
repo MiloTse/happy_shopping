@@ -25,16 +25,14 @@ const Category = () => {
     const {request  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
     const {data  } = useRequest<ProductResponseType>(productRequestData);
-console.log(data);
-const productList = data?.data || [];
+    console.log(data);
+    const productList = data?.data || [];
     useEffect(() => {
-
         request({
                 url:'/categoryAndTagList.json',
                 method:'GET',
 
             }
-
         ).then((data)=>{
              if(data?.success) {
                  const result = data.data;
@@ -45,9 +43,7 @@ const productList = data?.data || [];
         }).catch((e:any)=>{
             message(e?.message);
         });
-
-
-    },[])
+    },[]);
 
 
     function handleKeyDown(key: string) {
