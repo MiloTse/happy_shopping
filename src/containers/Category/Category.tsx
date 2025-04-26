@@ -2,33 +2,49 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import { CategoryAndTagResponseType, ProductResponseType} from "./types";
+import {CategoryAndTagResponseType,    ProductType, ProductResponseType} from "./types";
 import {message} from "../../utils/message";
 import {d} from "@pmmmwh/react-refresh-webpack-plugin/types/options";
 
 
 const Category = () => {
+    const [products, setProducts] = useState<Array<ProductType>>([]);
+
     const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
-    //define request parameter
-    const [productRequestData, setProductRequestData] = useState({
-        url: '/categoryProduct.json',
-        method: 'POST',
-        data: {
-            tag:'',
-            keyword:'',
-            category:'',
-        },
-    })
+
+
     //not send request until call request manually
-    const {request  } = useRequest<CategoryAndTagResponseType>({manual: true});
+    const {request: tagRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
-    const {data  } = useRequest<ProductResponseType>(productRequestData);
-    console.log(data);
-    const productList = data?.data || [];
+    const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
+
+     useEffect(() => {
+         productRequest({
+                url:'/categoryProduct.json',
+                method:'POST',
+                data: {
+                    tag:'',
+                    keyword:'',
+                    category:'',
+                },
+            }
+        ).then((data)=>{
+            if(data?.success) {
+                const result = data.data;
+                setProducts(result);
+
+            }
+        }).catch((e:any)=>{
+            message(e?.message);
+        });
+    },[]);
+
+
+
     useEffect(() => {
-        request({
+        tagRequest({
                 url:'/categoryAndTagList.json',
                 method:'GET',
 
@@ -92,9 +108,9 @@ const Category = () => {
 
             </div>
             <div className="product">
-                <div className="product-title">精选商品({productList.length})</div>
+                <div className="product-title">精选商品({products.length})</div>
                 {
-                    productList.map((product)=> {
+                    products.map((product)=> {
 
                             return(
                                 <div className="product-item">
