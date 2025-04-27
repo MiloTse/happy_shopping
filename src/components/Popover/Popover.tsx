@@ -8,11 +8,10 @@ function Popover   (props:{
     const {show, blankClickCallBack} = props;
 
     return show? (
-        <div className="popover" onClick={blankClickCallBack}>
-            <div className="popover-content">
-                popover-content
-            </div>
-        </div>
+        <>
+         <div className="popover-mask" onClick={blankClickCallBack}></div>
+         <div className="popover-content">popover-content</div>
+        </>
     ) : null;
 }
 
