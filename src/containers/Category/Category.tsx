@@ -71,6 +71,11 @@ const Category = () => {
         }
     }
     console.log(products)
+
+    function handleProductClick(id: string) {
+        
+    }
+
     return (
         <div className="page category-page">
             <div className="title">
@@ -129,7 +134,7 @@ const Category = () => {
                     products.map((product)=> {
 
                             return(
-                                <div className="product-item" key={product.id}>
+                                <div className="product-item" key={product.id} onClick={()=> {handleProductClick(product.id)}}>
                                     <img className="product-item-img"
                                          src={product.imgUrl}
                                          alt={product.title}
