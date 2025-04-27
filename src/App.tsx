@@ -49,6 +49,10 @@ const router = createHashRouter([{
     {
         path: "/category",
         element: <Category />
+    },
+    {
+        path: "/detail/:id",
+        element: <Detail />
     }
 ]);
 
