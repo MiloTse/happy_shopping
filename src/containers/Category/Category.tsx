@@ -5,9 +5,11 @@ import useRequest from "../../utils/useRequest";
 import {CategoryAndTagResponseType, ProductResponseType, ProductType} from "./types";
 import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
+import {useNavigate} from "react-router-dom";
 
 
 const Category = () => {
+    const navigate = useNavigate();
     //store data of item list
     const [products, setProducts] = useState<Array<ProductType>>([]);
     const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
