@@ -74,7 +74,7 @@ const Category = () => {
     return (
         <div className="page category-page">
             <div className="title">
-                <div className="iconfont">&#xe6a9;</div>
+
                 <div className="text">Category</div>
             </div>
             <div className="search">
