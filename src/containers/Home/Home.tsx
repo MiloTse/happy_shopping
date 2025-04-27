@@ -105,7 +105,7 @@ const Home =() => {
             <div className="bottom">
              -- I am the bottom line --
             </div>
-            <Docker />
+            <Docker activeName='home' />
         </div>
     )
 }
