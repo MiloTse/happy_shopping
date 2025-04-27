@@ -1,6 +1,6 @@
 
 import './style.scss';
-import React from "react";
+import React, {useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
@@ -15,6 +15,10 @@ const requestData = {
 
 const Detail = () => {
     const navigate = useNavigate();
+
+    const [showCart, setShowCart] = useState<boolean>(false);
+
+
     const params = useParams<{id:string}>();
     //assign value
     if(params.id){
