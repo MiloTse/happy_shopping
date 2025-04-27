@@ -6,9 +6,8 @@ import useRequest from "../../utils/useRequest";
 import Banner from "./components/Banner";
 import Category from "./components/Category";
 import Card from "./components/Card";
+import Docker from "../../components/Docker/Docker";
 //import { message } from "../../utils/message";
-
-
 
 
 
@@ -106,7 +105,7 @@ const Home =() => {
             <div className="bottom">
              -- I am the bottom line --
             </div>
-
+            <Docker />
         </div>
     )
 }
