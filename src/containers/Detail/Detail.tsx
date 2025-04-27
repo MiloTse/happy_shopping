@@ -92,7 +92,7 @@ const Detail = () => {
                     <div className='icon-text'>Shopping Cart</div>
                 </div>
 
-                <div className='cart-button'>Add to Cart</div>
+                <div className='cart-button' onClick={()=>{setShowCart(true)}}>Add to Cart</div>
             </div>
             {/*Popover area*/}
             <Popover show={showCart}/>
