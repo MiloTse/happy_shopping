@@ -158,12 +158,29 @@
   }
   .cart {
     &-content {
-      padding:.2rem.2rem.34rem.2rem;
+      padding: .2rem .2rem .34rem .2rem;
       display: flex;
+      border-bottom:.01rem solid #F4F4F4;
       &-img {
-        display: block;
-        width: 1.1rem;
-        height: 1.1rem;
+        margin-right:.48rem;
+        display:block;
+        width:.7rem;
+        height:.7rem;
+      }
+      &-info {
+        font-size: .12rem;
+      }
+      &-title {
+        margin-right:.45rem;
+        color: #242424;
+        line-height:.18rem;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        display:-webkit-box;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2;
+        white-space:normal;
+        word-break:break-all;
       }
     }
     &-button {

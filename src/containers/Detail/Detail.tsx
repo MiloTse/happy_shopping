@@ -98,7 +98,7 @@ const Detail = () => {
             <Popover show={showCart} blankClickCallBack={()=>{setShowCart(false)}}>
                 <div className='cart'>
                     <div className='cart-content'>
-                        <img className='cart-content-image' alt='' src={result.imgUrl}/>
+                        <img className='cart-content-img' alt='' src={result.imgUrl}/>
                         <div className='cart-content-info'>
                             <div className='cart-content-title'>{result.title}</div>
                             <div className='cart-content-price'>
@@ -108,7 +108,7 @@ const Detail = () => {
                          </div>
                     </div>
                     <div className='cart-count'></div>
-                    <div className='cart-button'></div>
+                    <div className='cart-button'>Add to Cart</div>
                 </div>
             </Popover>
         </div>
