@@ -4,6 +4,7 @@ import React from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
+import Popover from "../../components/Popover/Popover";
 
 {/*one time request*/}
 const requestData = {
@@ -88,6 +89,8 @@ const Detail = () => {
 
                 <div className='cart-button'>Add to Cart</div>
             </div>
+            {/*Popover area*/}
+            <Popover/>
         </div>
     ) : null;
 
