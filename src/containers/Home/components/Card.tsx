@@ -12,7 +12,12 @@ type CardPropsType = {
 
 const Card = (props: CardPropsType) => {
     const {title, list} = props;
-     return (
+
+    function handleItemClick() {
+
+    }
+
+    return (
         <div className="card">
             <h3 className="card-title">
                 <img
@@ -30,7 +35,7 @@ const Card = (props: CardPropsType) => {
                 {
                     (list || []).map((item) => {
                         return (
-                            <div className="card-content-item" key={item.id}>
+                            <div className="card-content-item" key={item.id} onClick={handleItemClick}>
                                 <img
                                     alt={item.name}
                                     className="card-content-item-img"
