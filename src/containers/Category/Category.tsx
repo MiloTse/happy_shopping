@@ -39,7 +39,7 @@ const Category = () => {
         }).catch((e:any)=>{
             message(e?.message);
         });
-    },[keyword, currentTag, currentCategory]);
+    },[keyword, currentTag, currentCategory,productRequest]);
 
 
 
@@ -59,7 +59,7 @@ const Category = () => {
         }).catch((e:any)=>{
             message(e?.message);
         });
-    },[]);
+    },[tagRequest]);
 
 
     function handleKeyDown(key: string, target: any) {
