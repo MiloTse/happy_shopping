@@ -105,10 +105,11 @@ const Category = () => {
                 }
             </div>
             <div className="tag">
-                <div className= { currentTag? 'tag-item tag-item-active':'tag-item'}
+                <div className= { currentTag ==='' ? 'tag-item tag-item-active':'tag-item'}
                      onClick={()=>{setCurrentTag('')}}
                 >
-                    全部</div>
+                    全部
+                </div>
                 {
                     tags.map((tag,index)=>(
                             <div className= {tag===currentTag? 'tag-item tag-item-active':'tag-item'}
