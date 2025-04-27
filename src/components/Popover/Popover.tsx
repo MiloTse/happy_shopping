@@ -9,7 +9,9 @@ function Popover   (props:{
 
     return show? (
         <div className="popover" onClick={blankClickCallBack}>
-
+            <div className="popover-content">
+                popover-content
+            </div>
         </div>
     ) : null;
 }
