@@ -74,8 +74,8 @@ const Category = () => {
     }
     console.log(products)
 
-    function handleProductClick(id: string) {
-        
+    function handleProductClick(productId: string) {
+        navigate(`/detail/${productId}`);
     }
 
     return (
