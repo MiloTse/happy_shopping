@@ -16,6 +16,7 @@ const requestData = {
 const Detail = () => {
     const navigate = useNavigate();
 
+    //showCart default false
     const [showCart, setShowCart] = useState<boolean>(false);
 
 
@@ -94,7 +95,7 @@ const Detail = () => {
                 <div className='cart-button'>Add to Cart</div>
             </div>
             {/*Popover area*/}
-            <Popover show={true}/>
+            <Popover show={showCart}/>
         </div>
     ) : null;
 
