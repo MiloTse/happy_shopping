@@ -28,14 +28,8 @@ const items = [
 
 function Docker   ()   {
     const navigate = useNavigate();
-
     return (
-
-
-
-
             <div className="docker">
-
                 {
                     items.map(
                         item => (
@@ -50,10 +44,7 @@ function Docker   ()   {
                         )
                     )
                 }
-
-
             </div>
-
     );
 }
 
