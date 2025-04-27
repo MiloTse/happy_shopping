@@ -1,6 +1,8 @@
 import './style.scss';
 
-function Popover   ( )   {
+function Popover   (props:{
+    show: boolean;
+} )   {
     return (
         <div className="popover">
 
