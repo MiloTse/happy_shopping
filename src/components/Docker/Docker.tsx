@@ -2,28 +2,56 @@ import React from "react";
 import './style.scss';
 import {useNavigate} from "react-router-dom";
 
+const items = [
+    {
+        title: 'Home',
+        icon: '&#xe608;',
+        path: '/home'
+    },
+    {
+        title: 'Category',
+        icon: '&#xe609;',
+        path: '/category'
+    },
+    {
+        title: 'Cart',
+        icon: '&#xe601;',
+        path: '/cart',
+    },
+    {
+        title: 'Mine',
+        icon: '&#xe602;',
+        path: '/mine',
+    }
+]
+
+
 function Docker   ()   {
     const navigate = useNavigate();
 
     return (
 
+
+
+
             <div className="docker">
-                <div className="docker-item docker-item-active" onClick={() => navigate('/home')}>
-                    <p className="iconfont">&#xe608;</p>
-                    <p className="docker-item-title">Home</p>
-                </div>
-                <div className="docker-item" onClick={() => navigate('/category')}>
-                    <p className="iconfont">&#xe609;</p>
-                    <p className="docker-item-title">Category</p>
-                </div>
-                <div className="docker-item">
-                    <p className="iconfont">&#xe601;</p>
-                    <p className="docker-item-title">Cart</p>
-                </div>
-                <div className="docker-item">
-                    <p className="iconfont">&#xe602;</p>
-                    <p className="docker-item-title">Mine</p>
-                </div>
+
+                {
+                    items.map(
+                        item => (
+                            <div className="docker-item docker-item-active"
+                                 onClick={() => navigate(item.path)}
+                                 key={item.title}
+                            >
+                                <p className="iconfont">{item.icon}</p>
+                                <p className="docker-item-title">{item.title}</p>
+                            </div>
+
+                        )
+                    )
+                }
+
+
             </div>
 
     );
