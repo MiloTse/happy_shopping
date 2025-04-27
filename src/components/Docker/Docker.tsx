@@ -33,7 +33,7 @@ const items = [
 function Docker   (props: {activeName:string})   {
     const navigate = useNavigate();
     const {activeName } = props;
-    console.log(activeName)
+
     return (
             <div className="docker">
                 {
