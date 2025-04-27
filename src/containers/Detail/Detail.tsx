@@ -95,7 +95,7 @@ const Detail = () => {
                 <div className='cart-button' onClick={()=>{setShowCart(true)}}>Add to Cart</div>
             </div>
             {/*Popover area*/}
-            <Popover show={showCart}/>
+            <Popover show={showCart} blankClickCallBack={()=>{setShowCart(false)}}/>
         </div>
     ) : null;
 

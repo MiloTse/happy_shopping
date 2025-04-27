@@ -1,13 +1,14 @@
 import './style.scss';
 
 function Popover   (props:{
-    show: boolean;
+    show: boolean,
+    blankClickCallBack:()=>void;
 } )   {
     //variable to determine if popover is shown or not
-    const {show} = props;
+    const {show, blankClickCallBack} = props;
 
     return show? (
-        <div className="popover">
+        <div className="popover" onClick={blankClickCallBack}>
 
         </div>
     ) : null;
