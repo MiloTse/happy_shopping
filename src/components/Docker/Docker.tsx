@@ -12,7 +12,7 @@ function Docker   ()   {
                     <p className="iconfont">&#xe608;</p>
                     <p className="docker-item-title">Home</p>
                 </div>
-                <div className="docker-item" onClick={() => navigate('/nearby')}>
+                <div className="docker-item" onClick={() => navigate('/category')}>
                     <p className="iconfont">&#xe609;</p>
                     <p className="docker-item-title">Category</p>
                 </div>
