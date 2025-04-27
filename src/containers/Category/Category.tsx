@@ -108,7 +108,12 @@ const Category = () => {
                 <div className="tag-item tag-item-active">全部</div>
                 {
                     tags.map((tag,index)=>(
-                            <div className="tag-item" key={tag+index}>{tag}</div>
+                            <div className= {tag===currentTag? 'tag-item tag-item-active':'tag-item'}
+                                 key={tag+index}
+                                 onClick={()=>{setCurrentTag(tag)}}
+                            >
+                                {tag}
+                            </div>
                     ))
                 }
 
