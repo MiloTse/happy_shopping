@@ -63,7 +63,7 @@ const Category = () => {
     },[tagRequest]);
 
     //handle search content change
-    function handleKeyDown(key: string, target: any) {
+    function handleKeyDown(key: string, target: EventTarget & HTMLInputElement) {
         if(key === 'Enter') {
             console.log(target.value);
             setKeyword(target.value);
@@ -82,9 +82,7 @@ const Category = () => {
                     <input
                         className="search-input"
                         placeholder="Please enter product name"
-
-
-                        onKeyDown={(e) => {handleKeyDown(e.key, e.target)} }
+                        onKeyDown={(e) => {handleKeyDown(e.key, e.currentTarget)} }
                     />
                 </div>
 
