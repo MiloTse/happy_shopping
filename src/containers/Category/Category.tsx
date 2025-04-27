@@ -2,9 +2,9 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import {CategoryAndTagResponseType,    ProductType, ProductResponseType} from "./types";
+import {CategoryAndTagResponseType, ProductResponseType, ProductType} from "./types";
 import {message} from "../../utils/message";
-import {d} from "@pmmmwh/react-refresh-webpack-plugin/types/options";
+import Docker from "../../components/Docker/Docker";
 
 
 const Category = () => {
@@ -173,24 +173,7 @@ const Category = () => {
                 </div>
 
             </div>
-            <div className="docker">
-            <div className="docker-item ">
-                    <p className="iconfont">&#xe608;</p>
-                    <p className="docker-item-title">Home</p>
-                </div>
-                <div className="docker-item docker-item-active">
-                    <p className="iconfont">&#xe609;</p>
-                    <p className="docker-item-title">Category</p>
-                </div>
-                <div className="docker-item">
-                    <p className="iconfont">&#xe601;</p>
-                    <p className="docker-item-title">Cart</p>
-                </div>
-                <div className="docker-item">
-                    <p className="iconfont">&#xe602;</p>
-                    <p className="docker-item-title">Mine</p>
-                </div>
-            </div>
+            <Docker />
         </div>
     )
 }
