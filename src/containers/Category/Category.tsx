@@ -89,7 +89,9 @@ const Category = () => {
 
             </div>
             <div className="category">
-                <div className="category-item category-item-active">全部商品</div>
+                <div className={currentCategory===''? 'category-item category-item-active':'category-item'}
+                onClick={()=>{setCurrentCategory('')}}
+                >全部商品</div>
                 {
                     categories.map((category)=>{
                         return(
