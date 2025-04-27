@@ -97,7 +97,9 @@ const Detail = () => {
             {/*Popover area*/}
             <Popover show={showCart} blankClickCallBack={()=>{setShowCart(false)}}>
                 <div className='cart'>
-                    popover content
+                    <div className='cart-content'></div>
+                    <div className='cart-count'></div>
+                    <div className='cart-button'></div>
                 </div>
             </Popover>
         </div>
