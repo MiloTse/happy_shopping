@@ -90,7 +90,7 @@ const Detail = () => {
                 <div className='cart-button'>Add to Cart</div>
             </div>
             {/*Popover area*/}
-            <Popover/>
+            <Popover show={true}/>
         </div>
     ) : null;
 
