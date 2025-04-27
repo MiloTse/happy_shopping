@@ -97,7 +97,16 @@ const Detail = () => {
             {/*Popover area*/}
             <Popover show={showCart} blankClickCallBack={()=>{setShowCart(false)}}>
                 <div className='cart'>
-                    <div className='cart-content'></div>
+                    <div className='cart-content'>
+                        <img className='cart-content-image' alt='' src={result.imgUrl}/>
+                        <div className='cart-content-info'>
+                            <div className='cart-content-title'>{result.title}</div>
+                            <div className='cart-content-price'>
+                                <span className='cart-content-price-symbol'>&#36;</span>
+                                {result.price}
+                            </div>
+                         </div>
+                    </div>
                     <div className='cart-count'></div>
                     <div className='cart-button'></div>
                 </div>

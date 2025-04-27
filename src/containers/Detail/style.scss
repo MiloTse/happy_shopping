@@ -155,6 +155,14 @@
       text-align: center;
       color: #FFF;
     }
-
+  }
+  .cart {
+    &-button {
+      line-height:.44rem;
+      margin:.1rem.16rem;
+      border-radius:.22rem;
+      background:#73D13D;
+      font-size:.16rem;
+    }
   }
 }
