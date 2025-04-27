@@ -65,7 +65,8 @@ const Category = () => {
     //handle search content change
     function handleKeyDown(key: string, target: EventTarget & HTMLInputElement) {
         if(key === 'Enter') {
-            console.log(target.value);
+            //HTMLInputElement must have value
+            // console.log(target.value);
             setKeyword(target.value);
         }
     }
