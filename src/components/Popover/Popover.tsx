@@ -12,7 +12,9 @@ function Popover   (props:{
     return show? (
         <>
          <div className="popover-mask" onClick={blankClickCallBack}></div>
-         <div className="popover-content">{children}</div>
+         <div className="popover-content">
+             {children}
+         </div>
         </>
     ) : null;
 }
