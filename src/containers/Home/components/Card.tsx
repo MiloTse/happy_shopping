@@ -16,7 +16,7 @@ const Card = (props: CardPropsType) => {
 
     const navigate = useNavigate();
     function handleItemClick(productId: string) {
-
+        navigate(`/detail/${productId}`);
     }
 
     return (
