@@ -43,7 +43,7 @@ function Docker   ()   {
                                  onClick={() => navigate(item.path)}
                                  key={item.title}
                             >
-                                <p className="iconfont">{item.icon}</p>
+                                <p className="iconfont" dangerouslySetInnerHTML={{__html: item.icon}}/>
                                 <p className="docker-item-title">{item.title}</p>
                             </div>
 
