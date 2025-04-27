@@ -8,15 +8,16 @@ import {d} from "@pmmmwh/react-refresh-webpack-plugin/types/options";
 
 
 const Category = () => {
+    //store data of item list
     const [products, setProducts] = useState<Array<ProductType>>([]);
-
     const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
+    //handle data of re-sending request
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
 
     const [currentTag, setCurrentTag] = useState('');
     const  [ currentCategory,  setCurrentCategory ]=useState('');
-    //not send request until call request manually
+    //sending request dynamically based on page data changed
     const {request: tagRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
@@ -61,7 +62,7 @@ const Category = () => {
         });
     },[tagRequest]);
 
-
+    //handle search content change
     function handleKeyDown(key: string, target: any) {
         if(key === 'Enter') {
             console.log(target.value);
