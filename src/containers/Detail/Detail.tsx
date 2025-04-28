@@ -107,7 +107,11 @@ const Detail = () => {
                             </div>
                          </div>
                     </div>
-                    <div className='cart-count'></div>
+                    <div className='cart-count'>
+                        <div className='cart-count-content'>
+
+                        </div>
+                    </div>
                     <div className='cart-button'>Add to Cart</div>
                 </div>
             </Popover>
