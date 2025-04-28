@@ -14,3 +14,11 @@ export type ResponseType = {
 
     }
 }
+
+export type CartResponseType = {
+    success: boolean,
+    data: {
+         count: number;
+
+    }
+}
