@@ -54,9 +54,13 @@ const Detail = () => {
     }, [cartRequest, params]);
 
 
-    function changCount(number: number) {
-
-    }
+    function changCount(count: number) {
+        if(count<0){
+            setCount(0);
+        }else{
+            setCount(count);
+        }
+     }
 
     return result ? (
         <div className="page detail-page">
