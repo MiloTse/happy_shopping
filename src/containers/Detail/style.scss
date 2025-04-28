@@ -136,15 +136,24 @@
       width: 1.2rem;
       text-align:center;
       .iconfont {
+        position: relative;
         margin-top: .1rem ;
         font-size:.24rem;
+      }
+      .icon-count {
+        position: absolute;
+        top: -.1rem;
+        right: -.1rem;
+        padding: .02rem .04rem;
+        border-radius: .1rem;
+        background: #EC0D0D;
+        color: #FFF;
+        font-size: .12rem;
       }
       .icon-text {
         position: relative;
         font-size:.14rem;
-        &-tips {
-          position: absolute;
-        }
+
       }
     }
 

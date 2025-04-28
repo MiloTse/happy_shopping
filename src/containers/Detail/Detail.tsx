@@ -102,7 +102,7 @@ const Detail = () => {
                 <div className='cart-icon'>
                     <div className='iconfont'>
                         &#xe949;
-                        <span className='icon-text-tips'>{count}</span>
+                        <span className='icon-count'>{count}</span>
                     </div>
                     <div className='icon-text'>
                       Shopping Cart
