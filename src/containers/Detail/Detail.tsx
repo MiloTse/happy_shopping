@@ -100,11 +100,12 @@ const Detail = () => {
             {/*docker area */}
             <div className='docker'>
                 <div className='cart-icon'>
-                    <div className='iconfont'>&#xe949;</div>
-                    <div className='icon-text'>
-                        Cart
+                    <div className='iconfont'>
+                        &#xe949;
                         <span className='icon-text-tips'>{count}</span>
-                        <span className='iconfont icon-right'>&#xe6aa;</span>
+                    </div>
+                    <div className='icon-text'>
+                      Shopping Cart
                     </div>
                 </div>
 
