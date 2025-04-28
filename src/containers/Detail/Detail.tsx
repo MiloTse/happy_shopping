@@ -71,9 +71,21 @@ const Detail = () => {
          setShowCart(false)
      }
 
+     //handle the action to change cart info and send request to server
     const {request: cartChangeRequest} = useRequest<CartChangeResponseType>({manual: true});
     function changeCartInfo() {
-
+        cartChangeRequest({
+            url: '/cartChange.json',
+            method: 'GET',
+            params: {id: params!.id, count: tempCount},
+        }).then(response => {
+            if(response.success){
+                setCount(tempCount);
+                setShowCart(false);
+            }
+        }).catch((e)=>{
+            message(e.message);
+        })
     }
 
     return result ? (
