@@ -54,6 +54,10 @@ const Detail = () => {
     }, [cartRequest, params]);
 
 
+    function changCount(number: number) {
+
+    }
+
     return result ? (
         <div className="page detail-page">
             {/*title area */}
@@ -128,9 +132,15 @@ const Detail = () => {
                         <div className='cart-count-content'>
                             Quantity:
                             <div className='cart-count-counter'>
-                                 <div className='cart-count-button'>-</div>
+                                 <div className='cart-count-button'
+                                      onClick={()=>{changCount(count-1)}}>
+                                     -
+                                 </div>
                                 <div className='cart-count-text'>{count}</div>
-                                <div className='cart-count-button'>+</div>
+                                <div className='cart-count-button'
+                                     onClick={()=>{changCount(count+1)}}>
+                                    +
+                                </div>
                             </div>
                         </div>
                     </div>
