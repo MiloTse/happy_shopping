@@ -1,6 +1,6 @@
 
 import './style.scss';
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType, CartResponseType} from "./types";
@@ -42,6 +42,12 @@ const Detail = () => {
         method: 'GET',
         params: { id: params?.id},
     });
+
+    useEffect(() => {
+        setCount(cartData?.data?.count || 0);
+    }, []);
+
+
     //alias to cartData
     const {data: cartData} = useRequest<CartResponseType>(requestCartData.current);
     console.log(cartData);
