@@ -111,9 +111,9 @@ const Detail = () => {
                         <div className='cart-count-content'>
                             Quantity:
                             <div className='cart-count-counter'>
-                                 <div className='cart-count-counter-minus'>-</div>
-                                <div className='cart-count-counter-num'>1</div>
-                                <div className='cart-count-counter-plus'>+</div>
+                                 <div className='cart-count-button'>-</div>
+                                <div className='cart-count-text'>1</div>
+                                <div className='cart-count-button'>+</div>
                             </div>
                         </div>
                     </div>
