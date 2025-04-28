@@ -38,6 +38,7 @@ const Detail = () => {
     };
     //shopping cart quantity that had been added to cart
     const [count, setCount] = useState(0);
+    const [tempCount, setTempCount] = useState(0);
     //manually trigger a request
     const {request: cartRequest} = useRequest<CartResponseType>({manual: true});
     useEffect(() => {
@@ -48,18 +49,26 @@ const Detail = () => {
             }
          ).then(response => {
              setCount(response.data.count);
+             //when request success, set tempCount to count as well
+             setTempCount(response.data.count);
          }).catch((e)=>{
             message(e.message);
         })
     }, [cartRequest, params]);
 
 
-    function changCount(count: number) {
-        if(count<0){
-            setCount(0);
+    function changTempCount(tempCount: number) {
+        if(tempCount<0){
+            setTempCount(0);
         }else{
-            setCount(count);
+            setTempCount(tempCount);
         }
+     }
+
+     //when close popover, set tempCount to count
+     function closeMask () {
+        setTempCount(count);
+         setShowCart(false)
      }
 
     return result ? (
@@ -120,7 +129,7 @@ const Detail = () => {
                 <div className='cart-button' onClick={()=>{setShowCart(true)}}>Add to Cart</div>
             </div>
             {/*Popover area*/}
-            <Popover show={showCart} blankClickCallBack={()=>{setShowCart(false)}}>
+            <Popover show={showCart} blankClickCallBack={ closeMask}>
                 <div className='cart'>
                     <div className='cart-content'>
                         <img className='cart-content-img' alt='' src={result.imgUrl}/>
@@ -137,12 +146,12 @@ const Detail = () => {
                             Quantity:
                             <div className='cart-count-counter'>
                                  <div className='cart-count-button'
-                                      onClick={()=>{changCount(count-1)}}>
+                                      onClick={()=>{changTempCount(tempCount-1)}}>
                                      -
                                  </div>
-                                <div className='cart-count-text'>{count}</div>
+                                <div className='cart-count-text'>{tempCount}</div>
                                 <div className='cart-count-button'
-                                     onClick={()=>{changCount(count+1)}}>
+                                     onClick={()=>{changTempCount(tempCount+1)}}>
                                     +
                                 </div>
                             </div>
