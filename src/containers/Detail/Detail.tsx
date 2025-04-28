@@ -13,6 +13,7 @@ const Detail = () => {
     const [showCart, setShowCart] = useState<boolean>(false);
     const params = useParams<{id:string}>();
 
+    //assemble request logic of Detail product
     const requestData = useRef({
         url: '/detail.json',
         method: 'GET',
@@ -34,8 +35,12 @@ const Detail = () => {
         specification: '',
         detail: ''
     };
-
-
+    //shopping cart quantity that had been added to cart
+    const requestCartData = useRef({
+        url: '/cart.json',
+        method: 'GET',
+        params: { id: params?.id},
+    });
     return result ? (
         <div className="page detail-page">
             {/*title area */}
