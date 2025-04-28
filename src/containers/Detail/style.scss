@@ -182,6 +182,17 @@
         white-space:normal;
         word-break:break-all;
       }
+      &-price {
+        color: #ec0d0d;
+        font-size: .20rem;
+        top: .18rem;
+        left: .1rem;
+        &-symbol {
+          font-size: .14rem;
+          margin-right: .02rem;
+          font-weight: normal;
+        }
+      }
     }
     &-button {
       line-height:.44rem;
