@@ -202,6 +202,20 @@
         color: #242424;
         font-size: .14rem;
       }
+      &-counter {
+        float: right;
+        font-size:0;
+      }
+      &-button, &-text {
+        display: inline-block;
+        font-size: .18rem;
+        line-height: .28rem;
+        text-align: center;
+        background: #F4F4F4;
+      }
+      &-button {
+        width: .28rem;
+      }
     }
     &-button {
       line-height:.44rem;
