@@ -1,33 +1,27 @@
 
 import './style.scss';
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
 import Popover from "../../components/Popover/Popover";
 
-{/*one time request*/}
-const requestData = {
-    url: '/detail.json',
-    method: 'GET',
-    params: { id: ''},
-}
 
 const Detail = () => {
     const navigate = useNavigate();
-
     //showCart default false
     const [showCart, setShowCart] = useState<boolean>(false);
-
-
     const params = useParams<{id:string}>();
-    //assign value
-    if(params.id){
-        requestData.params.id = params.id;
-    }
+
+    const requestData = useRef({
+        url: '/detail.json',
+        method: 'GET',
+        params: { id: params?.id},
+    });
+
 
     //data is a dynamic data fetch from api detail.json
-    const {data} = useRequest<ResponseType>(requestData);
+    const {data} = useRequest<ResponseType>(requestData.current);
     //define default value if undefined or null
     const result = data?.data || {
         id: '',
