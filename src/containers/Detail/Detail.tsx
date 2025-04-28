@@ -5,6 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType, CartResponseType} from "./types";
 import Popover from "../../components/Popover/Popover";
+import {message} from "../../utils/message";
 
 
 const Detail = () => {
@@ -47,7 +48,9 @@ const Detail = () => {
             }
          ).then(response => {
              setCount(response.data.count);
-         })
+         }).catch((e)=>{
+            message(e.message);
+        })
     }, [cartRequest, params]);
 
 
