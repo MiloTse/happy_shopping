@@ -3,7 +3,7 @@ import './style.scss';
 import React, {useEffect, useRef, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, CartResponseType} from "./types";
+import type {ResponseType, CartResponseType, CartChangeResponseType} from "./types";
 import Popover from "../../components/Popover/Popover";
 import {message} from "../../utils/message";
 
@@ -70,6 +70,11 @@ const Detail = () => {
         setTempCount(count);
          setShowCart(false)
      }
+
+    const {request: cartChangeRequest} = useRequest<CartChangeResponseType>({manual: true});
+    function changeCartInfo() {
+
+    }
 
     return result ? (
         <div className="page detail-page">
@@ -157,7 +162,7 @@ const Detail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='cart-button'>Add to Cart</div>
+                    <div className='cart-button' onClick={changeCartInfo}>Add to Cart</div>
                 </div>
             </Popover>
         </div>
