@@ -37,21 +37,18 @@ const Detail = () => {
     };
     //shopping cart quantity that had been added to cart
     const [count, setCount] = useState(0);
-    const requestCartData = useRef({
-        url: '/cart.json',
-        method: 'GET',
-        params: { id: params?.id},
-    });
-
+    //manually trigger a request
+    const {request: cartRequest} = useRequest<CartResponseType>({manual: true});
     useEffect(() => {
-        setCount(cartData?.data?.count || 0);
-    }, []);
-
-
-    //alias to cartData
-    const {data: cartData} = useRequest<CartResponseType>(requestCartData.current);
-    console.log(cartData);
-
+        cartRequest({
+                url: '/cart.json',
+                method: 'GET',
+                params: {id: params!.id},
+            }
+         ).then(response => {
+             setCount(response.data.count);
+         })
+    }, [cartRequest, params]);
 
 
     return result ? (
