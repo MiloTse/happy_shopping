@@ -109,7 +109,12 @@ const Detail = () => {
                     </div>
                     <div className='cart-count'>
                         <div className='cart-count-content'>
-
+                            Quantity:
+                            <div className='cart-count-counter'>
+                                 <div className='cart-count-counter-minus'>-</div>
+                                <div className='cart-count-counter-num'>1</div>
+                                <div className='cart-count-counter-plus'>+</div>
+                            </div>
                         </div>
                     </div>
                     <div className='cart-button'>Add to Cart</div>

@@ -194,6 +194,15 @@
         }
       }
     }
+    &-count {
+      padding:.35rem.16rem;
+      &-content {
+        height: .28rem;
+        line-height: .28rem;
+        color: #242424;
+        font-size: .14rem;
+      }
+    }
     &-button {
       line-height:.44rem;
       margin:.1rem .16rem;
