@@ -1,5 +1,5 @@
 {
-  "message": "success",
+  "success": true,
   "data": {
     "count": 18
   }
