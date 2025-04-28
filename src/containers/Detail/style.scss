@@ -140,7 +140,11 @@
         font-size:.24rem;
       }
       .icon-text {
+        position: relative;
         font-size:.14rem;
+        &-tips {
+          position: absolute;
+        }
       }
     }
 

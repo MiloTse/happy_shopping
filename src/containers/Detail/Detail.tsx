@@ -101,7 +101,11 @@ const Detail = () => {
             <div className='docker'>
                 <div className='cart-icon'>
                     <div className='iconfont'>&#xe949;</div>
-                    <div className='icon-text'>Shopping Cart</div>
+                    <div className='icon-text'>
+                        Cart
+                        <span className='icon-text-tips'>{count}</span>
+                        <span className='iconfont icon-right'>&#xe6aa;</span>
+                    </div>
                 </div>
 
                 <div className='cart-button' onClick={()=>{setShowCart(true)}}>Add to Cart</div>
