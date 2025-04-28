@@ -3,7 +3,7 @@ import './style.scss';
 import React, {useRef, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType} from "./types";
+import type {ResponseType, CartResponseType} from "./types";
 import Popover from "../../components/Popover/Popover";
 
 
@@ -41,6 +41,12 @@ const Detail = () => {
         method: 'GET',
         params: { id: params?.id},
     });
+    //alias to cartData
+    const {data: cartData} = useRequest<CartResponseType>(requestCartData.current);
+    console.log(cartData);
+
+
+
     return result ? (
         <div className="page detail-page">
             {/*title area */}
