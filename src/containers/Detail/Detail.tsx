@@ -36,6 +36,7 @@ const Detail = () => {
         detail: ''
     };
     //shopping cart quantity that had been added to cart
+    const [count, setCount] = useState(0);
     const requestCartData = useRef({
         url: '/cart.json',
         method: 'GET',
