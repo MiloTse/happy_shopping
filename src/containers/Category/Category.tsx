@@ -17,6 +17,7 @@ const Category = () => {
     //handle data of re-sending request
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
+    //logic of shopping cart
     const [showCart, setShowCart] = useState<boolean>(false);
 
 
