@@ -219,8 +219,8 @@ const Category = () => {
                         </div>
                     </div>
                     <div className='cart-buttons'>
-                        <div className='cart-button'>Add to Cart</div>
-                        <div className='cart-button'>Buy Now</div>
+                        <div className='cart-button cart-button-left'>Add to Cart</div>
+                        <div className='cart-button cart-button-right'>Buy Now</div>
                     </div>
                 </div>
             </Popover>

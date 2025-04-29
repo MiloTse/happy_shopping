@@ -212,12 +212,24 @@
     }
     &-buttons {
       display: flex;
+      padding: .1rem;
     }
     &-button {
       flex:1;
-      background:green;
+      background:#73D13D;
       font-size:.16rem;
-      margin:.16rem;
+      line-height:.44rem;
+      border-radius:.22rem;
+      text-align:center;
+         color: #FFF;
+      &-left {
+        margin-left: .16rem;
+        margin-right:.12rem;
+      }
+      &-right {
+        margin-right: .16rem;
+        margin-left:.12rem;
+      }
     }
   }
 }
