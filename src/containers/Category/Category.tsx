@@ -6,6 +6,7 @@ import {CategoryAndTagResponseType, ProductResponseType, ProductType} from "./ty
 import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
 import {useNavigate} from "react-router-dom";
+import Popover from "../../components/Popover/Popover";
 
 
 const Category = () => {
@@ -16,6 +17,9 @@ const Category = () => {
     //handle data of re-sending request
     const [tags, setTags] = useState<string[]>([]);
     const [keyword, setKeyword] = useState('');
+    const [showCart, setShowCart] = useState<boolean>(false);
+
+
 
     const [currentTag, setCurrentTag] = useState('');
     const  [ currentCategory,  setCurrentCategory ]=useState('');
@@ -74,8 +78,13 @@ const Category = () => {
     }
     console.log(products)
 
-    function handleProductClick(productId: string) {
-        navigate(`/detail/${productId}`);
+    function handleProductClick( ) {
+
+        setShowCart(true);
+    }
+
+    function closeMask() {
+        setShowCart(false);
     }
 
     return (
@@ -136,7 +145,8 @@ const Category = () => {
                     products.map((product)=> {
 
                             return(
-                                <div className="product-item" key={product.id} onClick={()=> {handleProductClick(product.id)}}>
+                                <div className="product-item" key={product.id}
+                                     onClick={()=> {handleProductClick( )}}>
                                     <img className="product-item-img"
                                          src={product.imgUrl}
                                          alt={product.title}
@@ -180,6 +190,37 @@ const Category = () => {
 
             </div>
             <Docker activeName='category'/>
+            <Popover show={showCart} blankClickCallBack={ closeMask}>
+                <div className='cart'>
+                    <div className='cart-content'>
+                        <img className='cart-content-img' alt='' src=''/>
+                        <div className='cart-content-info'>
+                            <div className='cart-content-title'> title </div>
+                            <div className='cart-content-price'>
+                                <span className='cart-content-price-symbol'>&#36;</span>
+                                 198
+                            </div>
+                        </div>
+                    </div>
+                    <div className='cart-count'>
+                        <div className='cart-count-content'>
+                            Quantity:
+                            <div className='cart-count-counter'>
+                                <div className='cart-count-button'
+                                >
+                                    -
+                                </div>
+                                <div className='cart-count-text'>0</div>
+                                <div className='cart-count-button'
+                                >
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='cart-button'>Add to Cart</div>
+                </div>
+            </Popover>
         </div>
     )
 }
