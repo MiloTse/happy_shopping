@@ -142,5 +142,33 @@
 
     }
   }
+  &-count {
+    padding:.35rem.16rem;
+    &-content {
+      height: .28rem;
+      line-height: .28rem;
+      color: #242424;
+      font-size: .14rem;
+    }
+    &-counter {
+      float: right;
+      font-size:0;
+    }
+    &-button, &-text {
+      display: inline-block;
+      font-size: .18rem;
+      line-height: .28rem;
+      text-align: center;
+      background: #F4F4F4;
+    }
+    &-button {
+      width: .28rem;
+    }
+    &-text {
+      margin: 0 .1rem;
+      padding: 0 .08rem;
+      width: .1rem;
+    }
+  }
 
 }
