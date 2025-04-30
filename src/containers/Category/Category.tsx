@@ -2,7 +2,7 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import {CategoryAndTagResponseType, ProductResponseType, ProductType} from "./types";
+import {CategoryAndTagResponseType, ProductResponseType, ProductType, CartType} from "./types";
 import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
 import {useNavigate} from "react-router-dom";
@@ -31,7 +31,7 @@ const Category = () => {
     //passing request data productRequestData to useRequest
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
     //gain cart's info
-    const {request: cartRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
+    const {request: cartRequest  } = useRequest<CartType>({manual: true});
      useEffect(() => {
          productRequest({
                 url:'/categoryProduct.json',
