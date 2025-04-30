@@ -30,7 +30,8 @@ const Category = () => {
     const {request: tagRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
     //passing request data productRequestData to useRequest
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
-
+    //gain cart's info
+    const {request: cartRequest  } = useRequest<CategoryAndTagResponseType>({manual: true});
      useEffect(() => {
          productRequest({
                 url:'/categoryProduct.json',
