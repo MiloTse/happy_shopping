@@ -81,7 +81,7 @@ const Category = () => {
     }
     console.log(products)
 
-    function handleProductClick( ) {
+    function handleProductClick(productId:string ) {
 
         setShowCart(true);
     }
@@ -162,7 +162,9 @@ const Category = () => {
                                             <span className="product-item-price-symbol">&#36;  </span>
                                             {product.price}
                                         </div>
-                                        <div className="product-item-button">
+                                        <div className="product-item-button"
+                                             onClick={()=>{handleProductClick(product.id)}}
+                                        >
                                             buy
                                         </div>
                                     </div>
@@ -187,7 +189,7 @@ const Category = () => {
                             <span className="product-item-price-symbol">&#36;  </span>156
                         </div>
                         <div className="product-item-button"
-                             onClick={()=> {handleProductClick()}}
+
                         >
                             buy
                         </div>
