@@ -105,6 +105,10 @@ const Category = () => {
         setShowCart(false);
     }
 
+    function handleCartNumberChange(number: number) {
+        
+    }
+
     return (
         <div className="page category-page">
             <div className="title">
@@ -230,6 +234,7 @@ const Category = () => {
                             Quantity:
                             <div className='cart-count-counter'>
                                 <div className='cart-count-button'
+                                     onClick={()=>{handleCartNumberChange(-1)}}
                                 >
                                     -
                                 </div>
@@ -237,6 +242,7 @@ const Category = () => {
                                     {cartProductInfo.count}
                                 </div>
                                 <div className='cart-count-button'
+                                     onClick={()=>{handleCartNumberChange(+1)}}
                                 >
                                     +
                                 </div>
