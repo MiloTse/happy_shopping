@@ -213,7 +213,9 @@ const Category = () => {
                                 >
                                     -
                                 </div>
-                                <div className='cart-count-text'>{cartProductInfo.count}</div>
+                                <div className='cart-count-text'>
+                                    {cartProductInfo.count}
+                                </div>
                                 <div className='cart-count-button'
                                 >
                                     +
