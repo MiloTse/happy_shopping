@@ -198,7 +198,7 @@ const Category = () => {
                     <div className='cart-content'>
                         <img className='cart-content-img' alt={cartProductInfo.title} src={cartProductInfo.imgUrl}/>
                         <div className='cart-content-info'>
-                            <div className='cart-content-title'> title </div>
+                            <div className='cart-content-title'> {cartProductInfo.title} </div>
                             <div className='cart-content-price'>
                                 <span className='cart-content-price-symbol'>&#36;</span>
                                  198
