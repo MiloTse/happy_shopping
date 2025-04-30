@@ -201,7 +201,7 @@ const Category = () => {
                             <div className='cart-content-title'> {cartProductInfo.title} </div>
                             <div className='cart-content-price'>
                                 <span className='cart-content-price-symbol'>&#36;</span>
-                                 198
+                                {cartProductInfo.price}
                             </div>
                         </div>
                     </div>
