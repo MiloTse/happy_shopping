@@ -19,7 +19,7 @@ const Category = () => {
     const [keyword, setKeyword] = useState('');
     //logic of shopping cart
     const [showCart, setShowCart] = useState<boolean>(false);
-    const [cartProductInfo, setShowProductInfo] = useState<CartType>({
+    const [cartProductInfo, setCartProductInfo] = useState<CartType>({
         id:'', title:'', imgUrl:'', price: '', count:0,
     });
 
@@ -84,7 +84,7 @@ const Category = () => {
     console.log(products)
 
     function handleProductClick(productId:string ) {
-        cartRequest({
+        cartRequest ({
                 url:'/cartProductInfo.json',
                 method:'GET',
                 params: {
@@ -92,6 +92,8 @@ const Category = () => {
                 },
             }
         ).then((data)=>{
+            //if success, load data from response api and set to cartProductInfo and show popover
+            setCartProductInfo(data.data);
             setShowCart(true);
         }).catch((e:any)=>{
             message(e?.message);
