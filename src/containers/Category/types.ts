@@ -28,3 +28,8 @@ export type CartType = {
     price: string;
     count:number;
 }
+
+export type CartResponseType = {
+    success: boolean;
+    data: CartType;
+}
