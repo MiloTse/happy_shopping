@@ -10,11 +10,11 @@ export type CategoryAndTagResponseType = {
     }
 }
 export type ProductType = {
-    "id":string;
-    "imgUrl": string;
-    "title":string;
-    "price":number;
-    "sales":number;
+    id:string;
+    imgUrl: string;
+    title:string;
+    price:number;
+    sales:number;
 }
 
 export type ProductResponseType = {
@@ -22,9 +22,9 @@ export type ProductResponseType = {
     data: Array<ProductType>;
 }
 export type CartType = {
-    "id":string;
-    "imgUrl": string;
-    "title":string;
-    "price":number;
-    "sales":number;
+    id:string;
+    title:string;
+    imgUrl:string;
+    price: string;
+    count:number;
 }
