@@ -106,7 +106,13 @@ const Category = () => {
     }
 
     function handleCartNumberChange(number: number) {
-        
+        const newCartProductInfo = {...cartProductInfo};
+        const {count} = newCartProductInfo;
+        newCartProductInfo.count = count + number;
+        if(newCartProductInfo.count < 0) {
+            newCartProductInfo.count = 0;
+        }
+        setCartProductInfo(newCartProductInfo);
     }
 
     return (
