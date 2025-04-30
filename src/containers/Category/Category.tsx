@@ -84,8 +84,19 @@ const Category = () => {
     console.log(products)
 
     function handleProductClick(productId:string ) {
+        cartRequest({
+                url:'/cartProductInfo.json',
+                method:'GET',
+                params: {
+                    productId,
+                },
+            }
+        ).then((data)=>{
+            setShowCart(true);
+        }).catch((e:any)=>{
+            message(e?.message);
+        });
 
-        setShowCart(true);
     }
 
     function closeMask() {
