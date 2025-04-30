@@ -196,7 +196,7 @@ const Category = () => {
             <Popover show={showCart} blankClickCallBack={ closeMask}>
                 <div className='cart'>
                     <div className='cart-content'>
-                        <img className='cart-content-img' alt='' src=''/>
+                        <img className='cart-content-img' alt='' src={cartProductInfo.imgUrl}/>
                         <div className='cart-content-info'>
                             <div className='cart-content-title'> title </div>
                             <div className='cart-content-price'>
