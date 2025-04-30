@@ -31,7 +31,7 @@ const Category = () => {
     //passing request data productRequestData to useRequest
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
     //gain cart's info
-    const {request: cartRequest  } = useRequest<CartType>({manual: true});
+    const {request: cartRequest  } = useRequest<CartResponseType>({manual: true});
 
      useEffect(() => {
          productRequest({
