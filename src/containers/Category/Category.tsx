@@ -20,7 +20,7 @@ const Category = () => {
     //logic of shopping cart
     const [showCart, setShowCart] = useState<boolean>(false);
     const [cartProductInfo, setShowProductInfo] = useState({
-        title:'', imgUrl:'', price: '', count:0,
+        id:'', title:'', imgUrl:'', price: '', count:0,
     });
 
 
