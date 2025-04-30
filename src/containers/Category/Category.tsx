@@ -148,8 +148,9 @@ const Category = () => {
                     products.map((product)=> {
 
                             return(
-                                <div className="product-item" key={product.id}
-                                     onClick={()=> {handleProductClick( )}}>
+                                <div className="product-item"
+                                     key={product.id}
+                                >
                                     <img className="product-item-img"
                                          src={product.imgUrl}
                                          alt={product.title}
@@ -185,7 +186,9 @@ const Category = () => {
                         <div className="product-item-price">
                             <span className="product-item-price-symbol">&#36;  </span>156
                         </div>
-                        <div className="product-item-button">
+                        <div className="product-item-button"
+                             onClick={()=> {handleProductClick()}}
+                        >
                             buy
                         </div>
                     </div>
