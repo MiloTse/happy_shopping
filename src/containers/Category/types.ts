@@ -21,3 +21,10 @@ export type ProductResponseType = {
     success: boolean,
     data: Array<ProductType>;
 }
+export type CartType = {
+    "id":string;
+    "imgUrl": string;
+    "title":string;
+    "price":number;
+    "sales":number;
+}
