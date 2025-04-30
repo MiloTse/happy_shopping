@@ -2,7 +2,7 @@ import './style.scss';
 import React, {useEffect, useState} from "react";
 
 import useRequest from "../../utils/useRequest";
-import {CategoryAndTagResponseType, ProductResponseType, ProductType, CartType} from "./types";
+import {CategoryAndTagResponseType, ProductResponseType, ProductType, CartType, CartResponseType} from "./types";
 import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
 import {useNavigate} from "react-router-dom";
@@ -19,7 +19,7 @@ const Category = () => {
     const [keyword, setKeyword] = useState('');
     //logic of shopping cart
     const [showCart, setShowCart] = useState<boolean>(false);
-    const [cartProductInfo, setShowProductInfo] = useState({
+    const [cartProductInfo, setShowProductInfo] = useState<CartType>({
         id:'', title:'', imgUrl:'', price: '', count:0,
     });
 
@@ -32,6 +32,7 @@ const Category = () => {
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
     //gain cart's info
     const {request: cartRequest  } = useRequest<CartType>({manual: true});
+
      useEffect(() => {
          productRequest({
                 url:'/categoryProduct.json',
