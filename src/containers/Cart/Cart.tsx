@@ -13,8 +13,10 @@ function Cart() {
                     <div className='radio'></div>
                     <span className='iconfont'>&#xe7ce;</span>喜梅蔬菜店
                 </div>
-                <div className='shop-product'>
-
+                <div className='shop-products'>
+                    <div className='shop-product-item'>
+                        <div className='radio'></div>
+                    </div>
                 </div>
             </div>
             <Docker activeName='cart' />
