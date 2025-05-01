@@ -7,6 +7,7 @@ import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
 import {useNavigate} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
+import {CartChangeResponseType} from "../Detail/types";
 
 
 const Category = () => {
@@ -32,6 +33,8 @@ const Category = () => {
     const {request: productRequest  } = useRequest<ProductResponseType>({manual: true});
     //gain cart's info
     const {request: cartRequest  } = useRequest<CartResponseType>({manual: true});
+    //update cart's content
+    const {request: cartChangeRequest  } = useRequest<CartChangeResponseType>({manual: true});
 
      useEffect(() => {
          productRequest({
