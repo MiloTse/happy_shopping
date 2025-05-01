@@ -7,7 +7,7 @@ import {message} from "../../utils/message";
 import Docker from "../../components/Docker/Docker";
 import {useNavigate} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
-import {CartChangeResponseType} from "../Detail/types";
+import {CartChangeResponseType} from "../../types";
 
 
 const Category = () => {
