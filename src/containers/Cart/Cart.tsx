@@ -16,6 +16,7 @@ function Cart() {
                 <div className='shop-products'>
                     <div className='shop-product'>
                         <div className='radio'></div>
+                        <img src='' alt='' className='shop-product-img'/>
                     </div>
                 </div>
             </div>
