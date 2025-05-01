@@ -5,7 +5,7 @@ import React from "react";
 function Cart() {
     return (
         <div className="page cart-page">
-            <Docker activeName='home' />
+            <Docker activeName='cart' />
         </div>
     )
 }
