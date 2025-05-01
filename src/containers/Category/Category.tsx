@@ -118,6 +118,10 @@ const Category = () => {
         setCartProductInfo(newCartProductInfo);
     }
 
+    function changeCartInfo() {
+
+    }
+
     return (
         <div className="page category-page">
             <div className="title">
@@ -259,7 +263,7 @@ const Category = () => {
                         </div>
                     </div>
                     <div className='cart-buttons'>
-                        <div className='cart-button cart-button-left'>Add to Cart</div>
+                        <div className='cart-button cart-button-left' onClick={changeCartInfo}>Add to Cart</div>
                         <div className='cart-button cart-button-right'>Buy Now</div>
                     </div>
                 </div>
