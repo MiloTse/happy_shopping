@@ -45,6 +45,7 @@
       &-img {
         display:block;
         margin-left:.48rem;
+        margin-right:.08rem;
         width:.96rem;
         height:.96rem;
       }
@@ -71,6 +72,13 @@
         &-symbol {
           font-size:.12rem;
         }
+      }
+      &-count{
+        display: block;
+        height:.24rem;
+        line-height:.24rem;
+        min-width:.24rem;
+        font-size: .12rem;
       }
     }
   }
