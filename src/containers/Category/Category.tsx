@@ -191,6 +191,9 @@ const Category = () => {
 
                             return(
                                 <div className="product-item"
+                                     onClick={()=>{
+                                         navigate(`/detail/${product.id}`);
+                                     }}
                                      key={product.id}
                                 >
                                     <img className="product-item-img"
