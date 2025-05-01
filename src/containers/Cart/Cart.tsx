@@ -19,7 +19,13 @@ function Cart() {
                         <img src='' alt='' className='shop-product-img'/>
                         <div className='shop-product-content'>
                             <div className='shop-product-title'></div>
-
+                            潍坊水果萝卜10斤水果萝卜甜脆水果型潍县青沙窝天津萝卜…
+                            </div>
+                            <div className='shop-product-kilo'>
+                                0.43kg
+                            </div>
+                            <div className='shop-product-price'>
+                                <span className='shop-product-price-symbol'></span>99
                             </div>
                         </div>
                     </div>
