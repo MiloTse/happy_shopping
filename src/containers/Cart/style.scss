@@ -1,13 +1,16 @@
 .cart-page {
   background: #F5F9FA;
   .title {
-     line-height: .44rem;
-     font-size:.18rem;
-     color: #242424;
-     background: #FFF;
-     text-align: center;
+
+    line-height: .44rem;
+    font-size:.18rem;
+    color: #242424;
+    background: #FFF;
+    text-align: center;
+
   }
   .radio {
+    display: inline-block;
     width:.24rem;
     height:.24rem;
     border-radius:.12rem;
@@ -17,11 +20,13 @@
   .shop {
     margin-top:.1rem;
     background:#FFF;
+    font-size: 0;
     &-title {
       padding-top:.12rem;
       padding-bottom:.04rem;
       line-height:.24rem;
       font-size:.16rem;
+
       .iconfont {
           margin-left: .18rem;
           margin-right:.08rem;
