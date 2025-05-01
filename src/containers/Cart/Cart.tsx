@@ -17,10 +17,13 @@ function Cart() {
                     <div className='shop-product'>
                         <div className='radio'></div>
                         <img src='' alt='' className='shop-product-img'/>
-                        <div className='shop-product-content'></div>
+                        <div className='shop-product-content'>
+                            <div className='shop-product-title'></div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             <Docker activeName='cart' />
         </div>
     )
