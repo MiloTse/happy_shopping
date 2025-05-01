@@ -19,13 +19,7 @@ export type ResponseType = {
 export type CartResponseType = {
     success: boolean,
     data: {
-         count: number;
+        count: number;
 
     }
-}
-
-//购物车数量变更返回内容类型
-export type CartChangeResponseType = {
-    success: boolean,
-    data: boolean;
 }
