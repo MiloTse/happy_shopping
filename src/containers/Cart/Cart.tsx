@@ -25,8 +25,9 @@ function Cart() {
                                 0.43kg
                             </div>
                             <div className='shop-product-price'>
-                                <span className='shop-product-price-symbol'></span>99
+                                <span className='shop-product-price-symbol'>&#36; </span>99
                             </div>
+                            <input value='3' className='shop-product-count'/>
                         </div>
                     </div>
                 </div>
