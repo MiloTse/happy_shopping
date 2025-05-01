@@ -119,7 +119,17 @@ const Category = () => {
     }
 
     function changeCartInfo() {
-
+        cartChangeRequest({
+            url: '/cartChange.json',
+            method: 'GET',
+            params: {id: cartProductInfo.id, count: cartProductInfo.count},
+        }).then(response => {
+            if(response.success){
+                 setShowCart(false);
+            }
+        }).catch((e)=>{
+            message(e.message);
+        })
     }
 
     return (
