@@ -38,6 +38,9 @@
     }
     &-products {
       padding: .16rem .1rem;
+      &-item {
+        position: relative;
+      }
     }
   }
 }
