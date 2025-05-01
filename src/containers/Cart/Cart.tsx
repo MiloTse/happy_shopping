@@ -8,6 +8,11 @@ function Cart() {
             <div className='title'>
                 Cart
             </div>
+            <div className='shop'>
+                <div className='shop-title'>
+                    <span className='iconfont'></span>喜梅蔬菜店
+                </div>
+            </div>
             <Docker activeName='cart' />
         </div>
     )
