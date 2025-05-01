@@ -40,7 +40,17 @@
       padding: .16rem .1rem .16rem 0;
     }
     &-product {
+      display: flex;
       position: relative;
+      &-img {
+        display:block;
+        margin-left:.48rem;
+        width:.96rem;
+        height:.96rem;
+      }
+      &-content {
+        flex:1;
+      }
     }
   }
 }
