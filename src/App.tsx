@@ -13,6 +13,7 @@ import Search from "./containers/Search/Search";
 import SearchList from "./containers/SearchList/SearchList";
 import Detail from "./containers/Detail/Detail";
 import Category from "./containers/Category/Category";
+import Cart from "./containers/Cart/Cart";
 
 const router = createHashRouter([{
         path: "/",
@@ -53,6 +54,10 @@ const router = createHashRouter([{
     {
         path: "/detail/:id",
         element: <Detail />
+    },
+    {
+        path: "/cart",
+        element: <Cart />
     }
 ]);
 
