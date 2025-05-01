@@ -86,7 +86,8 @@ const Category = () => {
     }
     console.log(products)
 
-    function handleProductClick(productId:string ) {
+    function handleProductClick(e: React.MouseEvent<HTMLDivElement>, productId:string ) {
+        e.stopPropagation();
         cartRequest ({
                 url:'/cartProductInfo.json',
                 method:'GET',
@@ -208,7 +209,7 @@ const Category = () => {
                                             {product.price}
                                         </div>
                                         <div className="product-item-button"
-                                             onClick={()=>{handleProductClick(product.id)}}
+                                             onClick={(e)=>{handleProductClick(e, product.id)}}
                                         >
                                             buy
                                         </div>
