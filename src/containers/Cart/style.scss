@@ -10,8 +10,10 @@
 
   }
   .radio {
-    display: inline-block;
-    width:.24rem;
+    position: absolute;
+    left: .1rem;
+    top: .1rem;
+     width:.24rem;
     height:.24rem;
     border-radius:.12rem;
     border:.01rem solid #B1B1B1
@@ -20,15 +22,17 @@
   .shop {
     margin-top:.1rem;
     background:#FFF;
-    font-size: 0;
+
     &-title {
+      position: relative;
       padding-top:.12rem;
       padding-bottom:.04rem;
       line-height:.24rem;
+      padding-left: .48rem;
       font-size:.16rem;
 
       .iconfont {
-          margin-left: .18rem;
+
           margin-right:.08rem;
       }
     }
