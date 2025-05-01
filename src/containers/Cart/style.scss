@@ -37,10 +37,10 @@
       }
     }
     &-products {
-      padding: .16rem .1rem;
-      &-item {
-        position: relative;
-      }
+      padding: .16rem .1rem .16rem 0;
+    }
+    &-product {
+      position: relative;
     }
   }
 }

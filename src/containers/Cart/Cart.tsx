@@ -14,7 +14,7 @@ function Cart() {
                     <span className='iconfont'>&#xe7ce;</span>喜梅蔬菜店
                 </div>
                 <div className='shop-products'>
-                    <div className='shop-product-item'>
+                    <div className='shop-product'>
                         <div className='radio'></div>
                     </div>
                 </div>
