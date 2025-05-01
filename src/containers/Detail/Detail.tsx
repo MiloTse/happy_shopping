@@ -3,9 +3,10 @@ import './style.scss';
 import React, {useEffect, useRef, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, CartResponseType, CartChangeResponseType} from "./types";
+import type {ResponseType, CartResponseType} from "./types";
 import Popover from "../../components/Popover/Popover";
 import {message} from "../../utils/message";
+import {CartChangeResponseType} from "../../types";
 
 
 const Detail = () => {
