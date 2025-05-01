@@ -51,6 +51,27 @@
       &-content {
         flex:1;
       }
+      &-title {
+        color: #242424;
+        font-size:.14rem;
+        line-height:.22rem;
+        word-wrap:break-word;
+        word-break:break-all;
+      }
+      &-kilo {
+        margin-top:.08rem;
+        color:#B1B1B1;
+        font-size:.12rem;
+        line-height:.18rem;
+      }
+      &-price {
+        margin-top:.14rem;
+        color:#CF1322;
+        font-size:.16rem;
+        &-symbol {
+          font-size:.12rem;
+        }
+      }
     }
   }
 }

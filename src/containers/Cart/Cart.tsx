@@ -18,9 +18,11 @@ function Cart() {
                         <div className='radio'></div>
                         <img src='' alt='' className='shop-product-img'/>
                         <div className='shop-product-content'>
-                            <div className='shop-product-title'></div>
-                            潍坊水果萝卜10斤水果萝卜甜脆水果型潍县青沙窝天津萝卜…
+                            <div className='shop-product-title'>
+                                潍坊水果萝卜10斤水果萝卜甜脆水果型潍县青沙窝天津萝卜…
                             </div>
+
+
                             <div className='shop-product-kilo'>
                                 0.43kg
                             </div>
@@ -31,6 +33,7 @@ function Cart() {
                         </div>
                     </div>
                 </div>
+            </div>
             <Docker activeName='cart' />
         </div>
     )
