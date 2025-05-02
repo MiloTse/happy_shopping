@@ -11,7 +11,7 @@ function Cart() {
         method: 'GET'
     });
 
-    const { data } = useRequest<ResponseType>(requestData.current);
+    const { data } = useRequest<ResponseType>({manual: true});
 
     console.log(data)
 
