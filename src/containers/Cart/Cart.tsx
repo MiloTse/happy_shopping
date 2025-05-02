@@ -12,7 +12,7 @@ function Cart() {
 
     });
 
-
+    console.log(data)
 
 
 
