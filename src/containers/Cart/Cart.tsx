@@ -5,15 +5,15 @@ import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
 
 function Cart() {
-
+    const { request } = useRequest<ResponseType>({manual: true});
     const requestData = useRef({
         url: '/cartProducts.json',
         method: 'GET'
     });
 
-    const { data } = useRequest<ResponseType>({manual: true});
 
-    console.log(data)
+
+
 
 
 
