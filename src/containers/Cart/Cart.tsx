@@ -17,12 +17,14 @@ function Cart() {
             const list = data.data;
             //fetch shop list data from response data
             const newList= list.map(shop =>{
+
+                //added new return property 'selected' to every product
                 const newCartList= shop.cartList.map(product => {
                     return {...product, selected: false}
                 });
                 return{ shopId:shop.shopId, shopName:shop.shopName, cartList: newCartList}
             });
-            console.log(newList);
+            // console.log(newList);
             //passing newList to list
             setList(newList);
         }).catch((e)=>{
