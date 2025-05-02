@@ -1,16 +1,17 @@
 import './style.scss';
 import Docker from "../../components/Docker/Docker";
-import React from "react";
+import React, {useRef} from "react";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
 
 function Cart() {
-    const { data } = useRequest<ResponseType>({
+
+    const requestData = useRef({
         url: '/cartProducts.json',
-        method: 'GET',
-
-
+        method: 'GET'
     });
+
+    const { data } = useRequest<ResponseType>(requestData.current);
 
     console.log(data)
 
