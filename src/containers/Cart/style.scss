@@ -114,12 +114,14 @@
       display: flex;
       flex:1;
       &-text {
-        width: .4rem;
+        flex:1;
+
         font-size: .15rem;
         color: #242424;
+        text-align: right;
       }
       &-price-inner  {
-        flex:1;
+        width: .6rem;
         text-align: right;
         color:#CF1322;
         font-size:.18rem;
