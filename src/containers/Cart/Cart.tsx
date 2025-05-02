@@ -118,10 +118,10 @@ function Cart() {
                 list.map(shop=>{
                     return (
 
-                        <div className='shop'>
+                        <div className='shop' key={shop.shopId}>
                             <div className='shop-title'>
                                 <div className='radio'></div>
-                                <span className='iconfont'>&#xe7ce;</span>喜梅蔬菜店
+                                <span className='iconfont'>&#xe7ce;</span>{shop.shopName}
                             </div>
                             <div className='shop-products'>
                                 <div className='shop-product'>
