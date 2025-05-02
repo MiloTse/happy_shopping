@@ -140,9 +140,11 @@ function Cart() {
                     <div className='radio'></div>
                     全选
                 </div>
-                <div>合计：
-                    <span className='total-price-symbol'>&#36; </span>
+                <div>
+                    <span>合计</span>
+                    <div><span>&#36; </span>
                     99
+                    </div>
                 </div>
                 <div className='check'>结算(2)</div>
 
