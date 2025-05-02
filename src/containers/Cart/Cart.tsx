@@ -141,9 +141,10 @@ function Cart() {
                     <div className='select-all-text'>全选</div>
                 </div>
                 <div className='total'>
-                    <span>合计</span>
-                    <div><span>&#36; </span>
-                    99
+                    <span className='total-text'>合计:</span>
+                    <div className='total-price-inner'>
+                        <span className='total-price-symbol'>&#36; </span>
+                        99
                     </div>
                 </div>
                 <div className='check'>结算(2)</div>

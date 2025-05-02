@@ -111,7 +111,16 @@
       }
     }
     .total {
+      display: flex;
       flex:1;
+      &-text {
+        width: .4rem;
+        font-size: .15rem;
+        color: #242424;
+      }
+      &-price-inner  {
+
+      }
     }
     .check {
       width:1.35rem;
