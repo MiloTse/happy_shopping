@@ -5,7 +5,7 @@ import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
 
 function Cart() {
-    const { data } = useRequest({
+    const { data } = useRequest<ResponseType>({
         url: '/cartProducts.json',
         method: 'GET',
 
