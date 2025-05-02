@@ -101,6 +101,14 @@
     left:0;
     right: 0;
     font-size:.15rem;
+    .select-all {
+      width:1.35rem;
+      background:#F5F9FA;
+      text-align:center;
+    }
+    .total {
+      flex:1;
+    }
     .check {
       width:1.35rem;
       background:#73D13D;

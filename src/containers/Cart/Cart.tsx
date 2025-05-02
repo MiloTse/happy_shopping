@@ -136,11 +136,11 @@ function Cart() {
             </div>
             {/* show total price*/}
             <div className='total-price'>
-                <div>
+                <div className='select-all'>
                     <div className='radio'></div>
                     全选
                 </div>
-                <div>
+                <div className='total'>
                     <span>合计</span>
                     <div><span>&#36; </span>
                     99
