@@ -8,6 +8,7 @@ function Cart() {
             <div className='title'>
                 Cart
             </div>
+            {/*show every shop*/}
             <div className='shop'>
                 <div className='shop-title'>
                     <div className='radio'></div>
@@ -70,8 +71,7 @@ function Cart() {
                     </div>
                 </div>
             </div>
-
-
+            {/*show every shop*/}
             <div className='shop'>
                 <div className='shop-title'>
                     <div className='radio'></div>
@@ -134,7 +134,19 @@ function Cart() {
                     </div>
                 </div>
             </div>
-            <div className='total-price'></div>
+            {/* show total price*/}
+            <div className='total-price'>
+                <div>
+                    <div className='radio'></div>
+                    全选
+                </div>
+                <div>合计：
+                    <span className='total-price-symbol'>&#36; </span>
+                    99
+                </div>
+                <div className='check'>结算(2)</div>
+
+            </div>
             <Docker activeName='cart' />
         </div>
     )
