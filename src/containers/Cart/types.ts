@@ -5,6 +5,7 @@ type CartItemType = {
     title: string;
     price: number;
     count: number;
+    selected?: boolean;
 }
 
 
