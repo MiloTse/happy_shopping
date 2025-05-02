@@ -1,4 +1,4 @@
-export type CartItemType = {
+type CartItemType = {
     productId: string;
     imgUrl: string;
     weight: string;
@@ -8,12 +8,12 @@ export type CartItemType = {
     selected?: boolean;
 }
 
-
+export type ListItemType = {
+    shopId: string;
+    shopName: string;
+    cartList: Array<CartItemType>;
+}
 export type ResponseType = {
     success: boolean,
-    data:  Array<{
-        shopId: string;
-        shopName: string;
-        cartList: Array<CartItemType>;
-    }>,
+    data:  Array<ListItemType>,
 }

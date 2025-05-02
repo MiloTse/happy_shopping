@@ -1,14 +1,14 @@
 import './style.scss';
 import Docker from "../../components/Docker/Docker";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType} from "./types";
+import type {ResponseType, ListItemType } from "./types";
 import {message} from "../../utils/message";
 
 function Cart() {
     //loading data from backend server at the first time only
     const { request } = useRequest<ResponseType>({manual: true});
-
+    const [list, setList ] = useState<ListItemType[]>([]);
     useEffect(() => {
         request({
                 url: '/cartProducts.json',
@@ -23,7 +23,8 @@ function Cart() {
                 return{ shopId:shop.shopId, shopName:shop.shopName, cartList: newCartList}
             });
             console.log(newList);
-
+            //passing newList to list
+            setList(newList);
         }).catch((e)=>{
                 console.log(e?.message);
                 message(e.message);
