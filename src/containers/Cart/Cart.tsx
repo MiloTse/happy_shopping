@@ -14,10 +14,17 @@ function Cart() {
                 url: '/cartProducts.json',
                 method: 'GET'
             }).then((data)=>{
-                console.log(data);
+            const list = data.data;
+            //fetch shop list data from response data
+            const newList= list.map(shop =>{
+                const newCartList= shop.cartList.map(product => {
+                    return {...product, selected: false}
+                });
+                return{ shopId:shop.shopId, shopName:shop.shopName, cartList: newCartList}
+            });
+            console.log(newList);
 
-
-            }).catch((e)=>{
+        }).catch((e)=>{
                 console.log(e?.message);
                 message(e.message);
             })
