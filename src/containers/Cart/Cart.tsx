@@ -8,20 +8,13 @@ function Cart() {
     const { request } = useRequest<ResponseType>({manual: true});
 
     useEffect(() => {
-        request(
-            {
+        request({
                 url: '/cartProducts.json',
                 method: 'GET'
             }
         )
     }, [request]);
 
-/*
-    const requestData = useRef({
-        url: '/cartProducts.json',
-        method: 'GET'
-    });
-*/
 
 
 
