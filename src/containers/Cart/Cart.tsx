@@ -143,7 +143,7 @@ function Cart() {
                 <div className='total'>
                     <span className='total-text'>合计:</span>
                     <div className='total-price-inner'>
-                        <span className='total-price-symbol'>&#36; </span>
+                        <span className='total-price-inner-symbol'>&#36; </span>
                         99
                     </div>
                 </div>
