@@ -134,6 +134,7 @@ function Cart() {
                     </div>
                 </div>
             </div>
+            <div className='total-price'></div>
             <Docker activeName='cart' />
         </div>
     )
