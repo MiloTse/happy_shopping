@@ -16,7 +16,7 @@ function Cart() {
                 <div className='shop-products'>
                     <div className='shop-product'>
                         <div className='radio'></div>
-                        <img src='' alt='' className='shop-product-img'/>
+                        <img src='http://statics.dell-lee.com/shopping/category-list-1.png' alt='' className='shop-product-img'/>
                         <div className='shop-product-content'>
                             <div className='shop-product-title'>
                                 潍坊水果萝卜10斤水果萝卜甜脆水果型潍县青沙窝天津萝卜…
