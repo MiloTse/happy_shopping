@@ -2,10 +2,13 @@ import './style.scss';
 import Docker from "../../components/Docker/Docker";
 import React from "react";
 import useRequest from "../../utils/useRequest";
+import {CartChangeResponseType} from "../../types";
 
 function Cart() {
     const { data } = useRequest({
-        url: '/api/cartProducts.json',
+        url: '/cartProducts.json',
+        method: 'GET',
+
 
     });
 
