@@ -128,24 +128,26 @@ function Cart() {
                                 {
                                     shop.cartList.map(product=>{
                                         return (
-                                            <div className='shop-product'>
+
+                                            <div className='shop-product' key={product.productId}>
                                                 <div className='radio'></div>
-                                                <img src='http://statics.dell-lee.com/shopping/category-list-1.png'
+                                                <img src={product.imgUrl}
                                                      alt=''
                                                      className='shop-product-img'/>
                                                 <div className='shop-product-content'>
                                                     <div className='shop-product-title'>
-                                                        潍坊水果萝卜10斤水果萝卜甜脆水果型潍县青沙窝天津萝卜…
+                                                        {product.title}
                                                     </div>
 
 
                                                     <div className='shop-product-kilo'>
-                                                        0.43kg
+                                                        {product.weight}
                                                     </div>
                                                     <div className='shop-product-price'>
-                                                        <span className='shop-product-price-symbol'>&#36; </span>99
+                                                        <span className='shop-product-price-symbol'>&#36; </span>
+                                                        {product.price}
                                                     </div>
-                                                    <input value='3' className='shop-product-count'/>
+                                                    <input  className='shop-product-count' value={product.count}/>
                                                 </div>
                                             </div>
                                         )
