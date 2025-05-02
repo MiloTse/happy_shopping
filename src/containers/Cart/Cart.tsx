@@ -124,6 +124,16 @@ function Cart() {
                                 <span className='iconfont'>&#xe7ce;</span>{shop.shopName}
                             </div>
                             <div className='shop-products'>
+                                {/*fetch cartList from shopList*/}
+                                {
+                                    shop.cartList.map(product=>{
+                                        return (
+                                            <div>test</div>
+                                        )
+                                    })
+                                }
+
+
                                 <div className='shop-product'>
                                     <div className='radio'></div>
                                     <img src='http://statics.dell-lee.com/shopping/category-list-1.png' alt=''
