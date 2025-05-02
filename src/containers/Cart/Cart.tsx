@@ -11,8 +11,11 @@ function Cart() {
         request({
                 url: '/cartProducts.json',
                 method: 'GET'
-            }
-        )
+            }).then(()=>{
+
+            }).catch((e)=>{
+                console.log(e?.message);
+            })
     }, [request]);
 
 
