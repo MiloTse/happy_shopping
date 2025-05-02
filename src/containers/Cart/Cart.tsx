@@ -3,18 +3,23 @@ import Docker from "../../components/Docker/Docker";
 import React, {useEffect, useRef} from "react";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType} from "./types";
+import {message} from "../../utils/message";
 
 function Cart() {
+    //loading data from backend server at the first time only
     const { request } = useRequest<ResponseType>({manual: true});
 
     useEffect(() => {
         request({
                 url: '/cartProducts.json',
                 method: 'GET'
-            }).then(()=>{
+            }).then((data)=>{
+                console.log(data);
+
 
             }).catch((e)=>{
                 console.log(e?.message);
+                message(e.message);
             })
     }, [request]);
 
