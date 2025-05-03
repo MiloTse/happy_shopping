@@ -93,7 +93,7 @@ function Cart() {
                                                  key={product.productId}
                                                  onClick={()=>{handleProductClick(shop.shopId, product.productId)}}
                                             >
-                                                <div className='radio'></div>
+                                                <div className={product.selected? 'radio radio-active':'radio'}></div>
                                                 <img src={product.imgUrl}
                                                      alt=''
                                                      className='shop-product-img'/>
