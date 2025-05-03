@@ -94,6 +94,7 @@ function Cart() {
         setList(newList);
     }
 
+    const notSelectedShop = list.find(shop => !shop.selected);
     return (
         <div className="page cart-page">
             <div className='title'>
@@ -161,7 +162,7 @@ function Cart() {
             {/* show total price*/}
             <div className='total-price'>
                 <div className='select-all' onClick={handleSelectAllClick}>
-                    <div className='radio'></div>
+                    <div className={notSelectedShop? 'radio' : 'radio radio-active'}></div>
                     <div className='select-all-text' >全选</div>
                 </div>
                 <div className='total'>
