@@ -71,7 +71,15 @@ function Cart() {
     }
 
     function handleShopSelectClick(shopId: string) {
-        
+        //copy list
+        const newList = [...list];
+        //find the shop
+        const shop = newList.find(shop => shop.shopId === shopId);
+        shop?.cartList.forEach(product=>{
+            product.selected= true;
+        });
+        //use newList to replace list
+        setList(newList);
     }
 
     return (
