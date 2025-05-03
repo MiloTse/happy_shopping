@@ -84,7 +84,7 @@ function Cart() {
 
                         <div className='shop' key={shop.shopId}>
                             <div className='shop-title'>
-                                <div className='radio'></div>
+                                <div className={shop.selected? 'radio radio-active':'radio'}></div>
                                 <span className='iconfont'>&#xe7ce;</span>{shop.shopName}
                             </div>
                             <div className='shop-products'>
