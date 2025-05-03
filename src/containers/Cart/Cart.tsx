@@ -56,12 +56,16 @@ function Cart() {
         const newList = [...list];
         //find the shop
         const shop = newList.find(shop => shop.shopId === shopId);
+        let shopAllSelected = true;
         shop?.cartList.forEach(product=>{
             if(product.productId === productId){
               product.selected = !product.selected;
-
+            }
+            if(!product.selected){
+                shopAllSelected = false;
             }
         });
+        shop!.selected = shopAllSelected;
         //use newList to replace list
         setList(newList);
     }
