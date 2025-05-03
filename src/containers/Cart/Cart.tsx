@@ -96,10 +96,12 @@ function Cart() {
 
     const notSelectedShop = list.find(shop => !shop.selected);
     let count = 0;
+    let totalPrice = 0;
     list.forEach(shop=>{
         shop.cartList.forEach(product=>{
             if(product.selected){
                 count++;
+                totalPrice += product.price * product.count;
             }
         })
     })
@@ -188,7 +190,7 @@ function Cart() {
                     <span className='total-text'>合计:</span>
                     <div className='total-price-inner'>
                         <span className='total-price-inner-symbol'>&#36; </span>
-                        99
+                        {totalPrice}
                     </div>
                 </div>
                 <div className='check'>结算({count})</div>
