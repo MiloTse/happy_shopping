@@ -83,6 +83,10 @@ function Cart() {
         setList(newList);
     }
 
+    function handleSelectAllClick() {
+
+    }
+
     return (
         <div className="page cart-page">
             <div className='title'>
@@ -151,7 +155,7 @@ function Cart() {
             <div className='total-price'>
                 <div className='select-all'>
                     <div className='radio'></div>
-                    <div className='select-all-text'>全选</div>
+                    <div className='select-all-text' onClick={handleSelectAllClick}>全选</div>
                 </div>
                 <div className='total'>
                     <span className='total-text'>合计:</span>
