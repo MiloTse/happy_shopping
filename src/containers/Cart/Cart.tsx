@@ -95,6 +95,25 @@ function Cart() {
     }
 
     const notSelectedShop = list.find(shop => !shop.selected);
+    let count = 0;
+    list.forEach(shop=>{
+        shop.cartList.forEach(product=>{
+            if(product.selected){
+                count++;
+            }
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="page cart-page">
             <div className='title'>
@@ -172,7 +191,7 @@ function Cart() {
                         99
                     </div>
                 </div>
-                <div className='check'>结算(2)</div>
+                <div className='check'>结算({count})</div>
 
             </div>
             <Docker activeName='cart'/>
