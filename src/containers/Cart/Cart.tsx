@@ -84,7 +84,14 @@ function Cart() {
     }
 
     function handleSelectAllClick() {
-
+        const newList = [...list];
+        newList.forEach(shop=>{
+            shop.selected = true;
+            shop.cartList.forEach(product=>{
+                product.selected = true;
+            })
+        });
+        setList(newList);
     }
 
     return (
