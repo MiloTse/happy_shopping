@@ -51,6 +51,10 @@ function Cart() {
         setList(newList);
     }
 
+    function handleProductClick(shopId: string, productId: string) {
+        
+    }
+
     return (
         <div className="page cart-page">
             <div className='title'>
@@ -74,7 +78,10 @@ function Cart() {
                                     shop.cartList.map(product=>{
                                         return (
 
-                                            <div className='shop-product' key={product.productId}>
+                                            <div className='shop-product'
+                                                 key={product.productId}
+                                                 onClick={()=>{handleProductClick(shop.shopId, product.productId)}}
+                                            >
                                                 <div className='radio'></div>
                                                 <img src={product.imgUrl}
                                                      alt=''
