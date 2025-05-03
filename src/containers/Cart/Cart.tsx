@@ -34,7 +34,7 @@ function Cart() {
     }, [request]);
 
 
-    function handleCountChange(shopId: string, productId: string) {
+    function handleCountChange(shopId: string, productId: string, value: string) {
         
     }
 
@@ -80,7 +80,7 @@ function Cart() {
                                                         {product.price}
                                                     </div>
                                                     <input  className='shop-product-count' 
-                                                            onChange={()=>{handleCountChange(shop.shopId, product.productId)}} 
+                                                            onChange={(e)=>{handleCountChange(shop.shopId, product.productId,e.target.value)}} 
                                                             value={product.count}/>
                                                 </div>
                                             </div>
