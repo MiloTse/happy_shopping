@@ -79,6 +79,7 @@ function Cart() {
             product.selected= true;
         });
         //use newList to replace list
+        shop!.selected = true;
         setList(newList);
     }
 
