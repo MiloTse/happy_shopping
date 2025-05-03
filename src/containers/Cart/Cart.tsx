@@ -35,7 +35,18 @@ function Cart() {
 
 
     function handleCountChange(shopId: string, productId: string, value: string) {
-        
+        //copy list
+        const newList = [...list];
+        //find the shop
+        const shop = newList.find(shop => shop.shopId === shopId);
+        shop?.cartList.forEach(product=>{
+            if(product.productId === productId){
+                // product.count = Number(value);
+                product.count += Number(value);
+            }
+        });
+        //use newList to replace list
+        setList(newList);
     }
 
     return (
