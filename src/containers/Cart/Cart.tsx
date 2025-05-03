@@ -190,7 +190,7 @@ function Cart() {
                     <span className='total-text'>合计:</span>
                     <div className='total-price-inner'>
                         <span className='total-price-inner-symbol'>&#36; </span>
-                        {totalPrice}
+                        {totalPrice.toFixed(2)}
                     </div>
                 </div>
                 <div className='check'>结算({count})</div>
