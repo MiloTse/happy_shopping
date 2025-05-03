@@ -34,7 +34,7 @@ function Cart() {
     }, [request]);
 
 
-    function handleCountChange(shopId: string, productId: string, value: string) {
+    function handleCountChange(shopId: string, productId: string, count: string) {
         //copy list
         const newList = [...list];
         //find the shop
@@ -42,7 +42,8 @@ function Cart() {
         shop?.cartList.forEach(product=>{
             if(product.productId === productId){
                 // product.count = Number(value);
-                product.count += Number(value);
+                console.log(count);
+                product.count = +count;
             }
         });
         //use newList to replace list
