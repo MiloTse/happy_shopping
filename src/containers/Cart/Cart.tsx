@@ -52,7 +52,18 @@ function Cart() {
     }
 
     function handleProductClick(shopId: string, productId: string) {
-        
+        //copy list
+        const newList = [...list];
+        //find the shop
+        const shop = newList.find(shop => shop.shopId === shopId);
+        shop?.cartList.forEach(product=>{
+            if(product.productId === productId){
+              product.selected = !product.selected;
+
+            }
+        });
+        //use newList to replace list
+        setList(newList);
     }
 
     return (
