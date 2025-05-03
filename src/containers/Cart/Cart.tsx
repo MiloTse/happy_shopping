@@ -43,7 +43,8 @@ function Cart() {
             if(product.productId === productId){
                 // product.count = Number(value);
                 console.log(count);
-                product.count = +count;
+                const countNumber = +count;
+                product.count = Number.isNaN(countNumber) ? 0 : countNumber;
             }
         });
         //use newList to replace list
