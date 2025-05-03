@@ -11,6 +11,7 @@ type CartItemType = {
 export type ListItemType = {
     shopId: string;
     shopName: string;
+    selected?: boolean;
     cartList: Array<CartItemType>;
 }
 export type ResponseType = {
