@@ -1,4 +1,5 @@
 import './style.scss';
+import React from "react";
 
 
 
@@ -12,7 +13,7 @@ import './style.scss';
                 <div className='iconfont'>&#xe68e; </div>
                 <div className='receiver-content'>
                     <div className='receiver-name'>
-                         Receiver: Tom
+                        Receiver: Tom
                         <span className='receiver-phone'>1-613-727-4723</span>
                     </div>
                     <div className='receiver-address'>
@@ -21,9 +22,42 @@ import './style.scss';
                 </div>
 
             </div>
+            <div className='delivery'>
+                <div className='delivery-text'>
+                    Anticipation of delivery: 3-5 business days
+                </div>
+                <div className='delivery-select'>
+                    Choose delivery time
+                </div>
+            </div>
+            <div className='shop' >
+                <div className='shop-title'  >
+                    <span className='iconfont'>&#xe7ce;</span>
+                    喜梅蔬菜店
+                </div>
+                <div className='shop-products'>
+                    <div className='shop-product'>
+                        <img src='http://statics.dell-lee.com/shopping/fresh-2.png'
+                             alt=''
+                             className='shop-product-img'/>
+                        <div className='shop-product-content'>
+                            <div className='shop-product-title'>
+                                城市厨房澳洲牛肉卷肥牛卷450g牛肉片火锅生鲜牛羊.
+                            </div>
+                            <div className='shop-product-kilo'>0.45</div>
+                            <div className='shop-product-price'>
+                                <span className='shop-product-price-symbol'>&#36; </span>
+                               99
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
- )
+    )
  }
 
 
- export default Order;
+export default Order;
