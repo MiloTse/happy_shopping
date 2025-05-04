@@ -129,7 +129,7 @@ function Cart() {
             method: 'POST',
             data: params
         }).then(response=>{
-            message('Order submitted successfully');
+            // message('Order submitted successfully');
             //if success, get orderId and navigate to order page
             const {orderId} = response.data;
             navigate(`/order/${orderId}`);
