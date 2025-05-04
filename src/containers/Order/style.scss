@@ -36,6 +36,21 @@
       line-height:.22rem;
     }
   }
+  .delivery {
+    background:#FFF;
+    margin-top:.1rem;
+    font-size:.14rem;
+    &-text {
+      line-height:.4rem;
+      padding:0 .1rem;
+      color: #242424;
+    }
+    &-select {
+      line-height:.4rem;
+      padding:0 .1rem;
+      color: #73D13D;
+    }
+  }
 }
 
 
