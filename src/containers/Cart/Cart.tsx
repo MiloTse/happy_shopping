@@ -4,8 +4,11 @@ import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType, ListItemType, CartSubmitArray, SubmitResponseType} from "./types";
 import {message} from "../../utils/message";
+import {useNavigate} from "react-router-dom";
 
 function Cart() {
+    const navigate = useNavigate();
+
     //loading data from backend server at the first time only
     const { request } = useRequest<ResponseType>({manual: true});
     const { request: submitRequest } = useRequest<SubmitResponseType>({manual: true});
@@ -125,9 +128,12 @@ function Cart() {
             url: '/cartSubmit.json',
             method: 'POST',
             data: params
-        }).then((data)=>{
+        }).then(response=>{
             message('Order submitted successfully');
-            console.log(data);
+            //if success, get orderId and navigate to order page
+            const {orderId} = response.data;
+            navigate(`/order/${orderId}`);
+            console.log(response);
         }).catch((e)=>{
             message(e.message);
         })
