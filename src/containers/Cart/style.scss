@@ -3,13 +3,11 @@
   overflow: scroll;
   padding-bottom:1.12rem;
   .title {
-
     line-height: .44rem;
     font-size:.18rem;
     color: #242424;
     background: #FFF;
     text-align: center;
-
   }
   .radio {
     position: absolute;
@@ -23,7 +21,6 @@
     &-active {
       background: #73D13D;
       border: none;
-
     }
   }
   .shop {
