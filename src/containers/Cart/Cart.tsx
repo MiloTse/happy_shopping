@@ -2,7 +2,7 @@ import './style.scss';
 import Docker from "../../components/Docker/Docker";
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, ListItemType, CartSubmitArray} from "./types";
+import type {ResponseType, ListItemType, CartSubmitArray, SubmitResponseType} from "./types";
 import {message} from "../../utils/message";
 
 function Cart() {
