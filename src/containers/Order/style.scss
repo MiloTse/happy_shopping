@@ -8,7 +8,33 @@
     color: #242424;
     background: #FFF;
     text-align: center;
-
+  }
+  .receiver {
+    display: flex;
+    font-size:.14rem;
+    background:#FFF;
+    color: #242424;
+    .iconfont {
+      line-height: .86rem;
+      width:.48rem;
+      text-align:center;
+      font-size:.2rem;
+      color:#73D13D;
+    }
+    &-content {
+      flex: 1;
+    }
+    &-name {
+      margin:.14rem .1rem .06rem 0;
+    }
+    &-phone {
+      margin-left:.22rem;
+    }
+    &-address {
+      margin-bottom:.28rem;
+      font-size:.12rem;
+      line-height:.22rem;
+    }
   }
 }
 
