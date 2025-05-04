@@ -18,3 +18,8 @@ export type ResponseType = {
     success: boolean,
     data:  Array<ListItemType>,
 }
+
+export type CartSubmitArray = Array<{
+    productId: string;
+    count: number;
+}>
