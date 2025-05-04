@@ -55,3 +55,10 @@ npm install sass-embedded
 npm install axios --save
 
 npm i swiper --save
+
+
+### Configuring a proxy response through Charles 
+![img.png](img.png)
+
+
+
