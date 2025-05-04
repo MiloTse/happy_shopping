@@ -58,7 +58,7 @@
       padding-top:.12rem;
       padding-bottom:.1rem;
       line-height:.24rem;
-      padding-left: .48rem;
+      padding-left: .08rem;
       font-size:.16rem;
       .iconfont {
         margin-right:.08rem;
@@ -68,18 +68,18 @@
     &-product {
       display: flex;
       position: relative;
-      padding: .16rem .1rem .16rem 0;
+      padding: .1rem;
       &-img {
         display:block;
-        margin-left:.48rem;
-        margin-right:.08rem;
-        width:.96rem;
-        height:.96rem;
+        margin-right:.1rem;
+        width:.86rem;
+        height:.86rem;
       }
       &-content {
         flex:1;
       }
       &-title {
+        padding-top:.14rem;
         color: #242424;
         font-size:.14rem;
         line-height:.22rem;
@@ -87,19 +87,27 @@
         word-break:break-all;
       }
       &-kilo {
-        margin-top:.08rem;
+        margin-top:.04rem;
         color:#B1B1B1;
         font-size:.12rem;
         line-height:.18rem;
       }
-      &-price {
-        margin-top:.14rem;
-        color:#CF1322;
-        font-size:.16rem;
-        &-symbol {
-          font-size:.12rem;
-        }
+      &-order {
+        line-height:.24rem;
+        width:.75rem;
+        font-size:.14rem;
+        padding-top:.16rem;
+        color:#242424;
+        text-align: right;
       }
+      //&-price {
+      //  margin-top:.14rem;
+      //  color:#CF1322;
+      //  font-size:.16rem;
+      //  &-symbol {
+      //    font-size:.12rem;
+      //  }
+      //}
 
     }
   }

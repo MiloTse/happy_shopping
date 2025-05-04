@@ -44,12 +44,11 @@ import React from "react";
                             <div className='shop-product-title'>
                                 城市厨房澳洲牛肉卷肥牛卷450g牛肉片火锅生鲜牛羊.
                             </div>
-                            <div className='shop-product-kilo'>0.45</div>
-                            <div className='shop-product-price'>
-                                <span className='shop-product-price-symbol'>&#36; </span>
-                               99
-                            </div>
-
+                            <div className='shop-product-kilo'>0.45kg</div>
+                        </div>
+                        <div className='shop-product-order'>
+                            <div>&#36;99</div>
+                            <div>x1</div>
                         </div>
                     </div>
                 </div>
