@@ -121,6 +121,16 @@ function Cart() {
             message('Select at least one product');
             return;
         }
+        submitRequest({
+            url: '/cartSubmit.json',
+            method: 'POST',
+            data: params
+        }).then((data)=>{
+            message('Order submitted successfully');
+            console.log(data);
+        }).catch((e)=>{
+            message(e.message);
+        })
         console.log(params);
     }
 
