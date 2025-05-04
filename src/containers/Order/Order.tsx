@@ -115,6 +115,10 @@ import React from "react";
                 </div>
             </div>
 
+            <div className='footer'>
+                <div className='footer-total'></div>
+                <div className='footer-submit'>Place Order</div>
+            </div>
         </div>
     )
  }

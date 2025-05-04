@@ -1,7 +1,7 @@
 .order-page {
   background: #F5F9FA;
   overflow: scroll;
-  padding-bottom:1.12rem;
+  padding-bottom:.96rem;
   .title {
     line-height: .44rem;
     font-size:.18rem;
@@ -53,12 +53,11 @@
   }
   .shop {
     margin-top:.1rem;
-
     &-title {
       padding-top:.12rem;
-      padding-bottom:.1rem;
+      padding-bottom:.04rem;
+      padding-left: .1rem;
       line-height:.24rem;
-      padding-left: .08rem;
       font-size:.16rem;
       background:#FFF;
       .iconfont {
@@ -104,6 +103,28 @@
         text-align: right;
       }
 
+    }
+  }
+  .footer {
+    height:.64rem;
+    line-height:.64rem;
+    background:#FFF;
+    display: flex;
+
+    &-total {
+      flex:1;
+    }
+    &-submit {
+      margin-right: .16rem;
+      width:1.43rem;
+      height:.44rem;
+      line-height:.44rem;
+      margin-top:.1rem;
+      border-radius:.22rem;
+      background:#73D13D;
+      text-align:center;
+      color: #FFF;
+      font-size:.16rem;
     }
   }
 }
