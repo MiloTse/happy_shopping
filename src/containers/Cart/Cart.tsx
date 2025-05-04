@@ -171,6 +171,7 @@ function Cart() {
                                                     </div>
                                                     <input  className='shop-product-count' 
                                                             onChange={(e)=>{handleCountChange(shop.shopId, product.productId,e.target.value)}} 
+                                                            onClick={(e)=>e.stopPropagation()}
                                                             value={product.count}/>
                                                 </div>
                                             </div>
