@@ -23,12 +23,8 @@ import React from "react";
 
             </div>
             <div className='delivery'>
-                <div className='delivery-text'>
-                    Anticipation of delivery: 3-5 business days
-                </div>
-                <div className='delivery-select'>
-                    Choose delivery time
-                </div>
+                <div className='delivery-text'>Delivery Time</div>
+                <div className='delivery-select'>Choose</div>
             </div>
             <div className='shop' >
                 <div className='shop-title'  >
@@ -116,7 +112,13 @@ import React from "react";
             </div>
 
             <div className='footer'>
-                <div className='footer-total'></div>
+                <div className='footer-total'>
+                    Total:
+                    <span className='footer-total-price'>
+                        <span className='footer-total-symbol'>&#36;</span>
+                    199
+                    </span>
+                </div>
                 <div className='footer-submit'>Place Order</div>
             </div>
         </div>
