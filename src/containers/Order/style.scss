@@ -53,13 +53,14 @@
   }
   .shop {
     margin-top:.1rem;
-    background:#FFF;
+
     &-title {
       padding-top:.12rem;
       padding-bottom:.1rem;
       line-height:.24rem;
       padding-left: .08rem;
       font-size:.16rem;
+      background:#FFF;
       .iconfont {
         margin-right:.08rem;
       }
@@ -69,6 +70,8 @@
       display: flex;
       position: relative;
       padding: .1rem;
+      margin-bottom:.1rem;
+      background:#FFF;
       &-img {
         display:block;
         margin-right:.1rem;
@@ -100,14 +103,6 @@
         color:#242424;
         text-align: right;
       }
-      //&-price {
-      //  margin-top:.14rem;
-      //  color:#CF1322;
-      //  font-size:.16rem;
-      //  &-symbol {
-      //    font-size:.12rem;
-      //  }
-      //}
 
     }
   }

@@ -52,6 +52,67 @@ import React from "react";
                         </div>
                     </div>
                 </div>
+
+                <div className='shop-products'>
+                    <div className='shop-product'>
+                        <img src='http://statics.dell-lee.com/shopping/fresh-2.png'
+                             alt=''
+                             className='shop-product-img'/>
+                        <div className='shop-product-content'>
+                            <div className='shop-product-title'>
+                                城市厨房澳洲牛肉卷肥牛卷450g牛肉片火锅生鲜牛羊.
+                            </div>
+                            <div className='shop-product-kilo'>0.45kg</div>
+                        </div>
+                        <div className='shop-product-order'>
+                            <div>&#36;99</div>
+                            <div>x1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='shop' >
+                <div className='shop-title'  >
+                    <span className='iconfont'>&#xe7ce;</span>
+                    喜梅蔬菜店
+                </div>
+                <div className='shop-products'>
+                    <div className='shop-product'>
+                        <img src='http://statics.dell-lee.com/shopping/fresh-2.png'
+                             alt=''
+                             className='shop-product-img'/>
+                        <div className='shop-product-content'>
+                            <div className='shop-product-title'>
+                                城市厨房澳洲牛肉卷肥牛卷450g牛肉片火锅生鲜牛羊.
+                            </div>
+                            <div className='shop-product-kilo'>0.45kg</div>
+                        </div>
+                        <div className='shop-product-order'>
+                            <div>&#36;99</div>
+                            <div>x1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='shop-products'>
+                    <div className='shop-product'>
+                        <img src='http://statics.dell-lee.com/shopping/fresh-2.png'
+                             alt=''
+                             className='shop-product-img'/>
+                        <div className='shop-product-content'>
+                            <div className='shop-product-title'>
+                                城市厨房澳洲牛肉卷肥牛卷450g牛肉片火锅生鲜牛羊.
+                            </div>
+                            <div className='shop-product-kilo'>0.45kg</div>
+                        </div>
+                        <div className='shop-product-order'>
+                            <div>&#36;99</div>
+                            <div>x1</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
