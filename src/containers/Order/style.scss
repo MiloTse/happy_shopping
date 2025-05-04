@@ -37,18 +37,20 @@
     }
   }
   .delivery {
-    background:#FFF;
     margin-top:.1rem;
+    height:.48rem;
+    line-height:.48rem;
+    background:#FFF;
     font-size:.14rem;
     &-text {
-      line-height:.4rem;
-      padding:0 .1rem;
-      color: #242424;
+      float: left;
+      margin-left:.1rem;
+      color:#242424;
     }
     &-select {
-      line-height:.4rem;
-      padding:0 .1rem;
-      color: #73D13D;
+      float: right;
+      margin-right:.4rem;
+      color:#B1B1B1;
     }
   }
   .shop {
@@ -106,13 +108,26 @@
     }
   }
   .footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
     height:.64rem;
     line-height:.64rem;
     background:#FFF;
     display: flex;
-
     &-total {
       flex:1;
+      font-size: .16rem;
+      margin-left: .1rem;
+      &-price {
+        color: #CF1322;
+        font-size:.18rem;
+      }
+      &-symbol {
+        font-size:.12rem;
+        margin-right:.04rem;
+      }
     }
     &-submit {
       margin-right: .16rem;
