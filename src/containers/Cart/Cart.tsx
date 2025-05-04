@@ -116,7 +116,10 @@ function Cart() {
                 }
             })
         });
-
+        if(params.length === 0){
+            message('Select at least one product');
+            return;
+        }
         console.log(params);
     }
 
