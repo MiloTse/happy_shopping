@@ -2,7 +2,7 @@ import './style.scss';
 import Docker from "../../components/Docker/Docker";
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, ListItemType } from "./types";
+import type {ResponseType, ListItemType, CartSubmitArray} from "./types";
 import {message} from "../../utils/message";
 
 function Cart() {
@@ -108,8 +108,19 @@ function Cart() {
 
 
     function handleCartSubmit() {
+        const params: CartSubmitArray = [];
+        list.forEach(shop=>{
+            shop.cartList.forEach(product=>{
+                if(product.selected){
+                    params.push({productId: product.productId, count: product.count})
+                }
+            })
+        });
 
+        console.log(params);
     }
+
+
 
     return (
         <div className="page cart-page">
