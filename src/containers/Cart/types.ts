@@ -23,10 +23,9 @@ export type CartSubmitArray = Array<{
     productId: string;
     count: number;
 }>
-export type SubmitResponseType = Array<{
+export type SubmitResponseType = {
     success: boolean;
     data: {
         orderId: string;
     }
-
-}>
+}
