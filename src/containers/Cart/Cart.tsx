@@ -107,14 +107,9 @@ function Cart() {
     })
 
 
+    function handleCartSubmit() {
 
-
-
-
-
-
-
-
+    }
 
     return (
         <div className="page cart-page">
@@ -193,7 +188,7 @@ function Cart() {
                         {totalPrice.toFixed(2)}
                     </div>
                 </div>
-                <div className='check'>结算({count})</div>
+                <div className='check' onClick={handleCartSubmit}>结算({count})</div>
 
             </div>
             <Docker activeName='cart'/>
