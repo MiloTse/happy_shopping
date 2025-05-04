@@ -8,6 +8,7 @@ import {message} from "../../utils/message";
 function Cart() {
     //loading data from backend server at the first time only
     const { request } = useRequest<ResponseType>({manual: true});
+    const { request: submitRequest } = useRequest<SubmitResponseType>({manual: true});
     const [list, setList ] = useState<ListItemType[]>([]);
     useEffect(() => {
         request({
