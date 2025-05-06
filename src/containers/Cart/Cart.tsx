@@ -171,7 +171,7 @@ function Cart() {
                                             >
                                                 <div className={product.selected? 'radio radio-active':'radio'}></div>
                                                 <img src={product.imgUrl}
-                                                     alt=''
+                                                     alt={product.title}
                                                      className='shop-product-img'/>
                                                 <div className='shop-product-content'>
                                                     <div className='shop-product-title'>
