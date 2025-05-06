@@ -113,11 +113,24 @@ import Popover from "../../components/Popover/Popover";
             <Popover show={showAddress} blankClickCallBack={()=> setShowAddress(false)}>
                 <div className='address-popover'>
                     <div className='address-popover-title'>Choose Address</div>
+                    <div className='address-item'>
+                        <div className='address-item-content'>
+                            <div className='address-item-name'>
+                                Receiver: {data.address.name}
+                                <span className='address-item-phone'>{data.address.phone}</span>
+                            </div>
+                            <div className='address-item-address'>
+                                Address: {data.address.address}
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </Popover>
         </div>
-    ) : null;
+     ) : null;
  }
 
 
