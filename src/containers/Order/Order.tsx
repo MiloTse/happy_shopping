@@ -10,8 +10,8 @@ import {useParams} from "react-router-dom";
 
 
  function Order() {
-     const {request }= useRequest<ResponseType>({ manual:true})
-     const { data, setData }= useState<ResponseDataType>();
+     const {request } = useRequest<ResponseType>({ manual:true})
+     const [data, setData] = useState<ResponseDataType | null >(null);
      const params = useParams<{id:string}>()
 
 
