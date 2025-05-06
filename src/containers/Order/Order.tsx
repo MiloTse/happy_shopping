@@ -38,17 +38,17 @@ import {useParams} from "react-router-dom";
                 <div className='receiver-content'>
                     <div className='receiver-name'>
                         Receiver: {data.address.name}
-                        <span className='receiver-phone'>1-613-727-4723</span>
+                        <span className='receiver-phone'>{data.address.phone}</span>
                     </div>
                     <div className='receiver-address'>
-                        Address: 1385 Woodroffe Avenue, Ottawa, ON, K2G 1V8
+                        Address: {data.address.address}
                     </div>
                 </div>
 
             </div>
             <div className='delivery'>
                 <div className='delivery-text'>Delivery Time</div>
-                <div className='delivery-select'>Choose</div>
+                <div className='delivery-select'>{data.time}</div>
             </div>
             <div className='shop' >
                 <div className='shop-title'  >
