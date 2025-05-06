@@ -1,7 +1,7 @@
 import './style.scss';
 import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType} from "./types";
+import type {ResponseType, ResponseDataType} from "./types";
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
 
@@ -11,7 +11,7 @@ import {useParams} from "react-router-dom";
 
  function Order() {
      const {request }= useRequest<ResponseType>({ manual:true})
-     const { data, setData }= useState();
+     const { data, setData }= useState<ResponseDataType>();
      const params = useParams<{id:string}>()
 
 
