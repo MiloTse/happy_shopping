@@ -32,7 +32,7 @@ import Popover from "../../components/Popover/Popover";
 
 
      function handleBlankClick() {
-         console.log('blank click');
+         setShowAddress(false);
      }
 
      function handleConfirmClick() {
@@ -110,7 +110,7 @@ import Popover from "../../components/Popover/Popover";
                 </div>
                 <div className='footer-submit'>Place Order</div>
             </div>
-            <Popover show={true} blankClickCallBack={handleBlankClick}></Popover>
+            <Popover show={showAddress} blankClickCallBack={handleBlankClick}></Popover>
         </div>
     ) : null;
  }
