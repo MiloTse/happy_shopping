@@ -11,6 +11,7 @@ import {useParams} from "react-router-dom";
 
  function Order() {
      const {request } = useRequest<ResponseType>({ manual:true})
+     //store order data from requesting
      const [data, setData] = useState<ResponseDataType | null >(null);
      const params = useParams<{id:string}>()
 
@@ -22,21 +23,21 @@ import {useParams} from "react-router-dom";
              params: {id: params.id}
          }).then((response)=>{
              setData(response.data);
-             console.log(response.data);
+             console.log(response. data);
          }).catch((e)=>{
              message(e.message);
          })
      }, []);
 
 
-    return (
+    return data? (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
             <div className='receiver'>
                 <div className='iconfont'>&#xe68e; </div>
                 <div className='receiver-content'>
                     <div className='receiver-name'>
-                        Receiver: Tom
+                        Receiver: {data.address.name}
                         <span className='receiver-phone'>1-613-727-4723</span>
                     </div>
                     <div className='receiver-address'>
@@ -145,7 +146,7 @@ import {useParams} from "react-router-dom";
                 <div className='footer-submit'>Place Order</div>
             </div>
         </div>
-    )
+    ) :null;
  }
 
 
