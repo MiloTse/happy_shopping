@@ -7,6 +7,8 @@ export type ResponseType ={
             name: string;
             phone: string;
             address: string;
-    }
+        },
+        time: string;
+        total:number;
 }
 };
