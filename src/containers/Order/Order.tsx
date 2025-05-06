@@ -21,6 +21,7 @@ import {useParams} from "react-router-dom";
              method: 'GET',
              params: {id: params.id}
          }).then((response)=>{
+             setData(response.data);
              console.log(response.data);
          }).catch((e)=>{
              message(e.message);
