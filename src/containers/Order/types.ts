@@ -8,7 +8,7 @@ type CartItemType = {
     selected?: boolean;
 }
 
-type ResponseDataType = {
+export type ResponseDataType = {
     address: {
         id: string;
         name: string;
