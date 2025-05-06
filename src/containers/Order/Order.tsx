@@ -110,7 +110,12 @@ import Popover from "../../components/Popover/Popover";
                 </div>
                 <div className='footer-submit'>Place Order</div>
             </div>
-            <Popover show={showAddress} blankClickCallBack={()=> setShowAddress(false)}></Popover>
+            <Popover show={showAddress} blankClickCallBack={()=> setShowAddress(false)}>
+                <div className='address-popover'>
+                    <div className='address-popover-title'>Choose Address</div>
+                </div>
+
+            </Popover>
         </div>
     ) : null;
  }
