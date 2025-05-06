@@ -1,11 +1,14 @@
 import './style.scss';
 import React from "react";
+import useRequest from "../../utils/useRequest";
 
 
 
 
 
  function Order() {
+     const {request }= useRequest<ResponseType>({ manual:true})
+
     return (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
