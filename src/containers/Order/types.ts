@@ -1,3 +1,12 @@
+type CartItemType = {
+    productId: string;
+    imgUrl: string;
+    weight: string;
+    title: string;
+    price: number;
+    count: number;
+    selected?: boolean;
+}
 
 export type ResponseType ={
     success: boolean;
@@ -9,6 +18,11 @@ export type ResponseType ={
             address: string;
         },
         time: string;
-        total:number;
+        total: number;
+        shop: Array<{
+            shopId: string;
+            shopName: string;
+            cartList: Array<CartItemType>;
+        }>
 }
 };
