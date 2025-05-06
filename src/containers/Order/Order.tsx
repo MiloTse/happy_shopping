@@ -14,29 +14,17 @@ import {useParams} from "react-router-dom";
      const params = useParams<{id:string}>()
 
 
-     // useEffect(() => {
-     //     request({
-     //         url: '/cartProducts.json',
-     //         method: 'GET'
-     //     }).then((data)=>{
-     //         const list = data.data;
-     //         //fetch shop list data from response data
-     //         const newList= list.map(shop =>{
-     //
-     //             //added new return property 'selected' to every product
-     //             const newCartList= shop.cartList.map(product => {
-     //                 return {...product, selected: false}
-     //             });
-     //             return{ shopId:shop.shopId, shopName:shop.shopName, cartList: newCartList}
-     //         });
-     //         // console.log(newList);
-     //         //passing newList to list
-     //         setList(newList);
-     //     }).catch((e)=>{
-     //         console.log(e?.message);
-     //         message(e.message);
-     //     })
-     // }, [request]);
+     useEffect(() => {
+         request({
+             url: 'orderDetail.json',
+             method: 'GET',
+             params: {id: params.id}
+         }).then((response)=>{
+             console.log(response.data);
+         }).catch((e)=>{
+             message(e.message);
+         })
+     }, []);
 
 
     return (
