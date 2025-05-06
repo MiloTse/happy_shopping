@@ -4,6 +4,7 @@ import useRequest from "../../utils/useRequest";
 import type {ResponseType, ResponseDataType} from "./types";
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
+import Popover from "../../components/Popover/Popover";
 
 
 
@@ -14,7 +15,7 @@ import {useParams} from "react-router-dom";
      //store order data from requesting
      const [data, setData] = useState<ResponseDataType | null >(null);
      const params = useParams<{id:string}>()
-
+     const [showAddress, setShowAddress] = useState(false);
 
      useEffect(() => {
          request({
@@ -30,7 +31,15 @@ import {useParams} from "react-router-dom";
      }, [params,request]);
 
 
-    return data? (
+     function handleBlankClick() {
+         console.log('blank click');
+     }
+
+     function handleConfirmClick() {
+         console.log('confirm click');
+     }
+
+     return data? (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
             <div className='receiver'>
@@ -101,6 +110,7 @@ import {useParams} from "react-router-dom";
                 </div>
                 <div className='footer-submit'>Place Order</div>
             </div>
+            <Popover show={true} blankClickCallBack={handleBlankClick}></Popover>
         </div>
     ) : null;
  }
