@@ -1,4 +1,12 @@
 
-export type Type = {
-
+export type ResponseType ={
+    success: boolean;
+    data:{
+        address: {
+            id: string;
+            name: string;
+            phone: string;
+            address: string;
+    }
 }
+};
