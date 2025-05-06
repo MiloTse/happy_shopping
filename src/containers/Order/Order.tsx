@@ -27,7 +27,7 @@ import {useParams} from "react-router-dom";
          }).catch((e)=>{
              message(e.message);
          })
-     }, []);
+     }, [params,request]);
 
 
     return data? (
