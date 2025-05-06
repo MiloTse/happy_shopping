@@ -8,21 +8,23 @@ type CartItemType = {
     selected?: boolean;
 }
 
+type ResponseDataType = {
+    address: {
+        id: string;
+        name: string;
+        phone: string;
+        address: string;
+    },
+    time: string;
+    total: number;
+    shop: Array<{
+        shopId: string;
+        shopName: string;
+        cartList: Array<CartItemType>;
+    }>
+}
+
 export type ResponseType ={
     success: boolean;
-    data:{
-        address: {
-            id: string;
-            name: string;
-            phone: string;
-            address: string;
-        },
-        time: string;
-        total: number;
-        shop: Array<{
-            shopId: string;
-            shopName: string;
-            cartList: Array<CartItemType>;
-        }>
-}
+    data: ResponseDataType;
 };
