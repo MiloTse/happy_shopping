@@ -42,7 +42,7 @@ import Popover from "../../components/Popover/Popover";
      return data? (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
-            <div className='receiver'>
+            <div className='receiver' onClick={()=> setShowAddress(true)}>
                 <div className='iconfont'>&#xe68e; </div>
                 <div className='receiver-content'>
                     <div className='receiver-name'>
