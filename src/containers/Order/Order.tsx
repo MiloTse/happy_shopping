@@ -64,7 +64,7 @@ import {useParams} from "react-router-dom";
 
                                 {
                                     shop.cartList.map(product => (
-                                        <div className='shop-product'>
+                                        <div className='shop-product' key={product.productId}>
                                             <img src={product.imgUrl}
                                                  alt={product.title}
                                                  className='shop-product-img'/>
