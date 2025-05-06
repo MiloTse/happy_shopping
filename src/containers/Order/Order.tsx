@@ -1,6 +1,7 @@
 import './style.scss';
 import React from "react";
 import useRequest from "../../utils/useRequest";
+import type {ResponseType} from "./types";
 
 
 
