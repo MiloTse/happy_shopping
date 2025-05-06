@@ -16,7 +16,7 @@ import {useParams} from "react-router-dom";
 
      useEffect(() => {
          request({
-             url: 'orderDetail.json',
+             url: '/orderDetail.json',
              method: 'GET',
              params: {id: params.id}
          }).then((response)=>{
