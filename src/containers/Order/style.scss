@@ -153,6 +153,7 @@
       font-size:.14rem;
     }
     .address-item {
+
       &-name {
         margin: .18rem 0 .08rem 0;
       }
@@ -161,8 +162,9 @@
       }
       &-address {
         margin-bottom:.28rem;
-        font-size:.12rem;
+        font-size:.14rem;
         line-height:.22rem;
+        color: #BBBBBB;
       }
     }
   }
