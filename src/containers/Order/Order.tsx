@@ -1,7 +1,7 @@
 import './style.scss';
 import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, ResponseDataType, AddressResponseType} from "./types";
+import {ResponseType, ResponseDataType, AddressResponseType, AddressItemType} from "./types";
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
@@ -12,12 +12,12 @@ import Popover from "../../components/Popover/Popover";
 
  function Order() {
      const {request } = useRequest<ResponseType>({ manual:true})
-     const {request: addressRequest } = useRequest<ResponseType>({ manual:true})
+     const {request: addressRequest } = useRequest<AddressResponseType>({ manual:true})
      //store order data from requesting
      const [data, setData] = useState<ResponseDataType | null >(null);
      const params = useParams<{id:string}>()
      const [showAddress, setShowAddress] = useState(false);
-
+     const [addressList, setAddressList] = useState<AddressItemType[]>([]);
      useEffect(() => {
          request({
              url: '/orderDetail.json',
@@ -47,6 +47,7 @@ import Popover from "../../components/Popover/Popover";
                method: 'GET'
            }).then((response)=>{
                console.log(response.data);
+                 setAddressList(response.data);
            }).catch((e)=>{
                message(e.message);
            });
