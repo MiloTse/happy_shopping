@@ -40,10 +40,14 @@ import Popover from "../../components/Popover/Popover";
          console.log('confirm click');
      }
 
+     function handleReceiverClick() {
+           setShowAddress(true);
+     }
+
      return data? (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
-            <div className='receiver' onClick={()=> setShowAddress(true)}>
+            <div className='receiver' onClick={handleReceiverClick}>
                 <div className='iconfont'>&#xe68e; </div>
                 <div className='receiver-content'>
                     <div className='receiver-name'>
