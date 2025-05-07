@@ -28,3 +28,13 @@ export type ResponseType ={
     success: boolean;
     data: ResponseDataType;
 };
+
+export type AddressResponseType ={
+    success: boolean;
+    data: Array<{
+        id: string;
+        name: string;
+        phone: string;
+        address: string
+    }>;
+};
