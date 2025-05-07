@@ -52,6 +52,8 @@ import Popover from "../../components/Popover/Popover";
                message(e.message);
            });
      }
+     console.log(addressList);
+
 
      return data? (
         <div className="page order-page">
@@ -127,6 +129,26 @@ import Popover from "../../components/Popover/Popover";
             <Popover show={showAddress} blankClickCallBack={()=> setShowAddress(false)}>
                 <div className='address-popover'>
                     <div className='address-popover-title'>Choose Address</div>
+                    {
+                        addressList.map((address, index) => (
+                            <div key={index} className='address-item'>
+                                <div className='address-item-content'>
+                                    <div className='address-item-name'>
+                                        Receiver: {address.name}
+                                        <span className='address-item-phone'>{address.phone}</span>
+                                    </div>
+                                    <div className='address-item-address'>
+                                        Address: {address.address}
+                                    </div>
+                                </div>
+                                {/*<div className='address-item-select'>*/}
+                                {/*    <span className={address.selected ? 'iconfont selected' : 'iconfont'}>&#xe6a7;</span>*/}
+                                {/*</div>*/}
+                            </div>
+                        ))
+                    }
+
+
                     <div className='address-item'>
                         <div className='address-item-content'>
                             <div className='address-item-name'>
@@ -137,8 +159,9 @@ import Popover from "../../components/Popover/Popover";
                                 Address: {data.address.address}
                             </div>
                         </div>
-
                     </div>
+
+
 
                 </div>
 
