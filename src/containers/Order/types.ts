@@ -29,12 +29,13 @@ export type ResponseType ={
     data: ResponseDataType;
 };
 
+export type AddressItemType = {
+    id: string;
+    name: string;
+    phone: string;
+}
+
 export type AddressResponseType ={
     success: boolean;
-    data: Array<{
-        id: string;
-        name: string;
-        phone: string;
-        address: string
-    }>;
+    data: Array<AddressItemType>;
 };
