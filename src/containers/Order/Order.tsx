@@ -55,6 +55,10 @@ import Popover from "../../components/Popover/Popover";
      console.log(addressList);
 
 
+     function handleAddressClick(address: AddressItemType) {
+
+     }
+
      return data? (
         <div className="page order-page">
             <div className='title'>Confirm Order</div>
@@ -130,8 +134,12 @@ import Popover from "../../components/Popover/Popover";
                 <div className='address-popover'>
                     <div className='address-popover-title'>Choose Address</div>
                     {
-                        addressList.map((address, index) => (
-                            <div key={index} className='address-item'>
+                        addressList.map((address ) => (
+                            <div className='address-item'
+                                 key={address.id}
+                                 onClick={()=>
+                                handleAddressClick(address)}
+                            >
                                 <div className='address-item-content'>
                                     <div className='address-item-name'>
                                         Receiver: {address.name}
@@ -141,7 +149,7 @@ import Popover from "../../components/Popover/Popover";
                                         Address: {address.address}
                                     </div>
                                 </div>
-                                {/*<div className='address-item-select'>*/}
+                                {/*implement lately <div className='address-item-select'>*/}
                                 {/*    <span className={address.selected ? 'iconfont selected' : 'iconfont'}>&#xe6a7;</span>*/}
                                 {/*</div>*/}
                             </div>
