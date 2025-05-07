@@ -12,6 +12,7 @@ import Popover from "../../components/Popover/Popover";
 
  function Order() {
      const {request } = useRequest<ResponseType>({ manual:true})
+     const {request: addressRequest } = useRequest<ResponseType>({ manual:true})
      //store order data from requesting
      const [data, setData] = useState<ResponseDataType | null >(null);
      const params = useParams<{id:string}>()
