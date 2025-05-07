@@ -56,7 +56,8 @@ npm install axios --save
 
 npm i swiper --save
 
-
+#### only on React 18 or less
+npm install --save antd-mobile
 ### Configuring a proxy response through Charles 
 ![img.png](img.png)
 

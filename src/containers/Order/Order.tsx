@@ -5,7 +5,7 @@ import {ResponseType, ResponseDataType, AddressResponseType, AddressItemType} fr
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
-
+import { Picker } from 'antd-mobile';
 
 
 
@@ -64,6 +64,20 @@ import Popover from "../../components/Popover/Popover";
          setShowAddress(false);
 
      }
+
+       const basicColumns = [
+         [
+             { label: '周一', value: 'Mon' },
+             { label: '周二', value: 'Tues' },
+             { label: '周三', value: 'Wed' },
+             { label: '周四', value: 'Thur' },
+             { label: '周五', value: 'Fri' },
+         ],
+         [
+             { label: '上午', value: 'am' },
+             { label: '下午', value: 'pm' },
+         ],
+     ]
 
      return data? (
         <div className="page order-page">
@@ -167,6 +181,17 @@ import Popover from "../../components/Popover/Popover";
                 </div>
 
             </Popover>
+            <Picker
+                columns={basicColumns}
+                visible={true}
+                onClose={() => {
+                    // setVisible(false)
+                }}
+                // value={value}
+                onConfirm={v => {
+                    // setValue(v)
+                }}
+            />
         </div>
      ) : null;
  }
