@@ -9,12 +9,7 @@ type CartItemType = {
 }
 
 export type ResponseDataType = {
-    address: {
-        id: string;
-        name: string;
-        phone: string;
-        address: string;
-    },
+    address: AddressItemType;
     time: string;
     total: number;
     shop: Array<{
@@ -33,6 +28,7 @@ export type AddressItemType = {
     id: string;
     name: string;
     phone: string;
+    address: string;
 }
 
 export type AddressResponseType ={
