@@ -1,7 +1,7 @@
 import './style.scss';
 import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import type {ResponseType, ResponseDataType} from "./types";
+import type {ResponseType, ResponseDataType, AddressResponseType} from "./types";
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
