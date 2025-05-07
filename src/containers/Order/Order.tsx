@@ -43,7 +43,7 @@ import Popover from "../../components/Popover/Popover";
      function handleReceiverClick() {
            setShowAddress(true);
            addressRequest({
-               url: '/addressList.json',
+               url: '/userAddress.json',
                method: 'GET'
            }).then((response)=>{
                console.log(response.data);
