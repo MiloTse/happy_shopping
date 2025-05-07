@@ -42,6 +42,14 @@ import Popover from "../../components/Popover/Popover";
 
      function handleReceiverClick() {
            setShowAddress(true);
+           addressRequest({
+               url: '/addressList.json',
+               method: 'GET'
+           }).then((response)=>{
+               console.log(response.data);
+           }).catch((e)=>{
+               message(e.message);
+           });
      }
 
      return data? (
