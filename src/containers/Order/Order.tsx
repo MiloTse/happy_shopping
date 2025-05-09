@@ -32,13 +32,9 @@ import { Picker } from 'antd-mobile';
      }, [params,request]);
 
 
-     function handleBlankClick() {
-         setShowAddress(false);
-     }
 
-     function handleConfirmClick() {
-         console.log('confirm click');
-     }
+
+
 
      function handleReceiverClick() {
            setShowAddress(true);
