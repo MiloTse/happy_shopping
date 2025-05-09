@@ -67,15 +67,20 @@ import { Picker } from 'antd-mobile';
 
        const basicColumns = [
          [
-             { label: '周一', value: 'Mon' },
-             { label: '周二', value: 'Tues' },
-             { label: '周三', value: 'Wed' },
-             { label: '周四', value: 'Thur' },
-             { label: '周五', value: 'Fri' },
+             { label: '2025-05-09', value: '2025-05-09' },
+             { label: '2025-05-09', value: '2025-05-09' },
+             { label: '2025-05-09', value: '2025-05-09' },
          ],
          [
-             { label: '上午', value: 'am' },
-             { label: '下午', value: 'pm' },
+             { label: '09', value:'09' },
+             { label: '10', value: '10' },
+             { label: '1', value: '11' },
+         ],
+         [
+             { label: '0', value:'0' },
+             { label: '15', value: '15' },
+             { label: '30', value: '30' },
+             { label: '40', value: '40' },
          ],
      ]
 
