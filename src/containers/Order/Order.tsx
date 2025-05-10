@@ -65,6 +65,9 @@ import { Picker } from 'antd-mobile';
      }
 
 
+     function handleOrderSubmit() {
+
+     }
 
      return data? (
         <div className="page order-page">
@@ -188,7 +191,7 @@ import { Picker } from 'antd-mobile';
                             <div className={payWay === 'cash' ? 'radio radio-active' : 'radio'}></div>
                         </div>
                     </div>
-                    <div className='payment-popover-button' >
+                    <div className='payment-popover-button' onClick={handleOrderSubmit} >
                         Pay Now
                     </div>
                 </div>
