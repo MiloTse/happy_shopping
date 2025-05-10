@@ -18,6 +18,8 @@ import { Picker } from 'antd-mobile';
      const params = useParams<{id:string}>()
      const [showAddress, setShowAddress] = useState(false);
      const [addressList, setAddressList] = useState<AddressItemType[]>([]);
+     const [showTimeRange, setTimeRange] = useState(false);
+
      useEffect(() => {
          request({
              url: '/orderDetail.json',
