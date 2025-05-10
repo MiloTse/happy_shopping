@@ -173,12 +173,18 @@ import { Picker } from 'antd-mobile';
                 columns={data.timeRange || []}
                 visible={showTimeRange}
                 onClose={() => {
-                    setShowTimeRange(false)
+                    setShowTimeRange(false);
                 }}
-                // value={value}
+                value={data?.time}
                 onConfirm={v => {
                     // setValue(v)
+                    if (data){
+                        const newData = {...data};
+                        newData.time = v as string[];
+                        setData(newData);
+                    }
                     console.log(v);
+                    setShowTimeRange(false);
                 }}
             />
         </div>
