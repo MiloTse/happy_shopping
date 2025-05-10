@@ -181,8 +181,8 @@ import { Picker } from 'antd-mobile';
                             <div className='radio radio-active'></div>
                         </div>
                         <div className='payment-popover-product'>
-                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='weixin' />
-                            Balance(200)
+                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/cash.png' alt='weixin' />
+                            Balance({data.balance})
                             <div className='radio radio-active'></div>
                         </div>
                     </div>
