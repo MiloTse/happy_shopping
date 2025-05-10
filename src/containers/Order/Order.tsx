@@ -178,7 +178,12 @@ import { Picker } from 'antd-mobile';
                         <div className='payment-popover-product'>
                             <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='weixin' />
                             WeChat
-                            <div className='radio radio-active'></div>
+                            <div className='radio'></div>
+                        </div>
+                        <div className='payment-popover-product'>
+                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='weixin' />
+                            WeChat
+                            <div className='radio'></div>
                         </div>
                     </div>
                     payment
