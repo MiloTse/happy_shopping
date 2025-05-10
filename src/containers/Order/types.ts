@@ -14,7 +14,7 @@ export type ResponseDataType = {
         value: string;
     }>>;
     address: AddressItemType;
-    time: string;
+    time: Array<string>;
     total: number;
     shop: Array<{
         shopId: string;
