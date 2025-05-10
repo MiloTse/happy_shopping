@@ -9,6 +9,7 @@ type CartItemType = {
 }
 
 export type ResponseDataType = {
+    balance: number;
     timeRange: Array<Array<{
         label: string;
         value: string;
