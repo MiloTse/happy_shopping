@@ -40,3 +40,8 @@ export type AddressResponseType ={
     success: boolean;
     data: Array<AddressItemType>;
 };
+
+export type PaymentResponseType ={
+    success: boolean;
+    data: boolean;
+};
