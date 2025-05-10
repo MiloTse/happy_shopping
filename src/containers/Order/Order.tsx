@@ -176,13 +176,13 @@ import { Picker } from 'antd-mobile';
                     <div className='payment-popover-title'>Choose Payment</div>
                     <div className='payment-popover-price'>&#36; {data.total}</div>
                     <div className='payment-popover-products'>
-                        <div className='payment-popover-product'>
+                        <div className='payment-popover-product' onClick={()=>{setPayWay('wechat')}}>
                             <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='wechat' />
                             WeChat
                             <div className={payWay === 'wechat' ? 'radio radio-active' : 'radio'}></div>
 
                         </div>
-                        <div className='payment-popover-product'>
+                        <div className='payment-popover-product' onClick={()=>{setPayWay('cash')}}>
                             <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/cash.png' alt='weixin' />
                             Balance({data.balance})
                             <div className={payWay === 'cash' ? 'radio radio-active' : 'radio'}></div>
