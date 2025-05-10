@@ -68,7 +68,23 @@ import { Picker } from 'antd-mobile';
 
 
      function handleOrderSubmit() {
-
+         const orderId =params.id;
+         const addressId =data?.address.id;
+         const time =data?.time;
+         paymentRequest({
+             method:'POST',
+             url:'/pay.json',
+             data:{
+                 orderId,
+                 addressId,
+                 time,
+                 payWay
+             }
+         }).then((response)=>{
+            console.log(response.data);
+         }).catch((e)=>{
+             message(e.message);
+         });
      }
 
      return data? (
