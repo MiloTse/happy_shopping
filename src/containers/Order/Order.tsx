@@ -1,7 +1,7 @@
 import './style.scss';
 import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
-import {ResponseType, ResponseDataType, AddressResponseType, AddressItemType} from "./types";
+import {ResponseType, ResponseDataType, AddressResponseType, AddressItemType, PaymentResponseType} from "./types";
 import {message} from "../../utils/message";
 import {useParams} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
@@ -21,6 +21,8 @@ import { Picker } from 'antd-mobile';
      const [showTimeRange, setShowTimeRange] = useState(false);
      const [showPayment, setShowPayment] = useState(false);
      const [payWay, setPayWay] = useState('wechat');
+     const {request: paymentRequest } = useRequest<PaymentResponseType>({ manual:true})
+
      useEffect(() => {
          request({
              url: '/orderDetail.json',
