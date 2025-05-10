@@ -186,7 +186,7 @@ import { Picker } from 'antd-mobile';
                             <div className='radio radio-active'></div>
                         </div>
                     </div>
-                    payment
+
                 </div>
             </Popover>
             <Picker
