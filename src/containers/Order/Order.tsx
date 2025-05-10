@@ -169,7 +169,7 @@ import { Picker } from 'antd-mobile';
             </Popover>
             <Picker
                 columns={data.timeRange || []}
-                visible={true}
+                visible={showTimeRange}
                 onClose={() => {
                     // setVisible(false)
                 }}
