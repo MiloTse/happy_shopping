@@ -188,7 +188,9 @@ import { Picker } from 'antd-mobile';
                             <div className={payWay === 'cash' ? 'radio radio-active' : 'radio'}></div>
                         </div>
                     </div>
-
+                    <div className='payment-popover-button' >
+                        Pay Now
+                    </div>
                 </div>
             </Popover>
             <Picker
