@@ -1,6 +1,24 @@
 {
   "success": true,
   "data": {
+    "timeRange": [
+      [
+        { "label": "2025-05-09", "value": "2025-05-09" },
+        { "label": "2025-05-09", "value": "2025-05-09" },
+        { "label": "2025-05-09", "value": "2025-05-09" }
+      ],
+      [
+        { "label": "09", "value": "09" },
+        { "label": "10", "value": "10" },
+        { "label": "01", "value": "11" }
+      ],
+      [
+        { "label": "00", "value": "00" },
+        { "label": "15", "value": "15" },
+        { "label": "30", "value": "30" },
+        { "label": "40", "value": "40" }
+      ]
+    ],
     "address": {
       "id": "10036",
       "name": "Jerry Wang",
