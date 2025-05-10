@@ -173,6 +173,14 @@ import { Picker } from 'antd-mobile';
             <Popover show={showPayment} blankClickCallBack={()=> setShowPayment(false)}>
                 <div className='payment-popover'>
                     <div className='payment-popover-title'>Choose Payment</div>
+                    <div className='payment-popover-price'>{data.total}</div>
+                    <div className='payment-popover-products'>
+                        <div className='payment-popover-product'>
+                            <img src='http://statics.dell-lee.com/shopping/wechat.png' />
+                            WeChat
+                            <div className='radio radio-active'></div>
+                        </div>
+                    </div>
                     payment
                 </div>
             </Popover>
