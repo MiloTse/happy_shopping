@@ -136,7 +136,7 @@ import { Picker } from 'antd-mobile';
                         {data.total}
                     </span>
                 </div>
-                <div className='footer-submit'>Place Order</div>
+                <div className='footer-submit' onClick={()=>{setShowPayment(true)}}>Place Order</div>
             </div>
             <Popover show={showAddress} blankClickCallBack={()=> setShowAddress(false)}>
                 <div className='address-popover'>
