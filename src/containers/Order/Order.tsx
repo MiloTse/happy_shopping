@@ -61,7 +61,7 @@ import { Picker } from 'antd-mobile';
 
      }
 
-       const basicColumns = [];
+
 
      return data? (
         <div className="page order-page">
@@ -166,7 +166,7 @@ import { Picker } from 'antd-mobile';
 
             </Popover>
             <Picker
-                columns={basicColumns}
+                columns={data.timeRange || []}
                 visible={true}
                 onClose={() => {
                     // setVisible(false)
