@@ -176,7 +176,7 @@ import { Picker } from 'antd-mobile';
                     <div className='payment-popover-price'>&#36; {data.total}</div>
                     <div className='payment-popover-products'>
                         <div className='payment-popover-product'>
-                            <img src='http://statics.dell-lee.com/shopping/wechat.png' />
+                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='weixin' />
                             WeChat
                             <div className='radio radio-active'></div>
                         </div>
