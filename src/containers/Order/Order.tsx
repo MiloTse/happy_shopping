@@ -83,7 +83,9 @@ import { Picker } from 'antd-mobile';
             </div>
             <div className='delivery'>
                 <div className='delivery-text'>Delivery Time</div>
-                <div className='delivery-select' onClick={()=>{setShowTimeRange(true)}}>{data.time}</div>
+                <div className='delivery-select' onClick={()=>{setShowTimeRange(true)}}>
+                    {data.time?.[0]} {data.time?.[1]}:{data.time?.[2]}
+                </div>
             </div>
 
             {
@@ -176,6 +178,7 @@ import { Picker } from 'antd-mobile';
                 // value={value}
                 onConfirm={v => {
                     // setValue(v)
+                    console.log(v);
                 }}
             />
         </div>
