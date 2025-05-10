@@ -20,7 +20,7 @@ import { Picker } from 'antd-mobile';
      const [addressList, setAddressList] = useState<AddressItemType[]>([]);
      const [showTimeRange, setShowTimeRange] = useState(false);
      const [showPayment, setShowPayment] = useState(false);
-     const [payWay, setPayWay] = useState(false);
+     const [payWay, setPayWay] = useState('wechat');
      useEffect(() => {
          request({
              url: '/orderDetail.json',
@@ -177,14 +177,15 @@ import { Picker } from 'antd-mobile';
                     <div className='payment-popover-price'>&#36; {data.total}</div>
                     <div className='payment-popover-products'>
                         <div className='payment-popover-product'>
-                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='weixin' />
+                            <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/weixin.png' alt='wechat' />
                             WeChat
-                            <div className='radio radio-active'></div>
+                            <div className={payWay === 'wechat' ? 'radio radio-active' : 'radio'}></div>
+
                         </div>
                         <div className='payment-popover-product'>
                             <img className='payment-popover-img' src='http://statics.dell-lee.com/shopping/cash.png' alt='weixin' />
                             Balance({data.balance})
-                            <div className='radio radio-active'></div>
+                            <div className={payWay === 'cash' ? 'radio radio-active' : 'radio'}></div>
                         </div>
                     </div>
 
