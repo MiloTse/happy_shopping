@@ -19,7 +19,7 @@ import { Picker } from 'antd-mobile';
      const [showAddress, setShowAddress] = useState(false);
      const [addressList, setAddressList] = useState<AddressItemType[]>([]);
      const [showTimeRange, setShowTimeRange] = useState(false);
-
+     const [showPayment, setShowPayment] = useState(false);
      useEffect(() => {
          request({
              url: '/orderDetail.json',
@@ -168,6 +168,13 @@ import { Picker } from 'antd-mobile';
 
                 </div>
 
+            </Popover>
+            {/*popover for payment method to select*/}
+            <Popover show={showPayment} blankClickCallBack={()=> setShowPayment(false)}>
+                <div className='payment-popover'>
+                    <div className='payment-popover-title'>Choose Payment</div>
+                    payment
+                </div>
             </Popover>
             <Picker
                 columns={data.timeRange || []}
