@@ -187,6 +187,7 @@
       margin: 0 .16rem;
     }
     &-product {
+      position: relative;
       height:.48rem;
       line-height:.48rem;
     }
@@ -197,6 +198,20 @@
       height:.28rem;
       margin-top:.1rem;
       margin-right:.18rem;
+    }
+  }
+  .radio {
+    position: absolute;
+    left:.1rem;
+    top:50%;
+    transform:translateY(-50%);
+    width:.24rem;
+    height:.24rem;
+    border-radius:.12rem;
+    border:.01rem solid #B1B1B1;
+    &-active {
+      background:#73D13D;
+      border:none;
     }
   }
 }
