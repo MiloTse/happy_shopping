@@ -9,6 +9,10 @@ type CartItemType = {
 }
 
 export type ResponseDataType = {
+    timeRange: Array<Array<{
+        label: string;
+        value: string;
+    }>>;
     address: AddressItemType;
     time: string;
     total: number;
