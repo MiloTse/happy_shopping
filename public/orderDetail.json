@@ -1,6 +1,7 @@
 {
   "success": true,
   "data": {
+    "balance": 200,
     "timeRange": [
       [
         { "label": "2025-05-09", "value": "2025-05-09" },
