@@ -18,7 +18,7 @@ import { Picker } from 'antd-mobile';
      const params = useParams<{id:string}>()
      const [showAddress, setShowAddress] = useState(false);
      const [addressList, setAddressList] = useState<AddressItemType[]>([]);
-     const [showTimeRange, setTimeRange] = useState(false);
+     const [showTimeRange, setShowTimeRange] = useState(false);
 
      useEffect(() => {
          request({
@@ -83,7 +83,7 @@ import { Picker } from 'antd-mobile';
             </div>
             <div className='delivery'>
                 <div className='delivery-text'>Delivery Time</div>
-                <div className='delivery-select'>{data.time}</div>
+                <div className='delivery-select' onClick={()=>{setShowTimeRange(true)}}>{data.time}</div>
             </div>
 
             {
@@ -171,7 +171,7 @@ import { Picker } from 'antd-mobile';
                 columns={data.timeRange || []}
                 visible={showTimeRange}
                 onClose={() => {
-                    setTimeRange(false)
+                    setShowTimeRange(false)
                 }}
                 // value={value}
                 onConfirm={v => {
