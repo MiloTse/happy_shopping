@@ -63,6 +63,10 @@ const router = createHashRouter([{
     {
         path: "/order/:id",
         element: <Order />
+    },
+    {
+        path: "*",
+        element: <Home />
     }
 ]);
 
