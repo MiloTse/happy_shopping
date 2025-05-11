@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import {ResponseType, ResponseDataType, AddressResponseType, AddressItemType, PaymentResponseType} from "./types";
 import {message} from "../../utils/message";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
 import { Picker } from 'antd-mobile';
 
@@ -22,7 +22,7 @@ import { Picker } from 'antd-mobile';
      const [showPayment, setShowPayment] = useState(false);
      const [payWay, setPayWay] = useState('wechat');
      const {request: paymentRequest } = useRequest<PaymentResponseType>({ manual:true})
-
+     const navigate = useNavigate();
      useEffect(() => {
          request({
              url: '/orderDetail.json',
@@ -81,7 +81,13 @@ import { Picker } from 'antd-mobile';
                  payWay
              }
          }).then((response)=>{
-            console.log(response.data);
+             if(response.data){
+
+                 navigate('/home');
+             }else{
+                 message('Payment failed');
+             }
+             console.log(response);
          }).catch((e)=>{
              message(e.message);
          });
