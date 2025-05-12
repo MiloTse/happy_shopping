@@ -31,11 +31,11 @@ function Mine() {
             <div className="mine-points">
                 <div className="mine-points-item">
                     <div className="mine-points-value">4</div>
-                    <div className="mine-points-label">优惠券</div>
+                    <div className="mine-points-label">Coupons</div>
                 </div>
                 <div className="mine-points-item">
                     <div className="mine-points-value">258</div>
-                    <div className="mine-points-label">积分</div>
+                    <div className="mine-points-label">Reward Points</div>
                 </div>
                 <div className="mine-points-item">
 
