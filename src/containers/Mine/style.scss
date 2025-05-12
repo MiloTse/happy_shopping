@@ -1,6 +1,14 @@
 .mine-page {
   background: #73D13D;
-
+  overflow: scroll;
+  padding-bottom:1.12rem;
+  .title {
+    line-height: .44rem;
+    font-size:.18rem;
+    color: #242424;
+    background: #FFF;
+    text-align: center;
+  }
 
 }
 
