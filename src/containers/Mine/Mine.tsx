@@ -41,6 +41,47 @@ function Mine() {
 
                 </div>
             </div>
+            {/* feature section */}
+            <div className="mine-features">
+                <div className="mine-features-row">
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe608;</div>
+                        <div className="mine-feature-text">全部订单</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe609;</div>
+                        <div className="mine-feature-text">待付款</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe601;</div>
+                        <div className="mine-feature-text">待发货</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe602;</div>
+                        <div className="mine-feature-text">待收货</div>
+                    </div>
+                </div>
+ 
+                <div className="mine-features-row">
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe608;</div>
+                        <div className="mine-feature-text">退款/售后</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe609;</div>
+                        <div className="mine-feature-text">客服</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe601;</div>
+                        <div className="mine-feature-text">设置</div>
+                    </div>
+                    <div className="mine-feature-item">
+                        <div className="mine-feature-icon iconfont">&#xe602;</div>
+                        <div className="mine-feature-text">地址</div>
+                    </div>
+                </div>
+            </div>
+            
             <Docker activeName='mine'/>
         </div>
     )
