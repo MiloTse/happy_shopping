@@ -56,6 +56,7 @@ function useRequest<T>(
                 //passing three parameters as obj
             //if passing, use requestOptions?.url
             //if not passing, use options.url instead.(outer)
+                baseURL: '',
                 url: requestOptions.url,
                 method: requestOptions.method,
                 signal: controllerRef.current.signal,
