@@ -11,13 +11,12 @@
     font-size:.12rem;
     color:#B3C1C4;
     text-align:center;
+    .iconfont {
+        font-size: 22px;
+        margin: 4px 0;
+    }
     &-item {
         flex:1;
-        &-icon {
-            margin:.04rem 0;
-            font-size:.18rem;
-        }
-
     }
     &-item-active {
         color:#73D13D;
