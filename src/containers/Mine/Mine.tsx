@@ -7,24 +7,21 @@ import Docker from "../../components/Docker/Docker";
 function Mine() {
     return (
         <div className="mine-page">
-            <div className='title'>
+            {/*title section*/}
+            <div className='mine-title'>
                 Mine
             </div>
-            {/*profile section*/}
-            <div className='profile'>
-                <div className='profile-left'>
-                    <img className='profile-left avatar' alt=''/>
-                    <div className='profile-left nickname'>
-                        <span>Nickname</span>
-
+            {/*profile information section*/}
+            <div className='mine-profile'>
+                <div className='mine-profile-left'>
+                    <img className='avatar' alt='avatar'/>
+                    <div className='nickname'>Tom Wang</div>
+                    <div className='vip-info'>
+                        <span  className='vip-level'>VIP5</span>
                     </div>
-                    <div className='profile-left vip-info'>
-                        <span  className='profile-left vip-level'>VIP5</span>
-                    </div>
-
                 </div>
-                <div className='profile-right'>
-                    <div className='profile-right member-centre'>
+                <div className='mine-profile-right'>
+                    <div className='mine-profile-right member-centre'>
                         Member Centre
                     </div>
                 </div>
@@ -42,7 +39,7 @@ function Mine() {
                     </div>
                 </div>
             </div>
-            <Docker activeName='cart'/>
+            <Docker activeName='mine'/>
         </div>
     )
 
