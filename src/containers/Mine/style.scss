@@ -27,15 +27,16 @@
         border: .01rem solid white;
         margin-right: .02rem;
       }
-      &-nickname{
-        color: #FFF;
-        font-size: 26px;
+      .nickname {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
         margin-right: 8px;
       }
-      &-vip-info{
-        background-color: #0f7a51;
-        &-vip-level{
-          color: #FFFFFF;
+      .vip-info {
+        .vip-level {
+          background-color: #2196F3;
+          color: white;
           font-size: 12px;
           padding: 2px 6px;
           border-radius: 4px;
@@ -52,7 +53,7 @@
       }
     }
   }
- 
+
   .mine-points {
     display: flex;
     margin: 15px;
