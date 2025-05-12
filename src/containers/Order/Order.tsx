@@ -95,7 +95,12 @@ import { Picker } from 'antd-mobile';
 
      return data? (
         <div className="page order-page">
-            <div className='title'>Confirm Order</div>
+            <div className='title'>
+                <div className="iconfont" onClick={() => {
+                    navigate(-1)
+                }}>&#xe6a9;</div>
+                <div className="text">Confirm Order</div>
+            </div>
             <div className='receiver' onClick={handleReceiverClick}>
                 <div className='iconfont'>&#xe68e; </div>
                 <div className='receiver-content'>

@@ -3,11 +3,19 @@
   overflow: scroll;
   padding-bottom:.96rem;
   .title {
-    line-height: .44rem;
-    font-size:.18rem;
+    position: relative;
+    line-height:.44rem;
+    font-size: .18rem;
     color: #242424;
-    background: #FFF;
     text-align: center;
+    background: #fff;
+    .iconfont {
+      position: absolute;
+      left:.1rem;
+      top:0;
+      font-size:.2rem;
+      color: #242424;
+    }
   }
   .receiver {
     display: flex;
