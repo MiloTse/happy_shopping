@@ -1,7 +1,10 @@
+import './style.scss';
+
+
 
 function Mine() {
     return (
-        <div className="mine">
+        <div className="mine-page">
             <h1>Mine</h1>
         </div>
     )
