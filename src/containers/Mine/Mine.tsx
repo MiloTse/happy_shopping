@@ -46,38 +46,38 @@ function Mine() {
                 <div className="mine-features-row">
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe603;</div>
-                        <div className="mine-feature-text">全部订单</div>
+                        <div className="mine-feature-text">All Orders</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe612;</div>
-                        <div className="mine-feature-text">待付款</div>
+                        <div className="mine-feature-text">Pending Payment</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe63f;</div>
-                        <div className="mine-feature-text">待发货</div>
+                        <div className="mine-feature-text">Awaiting Shipment</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe6b1;</div>
-                        <div className="mine-feature-text">待收货</div>
+                        <div className="mine-feature-text">Awaiting Delivery</div>
                     </div>
                 </div>
  
                 <div className="mine-features-row">
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe611;</div>
-                        <div className="mine-feature-text">退款/售后</div>
+                        <div className="mine-feature-text">Returns & Refunds</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xec2e;</div>
-                        <div className="mine-feature-text">客服</div>
+                        <div className="mine-feature-text">Customer Service</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe643;</div>
-                        <div className="mine-feature-text">设置</div>
+                        <div className="mine-feature-text">Settings</div>
                     </div>
                     <div className="mine-feature-item">
                         <div className="mine-feature-icon iconfont">&#xe640;</div>
-                        <div className="mine-feature-text">地址</div>
+                        <div className="mine-feature-text">Address</div>
                     </div>
                 </div>
             </div>
