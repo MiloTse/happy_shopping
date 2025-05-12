@@ -14,7 +14,7 @@ function Mine() {
             {/*profile information section*/}
             <div className='mine-profile'>
                 <div className='mine-profile-left'>
-                    <img className='avatar' alt='avatar'/>
+                    <img className='avatar' alt='avatar' src='http://statics.dell-lee.com/shopping/category-list-5.png'/>
                     <div className='nickname'>Tom Wang</div>
                     <div className='vip-info'>
                         <span  className='vip-level'>VIP5</span>
@@ -22,21 +22,23 @@ function Mine() {
                 </div>
                 <div className='mine-profile-right'>
                     <div className='mine-profile-right member-centre'>
-                        Member Centre
+                        Member
                     </div>
                 </div>
             </div>
-            {/*point section*/}
-            <div>
-                <div className='point'>
-                    <div className='point-item'>
-                        <span>4</span>
-                        <span>Points</span>
-                    </div>
-                    <div className='point-item'>
-                        <span>123456</span>
-                        <span>Points</span>
-                    </div>
+
+            {/* point section */}
+            <div className="mine-points">
+                <div className="mine-points-item">
+                    <div className="mine-points-value">4</div>
+                    <div className="mine-points-label">优惠券</div>
+                </div>
+                <div className="mine-points-item">
+                    <div className="mine-points-value">258</div>
+                    <div className="mine-points-label">积分</div>
+                </div>
+                <div className="mine-points-item">
+
                 </div>
             </div>
             <Docker activeName='mine'/>
