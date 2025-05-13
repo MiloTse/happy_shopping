@@ -1,10 +1,10 @@
 import './style.scss';
 import React from "react";
-import Docker from "../../components/Docker/Docker";
+import NavBar from "../../components/NavBar/NavBar";
 
 
 
-function Mine() {
+function Profile() {
     function handleMemberClick() {
         console.log('member centre')
     }
@@ -86,10 +86,10 @@ function Mine() {
                 </div>
             </div>
             
-            <Docker activeName='mine'/>
+            <NavBar activeName='mine'/>
         </div>
     )
 
 }
 
-export default Mine;
+export default Profile;

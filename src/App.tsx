@@ -15,7 +15,7 @@ import Detail from "./containers/Detail/Detail";
 import Category from "./containers/Category/Category";
 import Cart from "./containers/Cart/Cart";
 import Order from "./containers/Order/Order";
-import Mine from "./containers/Mine/Mine";
+import Profile from "./containers/Profile/Profile";
 
 const router = createHashRouter([{
         path: "/",
@@ -66,8 +66,8 @@ const router = createHashRouter([{
         element: <Order />
     },
     {
-        path: "/mine",
-        element: <Mine />
+        path: "/profile",
+        element: <Profile />
     },
     {
         path: "*",

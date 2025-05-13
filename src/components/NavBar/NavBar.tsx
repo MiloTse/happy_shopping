@@ -30,22 +30,22 @@ const items = [
 ]
 
 
-function Docker   (props: {activeName:string})   {
+function NavBar   (props: {activeName:string})   {
     const navigate = useNavigate();
     const {activeName } = props;
 
     return (
-            <div className="docker">
+            <div className="navbar">
                 {
                     items.map(  item => (
                             <div className= { activeName.toLowerCase() === item.name.toLowerCase() ?
-                                'docker-item docker-item-active'
-                                : 'docker-item' }
+                                'navbar-item navbar-item-active'
+                                : 'navbar-item' }
                                  onClick={() => navigate(item.path)}
                                  key={item.name}
                             >
                                 <p className="iconfont" dangerouslySetInnerHTML={{__html: item.icon}}/>
-                                <p className="docker-item-title">{item.text}</p>
+                                <p className="navbar-item-title">{item.text}</p>
                             </div>
 
                         )
@@ -55,4 +55,4 @@ function Docker   (props: {activeName:string})   {
     );
 }
 
-export default Docker;
+export default NavBar;

@@ -1,5 +1,5 @@
 import './style.scss';
-import Docker from "../../components/Docker/Docker";
+import NavBar from "../../components/NavBar/NavBar";
 import React, {useEffect, useRef, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import type {ResponseType, ListItemType, CartSubmitArray, SubmitResponseType} from "./types";
@@ -223,7 +223,7 @@ function Cart() {
                 <div className='check' onClick={handleCartSubmit}>结算({count})</div>
 
             </div>
-            <Docker activeName='cart'/>
+            <NavBar activeName='cart'/>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import useRequest from "../../utils/useRequest";
 import {CategoryAndTagResponseType, ProductResponseType, ProductType, CartType, CartResponseType} from "./types";
 import {message} from "../../utils/message";
-import Docker from "../../components/Docker/Docker";
+import NavBar from "../../components/NavBar/NavBar";
 import {useNavigate} from "react-router-dom";
 import Popover from "../../components/Popover/Popover";
 import {CartChangeResponseType} from "../../types";
@@ -243,7 +243,7 @@ const Category = () => {
                 </div>
 
             </div>
-            <Docker activeName='category'/>
+            <NavBar activeName='category'/>
             <Popover show={showCart} blankClickCallBack={ closeMask}>
                 <div className='cart'>
                     <div className='cart-content'>
