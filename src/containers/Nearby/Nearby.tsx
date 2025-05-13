@@ -44,18 +44,16 @@ const Nearby = () => {
     return (
         <div className='page nearby-page'>
             <div className="title">
-
-                    <div className="iconfont title-icon"
-                         onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
-                        &#xe6a9;</div>
-
+                <div className="iconfont title-icon"
+                     onClick={handleGoBackClick} style={{ cursor: 'pointer' }}>
+                    &#xe6a9;</div>
                 Switch Store
             </div>
             <div className="search">
                 <span className="search-icon iconfont">&#xe600;</span>
                 <input 
                     className="search-input"
-                    placeholder="Please enter a keyword"
+                    placeholder="Please enter address"
                     value={keyword}
                     onChange={(e) => setKeyword(e.target.value)}
                 />
