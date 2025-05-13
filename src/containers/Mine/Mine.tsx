@@ -5,6 +5,10 @@ import Docker from "../../components/Docker/Docker";
 
 
 function Mine() {
+    function handleMemberClick() {
+        console.log('member centre')
+    }
+
     return (
         <div className="mine-page">
             {/*title section*/}
@@ -21,7 +25,7 @@ function Mine() {
                     </div>
                 </div>
                 <div className='mine-profile-right'>
-                    <div className='mine-profile-right member-centre'>
+                    <div className='mine-profile-right member-centre' onClick={handleMemberClick}>
                         Member
                     </div>
                 </div>
