@@ -25,9 +25,9 @@ function Mine() {
                     </div>
                 </div>
                 <div className='mine-profile-right'>
-                    <div className='mine-profile-right member-centre' onClick={handleMemberClick}>
+                    <button className='mine-profile-right member-centre' onClick={handleMemberClick}>
                         Member
-                    </div>
+                    </button>
                 </div>
             </div>
 
