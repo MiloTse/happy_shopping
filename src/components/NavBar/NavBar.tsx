@@ -22,10 +22,10 @@ const items = [
         path: '/cart',
     },
     {
-        name: 'Mine',
-        text: 'Mine',
+        name: 'Profile',
+        text: 'Profile',
         icon: '&#xe602;',
-        path: '/mine',
+        path: '/profile',
     }
 ]
 

@@ -10,83 +10,83 @@ function Profile() {
     }
 
     return (
-        <div className="mine-page">
+        <div className="profile-page">
             {/*title section*/}
-            <div className='mine-title'>
-                Mine
+            <div className='profile-title'>
+                profile
             </div>
             {/*profile information section*/}
-            <div className='mine-profile'>
-                <div className='mine-profile-left'>
+            <div className='profile-profile'>
+                <div className='profile-profile-left'>
                     <img className='avatar' alt='avatar' src='http://statics.dell-lee.com/shopping/category-list-5.png'/>
                     <div className='nickname'>Tom Wang</div>
                     <div className='vip-info'>
                         <span  className='vip-level'>VIP5</span>
                     </div>
                 </div>
-                <div className='mine-profile-right'>
-                    <button className='mine-profile-right member-centre' onClick={handleMemberClick}>
+                <div className='profile-profile-right'>
+                    <button className='profile-profile-right member-centre' onClick={handleMemberClick}>
                         Member
                     </button>
                 </div>
             </div>
 
             {/* point section */}
-            <div className="mine-points">
-                <div className="mine-points-item">
-                    <div className="mine-points-value">4</div>
-                    <div className="mine-points-label">Coupons</div>
+            <div className="profile-points">
+                <div className="profile-points-item">
+                    <div className="profile-points-value">4</div>
+                    <div className="profile-points-label">Coupons</div>
                 </div>
-                <div className="mine-points-item">
-                    <div className="mine-points-value">258</div>
-                    <div className="mine-points-label">Reward Points</div>
+                <div className="profile-points-item">
+                    <div className="profile-points-value">258</div>
+                    <div className="profile-points-label">Reward Points</div>
                 </div>
-                <div className="mine-points-item">
+                <div className="profile-points-item">
 
                 </div>
             </div>
             {/* feature section */}
-            <div className="mine-features">
-                <div className="mine-features-row">
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe603;</div>
-                        <div className="mine-feature-text">All Orders</div>
+            <div className="profile-features">
+                <div className="profile-features-row">
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe603;</div>
+                        <div className="profile-feature-text">All Orders</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe612;</div>
-                        <div className="mine-feature-text">Pending Payment</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe612;</div>
+                        <div className="profile-feature-text">Pending Payment</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe63f;</div>
-                        <div className="mine-feature-text">Awaiting Shipment</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe63f;</div>
+                        <div className="profile-feature-text">Awaiting Shipment</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe6b1;</div>
-                        <div className="mine-feature-text">Awaiting Delivery</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe6b1;</div>
+                        <div className="profile-feature-text">Awaiting Delivery</div>
                     </div>
                 </div>
  
-                <div className="mine-features-row">
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe611;</div>
-                        <div className="mine-feature-text">Returns & Refunds</div>
+                <div className="profile-features-row">
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe611;</div>
+                        <div className="profile-feature-text">Returns & Refunds</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xec2e;</div>
-                        <div className="mine-feature-text">Customer Service</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xec2e;</div>
+                        <div className="profile-feature-text">Customer Service</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe643;</div>
-                        <div className="mine-feature-text">Settings</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe643;</div>
+                        <div className="profile-feature-text">Settings</div>
                     </div>
-                    <div className="mine-feature-item">
-                        <div className="mine-feature-icon iconfont">&#xe640;</div>
-                        <div className="mine-feature-text">Address</div>
+                    <div className="profile-feature-item">
+                        <div className="profile-feature-icon iconfont">&#xe640;</div>
+                        <div className="profile-feature-text">Address</div>
                     </div>
                 </div>
             </div>
             
-            <NavBar activeName='mine'/>
+            <NavBar activeName='profile'/>
         </div>
     )
 
