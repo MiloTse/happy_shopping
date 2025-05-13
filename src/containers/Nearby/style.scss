@@ -3,31 +3,36 @@
   min-height: 100vh;
 
   .title {
+    position: relative;
     align-items: center;
     display: flex;
-    padding: 0.12rem;
-    font-size: 0.16rem;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    justify-content: center;
 
     .title-icon {
-      margin-right: 1.4rem;
-      font-size: 0.16rem;
-      color: #242424;
+      position: absolute;
+      left: 16px;
+      font-size: 16px;
+      color: #333;
     }
   }
 
   .search {
-    margin: 0.12rem;
+    margin: 12px 16px;
     background: #f5f5f5;
-    border-radius: 0.16rem;
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    height: 0.32rem;
-    padding: 0 0.12rem;
+    height: 36px;
+    padding: 0 12px;
 
     &-icon {
       color: #999;
-      font-size: 0.14rem;
-      margin-right: 0.08rem;
+      font-size: 14px;
+      margin-right: 8px;
     }
 
     &-input {
@@ -36,7 +41,7 @@
       border: none;
       outline: none;
       background: transparent;
-      font-size: 0.14rem;
+      font-size: 14px;
       padding: 0;
 
       &::placeholder {
@@ -46,50 +51,58 @@
   }
 
   .subtitle {
-    padding: 0.08rem 0.12rem;
-    font-size: 0.14rem;
-    color: #333;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #999;
     background: #f5f5f5;
+    margin-bottom: 1px;
   }
 
   .store-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
     &-item {
-      padding: 0.08rem 0.12rem;
+      padding: 16px;
       border-bottom: 1px solid #f0f0f0;
       position: relative;
-      margin-top: -0.6rem;
-      margin-left: 0.10rem;
+      cursor: pointer;
+      
       &-title {
-        font-size: 0.15rem;
+        font-size: 15px;
+        font-weight: 500;
         color: #333;
-        margin-bottom: 0.04rem;
+        margin-bottom: 8px;
       }
 
       &-desc {
-        font-size: 0.13rem;
+        font-size: 13px;
         color: #666;
-        margin-bottom: 0.02rem;
-        line-height: 1.2;
+        margin-bottom: 4px;
+        line-height: 1.4;
       }
 
       &-address {
-        font-size: 0.13rem;
+        font-size: 13px;
         color: #666;
-        line-height: 1.2;
+        line-height: 1.4;
+        padding-right: 60px;
       }
 
       &-right {
         position: absolute;
-        right: 0.12rem;
-        top: 1.08rem;
+        right: 16px;
+        top: 16px;
         color: #999;
-        font-size: 0.13rem;
+        font-size: 13px;
         display: flex;
         align-items: center;
 
         .iconfont {
-          margin-right: 0.04rem;
-          font-size: 0.13rem;
+          margin-right: 4px;
+          font-size: 14px;
+          color: #999;
         }
       }
     }
