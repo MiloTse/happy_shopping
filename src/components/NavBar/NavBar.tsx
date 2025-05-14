@@ -34,19 +34,21 @@ function NavBar   (props: {activeName:string})   {
     const navigate = useNavigate();
     const {activeName } = props;
 
+
     return (
             <div className="navbar">
                 {
                     items.map(  item => (
-                            <div className= { activeName.toLowerCase() === item.name.toLowerCase() ?
-                                'navbar-item navbar-item-active'
-                                : 'navbar-item' }
+                            <button className= { activeName.toLowerCase() === item.name.toLowerCase() ?
+                                'navbar-item navbar-item-active' : 'navbar-item' }
                                  onClick={() => navigate(item.path)}
                                  key={item.name}
+                                 aria-label={item.text}
+                                 aria-current={activeName.toLowerCase() === item.name.toLowerCase() ? 'page' : undefined}
                             >
                                 <p className="iconfont" dangerouslySetInnerHTML={{__html: item.icon}}/>
                                 <p className="navbar-item-title">{item.text}</p>
-                            </div>
+                            </button>
 
                         )
                     )
