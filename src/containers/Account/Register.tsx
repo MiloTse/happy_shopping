@@ -54,13 +54,14 @@ const Register = ()=> {
 
         request({
                 url:'/register.json',
-                method:'POST',
-                data:{
-                    userName:userName,
-                    phoneNumber:phoneNumber,
-                    password:password
-
-                }
+                method:'GET',
+                // The original POST request code was implemented using Charles Proxy, and it is currently commented out to facilitate future conversion into a full-stack project.
+                // method:'POST',
+                // data:{
+                //     userName:userName,
+                //     phoneNumber:phoneNumber,
+                //     password:password
+                // }
             }
 
         ).then((data)=>{

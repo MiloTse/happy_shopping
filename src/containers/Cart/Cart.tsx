@@ -126,8 +126,10 @@ function Cart() {
         }
         submitRequest({
             url: '/cartSubmit.json',
-            method: 'POST',
-            data: params
+            method: 'GET',
+            // The original POST request code was implemented using Charles Proxy, and it is currently commented out to facilitate future conversion into a full-stack project.
+            // method: 'POST',
+            // data: params
         }).then(response=>{
             // message('Order submitted successfully');
             //if success, get orderId and navigate to order page

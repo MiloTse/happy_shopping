@@ -72,14 +72,16 @@ import { Picker } from 'antd-mobile';
          const addressId =data?.address.id;
          const time =data?.time;
          paymentRequest({
-             method:'POST',
+             method:'GET',
              url:'/pay.json',
-             data:{
-                 orderId,
-                 addressId,
-                 time,
-                 payWay
-             }
+             // The original POST request code was implemented using Charles Proxy, and it is currently commented out to facilitate future conversion into a full-stack project.
+             // method:'POST',
+             // data:{
+             //     orderId,
+             //     addressId,
+             //     time,
+             //     payWay
+             // }
          }).then((response)=>{
              if(response.data){
 

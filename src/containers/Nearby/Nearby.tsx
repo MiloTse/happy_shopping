@@ -6,22 +6,24 @@ import type {ResponseType} from "./types";
 
 const defaultRequestData = {
     url: '/nearby.json',
-    method: 'POST',
-    data: {
-        latitude: 37.7304167,
-        longitude: -122.384425,
-    }
+    method: 'GET',
+    // The original POST request code was implemented using Charles Proxy, and it is currently commented out to facilitate future conversion into a full-stack project.
+    // method: 'POST',
+    // data: {
+    //     latitude: 37.7304167,
+    //     longitude: -122.384425,
+    // }
 }
 
 const Nearby = () => {
     const localLocation = localStorage.getItem('location');
     const locationHistory = localLocation ? JSON.parse(localLocation) : null;
     
-    // Update request data with location history if available
-    if (locationHistory) {
-        defaultRequestData.data.latitude = locationHistory.latitude;
-        defaultRequestData.data.longitude = locationHistory.longitude;
-    }
+   // 位置信息功能暂时禁用,改为GET请求, 解决停用Charles Proxy的404请求报错问题。
+    // if (locationHistory) {
+    //     defaultRequestData.data.latitude = locationHistory.latitude;
+    //     defaultRequestData.data.longitude = locationHistory.longitude;
+    // }
 
     const { data } = useRequest<ResponseType>(defaultRequestData);
     const navigate = useNavigate();

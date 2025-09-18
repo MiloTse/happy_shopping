@@ -16,21 +16,24 @@ import NavBar from "../../components/NavBar/NavBar";
 //defaultRequestData
 const defaultRequestData = {
     url: '/home.json',
-    method: 'POST',
-    data: {
-        //default value
-        latitude:  45.3497856,
-        longitude: -75.7554394,
-    }
+    method: 'GET',
+    // The original POST request code was implemented using Charles Proxy, and it is currently commented out to facilitate future conversion into a full-stack project.
+    // method: 'POST',
+    // data: {
+    //     //default value
+    //     latitude:  45.3497856,
+    //     longitude: -75.7554394,
+    // }
 }
 
 const Home =() => {
     const localLocation= localStorage.getItem('location');
     const locationHistory= localLocation ? JSON.parse(localLocation) : null;
-    if(locationHistory) {
-        defaultRequestData.data.latitude = locationHistory.latitude;
-        defaultRequestData.data.longitude = locationHistory.longitude;
-    }
+    // 位置信息功能暂时禁用,改为GET请求, 解决停用Charles Proxy的404请求报错问题。
+    // if(locationHistory) {
+    //     defaultRequestData.data.latitude = locationHistory.latitude;
+    //     defaultRequestData.data.longitude = locationHistory.longitude;
+    // }
 
 
 
@@ -67,13 +70,13 @@ const Home =() => {
                  localStorage.setItem('location', JSON.stringify({
                      latitude, longitude
                  }));
-                 //setRequestData if can get location, and copy to new object
-                 const newRequestData = {
-                     ...defaultRequestData,
-                     data: {
-                         latitude, longitude
-                 }};
-                 setRequestData(newRequestData);
+                 // 位置信息功能暂时禁用（因为改为GET请求）
+                 // const newRequestData = {
+                 //     ...defaultRequestData,
+                 //     data: {
+                 //         latitude, longitude
+                 // }};
+                 // setRequestData(newRequestData);
 
              },(error)=>{
                  console.log(error);
