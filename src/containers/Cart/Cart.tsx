@@ -213,16 +213,16 @@ function Cart() {
             <div className='total-price'>
                 <div className='select-all' onClick={handleSelectAllClick}>
                     <div className={notSelectedShop? 'radio' : 'radio radio-active'}></div>
-                    <div className='select-all-text' >全选</div>
+                    <div className='select-all-text' >Select All</div>
                 </div>
                 <div className='total'>
-                    <span className='total-text'>合计:</span>
+                    <span className='total-text'>Total:</span>
                     <div className='total-price-inner'>
                         <span className='total-price-inner-symbol'>&#36; </span>
                         {totalPrice.toFixed(2)}
                     </div>
                 </div>
-                <div className='check' onClick={handleCartSubmit}>结算({count})</div>
+                <div className='check' onClick={handleCartSubmit}>Checkout({count})</div>
 
             </div>
             <NavBar activeName='cart'/>
