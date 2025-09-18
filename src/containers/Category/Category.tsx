@@ -227,7 +227,7 @@ const Category = () => {
 
                 <div className="product-item">
                     <img className="product-item-img"
-                        src="http://statics.dell-lee.com/shopping/fresh-1.png"
+                        src="/images/external/fresh-1.png"
                         alt=""
                     />
                     <div className="product-item-content">

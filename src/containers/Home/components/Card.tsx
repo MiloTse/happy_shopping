@@ -25,7 +25,7 @@ const Card = (props: CardPropsType) => {
                 <img
                     alt={title}
                     className="card-title-img"
-                    src="http://statics.dell-lee.com/shopping/hot.png"/>
+                    src="/images/external/hot.png"/>
                 {title}
                 <div className="card-title-more">
                     more

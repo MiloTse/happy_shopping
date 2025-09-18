@@ -18,7 +18,7 @@ function Profile() {
             {/*profile information section*/}
             <div className='profile-profile'>
                 <div className='profile-profile-left'>
-                    <img className='avatar' alt='avatar' src='http://statics.dell-lee.com/shopping/category-list-5.png'/>
+                    <img className='avatar' alt='avatar' src='/images/external/category-list-5.png'/>
                     <div className='nickname'>Tom Wang</div>
                     <div className='vip-info'>
                         <span  className='vip-level'>VIP5</span>
