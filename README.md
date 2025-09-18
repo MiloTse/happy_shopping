@@ -62,4 +62,6 @@ npm install --save antd-mobile
 ![img.png](img.png)
 
 
+this project use Charles for proxy, should run it before access more pages including register and login.
+image.png
 
